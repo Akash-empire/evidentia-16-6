@@ -235,12 +235,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         <!-- Social -->
                         <div class="social-custom d-flex align-items-center gap-3 mt-4">
                             <a href="#" class="black">
-                                <i class="fab fa-facebook-f white65"></i>
+                                <i class="fab fa-instagram white65"></i>
                             </a>
 
-                            <a href="#" class="black">
-                                <i class="fa-brands fa-x-twitter white65"></i>
-                            </a>
+                           
 
                             <a href="#" class="black">
                                 <i class="fab fa-linkedin-in white65"></i>
