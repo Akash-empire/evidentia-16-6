@@ -347,36 +347,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <div class="d-flex flex-column gap-4">
 
-                            <div>
-                                <span class="fs-eight white65 d-block mb-1">
-                                    Call Us
-                                </span>
+    <!-- Phone -->
+    <div>
+        <span class="fs-eight white65 d-block mb-1">
+            Support
+        </span>
 
-                                <a href="tel:+112246767430" class="white fw-semibold">
-                                    +(1) 224 676 7430
-                                </a>
-                            </div>
+        <a href="tel:+919790615824" class="white fw-semibold">
+            +91 97906 15824
+        </a>
+    </div>
 
-                            <div>
-                                <span class="fs-eight white65 d-block mb-1">
-                                    Email Address
-                                </span>
+    <!-- Email -->
+    <div>
+        <span class="fs-eight white65 d-block mb-1">
+            Email Address
+        </span>
 
-                                <a href="mailto:security@example.com" class="white fw-semibold">
-                                    security@example.com
-                                </a>
-                            </div>
-                            <div>
-                                <span class="fs-eight white65 d-block mb-1">
-                                    Location
-                                </span>
+        <a href="mailto:research@evidentia.co.in" class="white fw-semibold">
+            research@evidentia.co.in
+        </a>
+    </div>
 
-                                <p class="white mb-0">
-                                    Chennai, India
-                                </p>
-                            </div>
+    <!-- Address -->
+    <div>
+        <span class="fs-eight white65 d-block mb-1">
+            Office Address
+        </span>
 
-                        </div>
+        <p class="white mb-0">
+            Aminjikarai, <br>
+            Chennai – 600029.
+        </p>
+    </div>
+
+</div>
 
                     </div>
                 </div>
