@@ -95,271 +95,94 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li class=" menu-thumb">
-                                            <a href="index.html">
-                                                Home
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="about.html">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                Services
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu services-mega">
-                                                <li class="services-mega__rail">
-                                                    <button type="button" class="services-mega__tab active"
-                                                        data-services-tab="security">
-                                                        Security<i class="fa-solid fa-arrow-right"></i>
-                                                    </button>
-                                                    <button type="button" class="services-mega__tab"
-                                                        data-services-tab="testing">
-                                                        Pentest <i class="fa-solid fa-arrow-right"></i>
-                                                    </button>
-                                                    <button type="button" class="services-mega__tab"
-                                                        data-services-tab="governance">
-                                                        GRC Services <i class="fa-solid fa-arrow-right"></i>
-                                                    </button>
-                                                    <button type="button" class="services-mega__tab"
-                                                        data-services-tab="training">
-                                                        Training <i class="fa-solid fa-arrow-right"></i>
-                                                    </button>
-                                                    <button type="button" class="services-mega__tab"
-                                                        data-services-tab="platforms">
-                                                        Consultation <i class="fa-solid fa-arrow-right"></i>
-                                                    </button>
-                                                    <button type="button" class="services-mega__tab" id="psychometricBtn">
-                                                        Pyschometric Analysis <i class="fa-solid fa-arrow-right"></i>
-                                                    </button>
-                                                </li>
 
-                                                <li class="services-mega__panels">
-                                                    <div class="services-mega__panel active"
-                                                        data-services-panel="security">
-                                                        <div class="security-headding">
-                                                            <h3>Security Engineering Services</h3>
-                                                        </div>
-                                                        <ul class="services-mega__list">
 
-                                                            <li class="services-mega__item">
-                                                                <a href="dlp-solutions.html"
-                                                                    class="services-mega__link services-mega__link--main">DLP
-                                                                    solutions</a>
-                                                            </li>
 
-                                                            <li class="services-mega__item">
-                                                                <a href="threat-hunting.html"
-                                                                    class="services-mega__link services-mega__link--main">Threat
-                                                                    hunting</a>
-                                                            </li>
+    <li>
+        <a href="about.html">About Us</a>
+    </li>
 
-                                                            <li class="services-mega__item">
-                                                                <a href="cloud-solutions.html"
-                                                                    class="services-mega__link services-mega__link--main">Cloud
-                                                                    solutions</a>
-                                                                <ul class="services-mega__sublist">
-                                                                    <li
-                                                                        class="services-mega__item services-mega__item--full">
-                                                                        <a
-                                                                            class="services-mega__link services-mega__link--child">Microsoft</a>
-                                                                        <ul class="services-mega__sublist">
-                                                                            <li class="services-mega__item">
-                                                                                <a href="microsoft-365-security-review.html"
-                                                                                    class="services-mega__link services-mega__link--child">Microsoft
-                                                                                    365 security reviews</a>
-                                                                            </li>
-                                                                            <li class="services-mega__item">
-                                                                                <a href="microsoft-purview-review.html"
-                                                                                    class="services-mega__link services-mega__link--child">Microsoft
-                                                                                    Purview review</a>
-                                                                            </li>
-                                                                            <li class="services-mega__item">
-                                                                                <a href="microsoft-defender-security-review.html"
-                                                                                    class="services-mega__link services-mega__link--child">Microsoft
-                                                                                    Defender security reviews</a>
-                                                                            </li>
-                                                                            <li class="services-mega__item">
-                                                                                <a href="microsoft-intune-compliance-review.html"
-                                                                                    class="services-mega__link services-mega__link--child">Microsoft
-                                                                                    Intune compliance reviews</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
+    <!-- Research -->
+    <li class="has-dropdown">
+        <a href="#">
+            Research
+            <i class="fas fa-angle-down"></i>
+        </a>
 
-                                                                    <li class="services-mega__item">
-                                                                        <a href="amazon-aws-security.html"
-                                                                            class="services-mega__link services-mega__link--child">Amazon
-                                                                            AWS</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
+        <ul class="submenu">
+            <li><a href="research-consulting.html">Research Consulting</a></li>
+            <li><a href="data-analysis.html">Data Analysis</a></li>
+            <li><a href="project-management.html">Project Management</a></li>
+            <li><a href="publication-support.html">Publication Support</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+        </ul>
+    </li>
 
-                                                            <li class="services-mega__item">
-                                                                <a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Service
-                                                                    now solutions</a>
-                                                                <ul class="services-mega__sublist">
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">ServiceNow
-                                                                            implementations</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">ServiceNow
-                                                                            Managed services</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">ServiceNow
-                                                                            Training services</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
+    <!-- Distinct Capacities -->
+    <li class="has-dropdown">
+        <a href="#">
+            Distinct Capacities
+            <i class="fas fa-angle-down"></i>
+        </a>
 
-                                                            <li class="services-mega__item">
-                                                                <a href="security-design-architecture.html"
-                                                                    class="services-mega__link services-mega__link--main">Security
-                                                                    design and architecture</a>
-                                                                <ul class="services-mega__sublist">
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Zero
-                                                                            Trust</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
+        <ul class="submenu">
+            <li><a href="capacity-building.html">Capacity Building</a></li>
+            <li><a href="community-development.html">Community Development</a></li>
+            <li><a href="research-collaboration.html">Research Collaboration</a></li>
+        </ul>
+    </li>
 
-                                                            <li class="services-mega__item">
-                                                                <a href="rsa-archer-solutions.html"
-                                                                    class="services-mega__link services-mega__link--main">RSA
-                                                                    Archer solutions</a>
-                                                            </li>
-                                                            <li class="services-mega__item">
-                                                                <a href="zero-trust-implementations.html"
-                                                                    class="services-mega__link services-mega__link--main">Zero
-                                                                    Trust implementations</a>
-                                                            </li>
-                                                            <li class="services-mega__item">
-                                                                <a href="passwordless-mfa-solutions-sdo.html"
-                                                                    class="services-mega__link services-mega__link--main">Passwordless
-                                                                    MFA solutions - SDO</a>
-                                                            </li>
-                                                            <li class="services-mega__item">
-                                                                <a href="data-centric-security-solutions.html"
-                                                                    class="services-mega__link services-mega__link--main">Data
-                                                                    centric security solutions - Seclore</a>
-                                                            </li>
+    <!-- Training -->
+    <li class="has-dropdown">
+        <a href="#">
+            Training
+            <i class="fas fa-angle-down"></i>
+        </a>
 
-                                                            <li class="services-mega__item">
-                                                                <a href="virtualization-services.html"
-                                                                    class="services-mega__link services-mega__link--main">Virtualization
-                                                                    services</a>
-                                                                <ul class="services-mega__sublist">
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Small
-                                                                            Office (SMB)</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Enterprise</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+        <ul class="submenu">
+            <li><a href="training-programs.html">Training Programs</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="webinars.html">Webinars</a></li>
+        </ul>
+    </li>
 
-                                                    <div class="services-mega__panel" data-services-panel="testing">
-                                                        <h3 class="services-mega__panel-heading">Pentest Services</h3>
-                                                        <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Red teaming</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Web application pentesting</a></li>
-                                                            
-                                                        </ul>
-                                                    </div>
+    <!-- Resource Centre -->
+    <li class="has-dropdown">
+        <a href="#">
+            Resource Centre
+            <i class="fas fa-angle-down"></i>
+        </a>
 
-                                                    <div class="services-mega__panel" data-services-panel="governance">
-                                                        <h3 class="services-mega__panel-heading">GRC services
-                                                        </h3>
-                                                        <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Security baseline assessment (Essentials 8 or ISO 27001 dependent)</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Compliance
-                                                                    Audits</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Risk
-                                                                    Management Audits</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">OT Audit
-                                                                    </a></li>
-                                                        </ul>
-                                                    </div>
+        <ul class="submenu">
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+    </li>
 
-                                                    <div class="services-mega__panel" data-services-panel="training">
-                                                        <h3 class="services-mega__panel-heading">Training solutions</h3>
-                                                        <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Cyber Security Essentialss</a></li>
-                                                            
-                                                            <li class="services-mega__item"><a href="ethical-hacking.html"
-                                                                    class="services-mega__link services-mega__link--main">Ethical
-                                                                    Hacker</a></li>
-                                                        </ul>
-                                                    </div>
+    <!-- Opportunities -->
+    <li class="has-dropdown">
+        <a href="#">
+            Opportunities
+            <i class="fas fa-angle-down"></i>
+        </a>
 
-                                                    <div class="services-mega__panel" data-services-panel="platforms">
-                                                        <h3 class="services-mega__panel-heading">Consultation services</h3>
-                                                        <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Bespoke policies and procedures</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">GRC outsourcing 
-                                                                    </a></li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
+        <ul class="submenu">
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="internships.html">Internships</a></li>
+            <li><a href="collaborate.html">Collaborate With Us</a></li>
+        </ul>
+    </li>
 
-                                        <li>
-                                            <a href="services.html">
-                                                Join Our Partnership
-                                                <!-- <i class="fas fa-angle-down"></i> -->
-                                            </a>
-                                            <!-- <ul class="submenu">
-                                                <li><a href="services.html">Service</a></li>
-                                                <li><a href="services-details.html">Service Details</a></li>
-                                            </ul> -->
-                                        </li>
+    <!-- News -->
+    <li>
+        <a href="news-events.html">
+            News & Events
+        </a>
+    </li>
 
-                                        <li>
-                                            <a href="blog.html">
-                                                Insights
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Security Insights</a></li>
-                                                <li><a href="blog-sidebar.html">GRC Updates</a></li>
-                                                <li><a href="blog-details.html">PenTest Notes</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="#0">
-                                                Training Solutions
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="services-details.html">Cyber Security Essentials</a></li>
-                                                <li><a href="ethical-hacking.html">Ethical hackers</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+
+</ul>
                                 </nav>
                             </div>
                         </div>
@@ -405,8 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </a>
 
                         <p class="white65 mb-4">
-                            Delivering enterprise-grade cybersecurity, compliance,
-                            cloud security and governance solutions for modern businesses.
+                            Empowering researchers, institutions and industries through innovative research consulting, scientific excellence and evidence-based solutions that drive knowledge.
                         </p>
 
 
@@ -433,23 +255,26 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
-                            <h5 class="white">Programs</h5>
+                            <h5 class="white">Research</h5>
                         </div>
 
                         <ul class="list-area d-grid gap-1">
 
-                            <li><a href="data-security-program.html">Digital Security Program</a></li>
-                            <li><a href="data-privacy-program.html">Data Privacy Program</a></li>
-                            <li><a href="cybersecurity-sop-program.html">Cybersecurity SOP Program</a></li>
-                            <li><a href="risk-management-program.html">Risk Management Program</a></li>
-                            <li><a href="information-assurance-program.html">Information Assurance Program</a></li>
-                            <li><a href="integrated-incident-response-program.html">Integrated Incident Response Program</a></li>
-                            <li><a href="continuity-of-operations-program.html">Continuity of Operations Program</a></li>
-                            <li><a href="secure-engineering-data-privacy-program.html">Secure Engineering & Data Privacy Program</a></li>
-                            <li><a href="vulnerability-patch-management-program.html">Vulnerability & Patch Management Program</a></li>
-                            <li><a href="cybersecurity-scrm-strategy-implementation-plan.html">Cybersecurity SCRM Strategy & Implementation Plan</a></li>
+    <li><a href="research-consulting.html">Research Consulting</a></li>
 
-                        </ul>
+    <li><a href="data-analysis.html">Data Analysis</a></li>
+
+    <li><a href="project-management.html">Project Management</a></li>
+
+    <li><a href="publication-support.html">Publication Support</a></li>
+
+    <li><a href="documentation.html">Documentation</a></li>
+
+    <li><a href="research-collaboration.html">Research Collaboration</a></li>
+
+    <li><a href="scientific-advisory.html">Scientific Advisory</a></li>
+
+</ul>
 
                     </div>
                 </div>
@@ -459,28 +284,26 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
-                            <h5 class="white">Frameworks</h5>
+                            <h5 class="white">
+    Training
+</h5>
                         </div>
 
                         <ul class="list-area d-grid gap-1">
- 
-                            <li><a href="essential-8.html">Essentials 8</a></li>
-                            <li><a href="soc-2.html">SOC 2</a></li>
-                            <li><a href="iso-27001.html">ISO 27001</a></li>
-                            <li><a href="iso-31000.html">ISO 31000</a></li>
-                            <li><a href="iso-20000.html">ISO 20000</a></li>
-                            <li><a href="iso-22301.html">ISO 22301</a></li>
-                            <li><a href="iso-27701.html">ISO 27701</a></li>
-                            <li><a href="iso-9001.html">ISO 9001</a></li>
-                            <li><a href="nist-csf.html">NIST CSF</a></li>
-                            <li><a href="nist-sp-800-53.html">NIST SP 800 53</a></li>
-                            <li><a href="#">NIS AI RMF</a></li>
-                            <li><a href="cyber-essentials.html">Cyber Essentials</a></li>
-                            <li><a href="cps-234.html">CPS 234</a></li>
-                            <li><a href="gdpr.html">GDPR</a></li>
-                            <li><a href="hipaa.html">HIPAA</a></li>
 
-                        </ul>
+    <li><a href="research-methodology.html">Research Methodology</a></li>
+
+    <li><a href="scientific-writing.html">Scientific Writing</a></li>
+
+    <li><a href="publication-workshops.html">Publication Workshops</a></li>
+
+    <li><a href="faculty-development.html">Faculty Development</a></li>
+
+    <li><a href="capacity-building.html">Capacity Building</a></li>
+
+    <li><a href="professional-training.html">Professional Training</a></li>
+
+</ul>
 
                     </div>
                 </div>
@@ -490,18 +313,26 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
-                            <h5 class="white">Checklists</h5>
+                           <h5 class="white">
+    Resource Centre
+</h5>
                         </div>
 
                         <ul class="list-area d-grid gap-1">
 
-                            <li><a href="iso-9001-2015-quality-checklist.html">ISO 9001:2015 Quality Checklist</a></li>
-                            <li><a href="iso-42001-2023-artificial-intelligence-management-system.html">ISO 42001:2023 Artificial Intelligence Management System</a></li>
-                            <li><a href="iso-27001-2022-Information-security-checklist.html">ISO 27001:2022 Information Security Checklist</a></li>
-                            <li><a href="iso-27701-2019-privacy-checklist.html">ISO 27701:2025 Privacy Checklist</a></li>
-                            <li><a href="iso-3100-risk-checklist.html">ISO 31000 Risk Checklist</a></li>
+    <li><a href="publications.html">Publications</a></li>
 
-                        </ul>
+    <li><a href="case-studies.html">Case Studies</a></li>
+
+    <li><a href="research-guides.html">Research Guides</a></li>
+
+    <li><a href="downloads.html">Downloads</a></li>
+
+    <li><a href="news-events.html">News & Events</a></li>
+
+    <li><a href="opportunities.html">Opportunities</a></li>
+
+</ul>
 
                     </div>
                 </div>
@@ -561,7 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="white65 mb-0">
                             © 2026
                             <a href="index.html" class="white fw-semibold">
-                                Clarent360
+                                Evidentia
                             </a>.
                             All Rights Reserved.
                         </p>
@@ -656,6 +487,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.dispatchEvent(new CustomEvent("footerLoaded"));
     }
 
-    
-    
+
+
 });

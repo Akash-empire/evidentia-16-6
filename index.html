@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 
     <style>
         .indexx-services-menu {
@@ -234,8 +235,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                        visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .clarent-popup-overlay.active {
@@ -246,8 +247,15 @@
 
         /* Breathing neon pulse glow under the modal card */
         @keyframes card-glow-pulse {
-            0%, 100% { box-shadow: 0 24px 70px rgba(3, 23, 64, 0.18); }
-            50% { box-shadow: 0 24px 85px rgba(81, 53, 255, 0.28); }
+
+            0%,
+            100% {
+                box-shadow: 0 24px 70px rgba(3, 23, 64, 0.18);
+            }
+
+            50% {
+                box-shadow: 0 24px 85px rgba(81, 53, 255, 0.28);
+            }
         }
 
         /* Card container with dynamic, buttery spring entrance and pulse */
@@ -260,14 +268,14 @@
             position: relative;
             box-sizing: border-box;
             transform-origin: bottom left;
-            
+
             /* Default closed (minimized) state: squashed, stretched, skewed, and translated to bottom-left (Genie effect) */
             transform: scale(0.05, 0.12) translate(-42vw, 42vh) skewX(-15deg) rotate(-8deg);
             opacity: 0;
-            
+
             /* Spring slide-up opening transition */
-            transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                        opacity 0.5s ease;
+            transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.5s ease;
         }
 
 
@@ -276,8 +284,8 @@
             transform: scale(1, 1) translate(0, 0) skewX(0deg) rotate(0deg);
             opacity: 1;
             animation: card-glow-pulse 6s infinite ease-in-out;
-            transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                        opacity 0.5s ease;
+            transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.5s ease;
         }
 
         /* Elegant close button with rotational transition */
@@ -308,8 +316,8 @@
 
         /* Staggered entry transitions for modal children */
         .clarent-popup-header,
-        .clarent-popup-form > .clarent-popup-row,
-        .clarent-popup-form > .clarent-popup-group,
+        .clarent-popup-form>.clarent-popup-row,
+        .clarent-popup-form>.clarent-popup-group,
         .clarent-popup-btn {
             transform: translateY(20px);
             opacity: 0;
@@ -317,19 +325,33 @@
         }
 
         .clarent-popup-overlay.active .clarent-popup-header {
-            transform: translateY(0); opacity: 1; transition-delay: 0.1s;
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.1s;
         }
+
         .clarent-popup-overlay.active .clarent-popup-row:nth-of-type(1) {
-            transform: translateY(0); opacity: 1; transition-delay: 0.2s;
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.2s;
         }
+
         .clarent-popup-overlay.active .clarent-popup-row:nth-of-type(2) {
-            transform: translateY(0); opacity: 1; transition-delay: 0.3s;
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.3s;
         }
-        .clarent-popup-overlay.active .clarent-popup-form > .clarent-popup-group {
-            transform: translateY(0); opacity: 1; transition-delay: 0.4s;
+
+        .clarent-popup-overlay.active .clarent-popup-form>.clarent-popup-group {
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.4s;
         }
+
         .clarent-popup-overlay.active .clarent-popup-btn {
-            transform: translateY(0); opacity: 1; transition-delay: 0.48s;
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.48s;
         }
 
         /* Header typography styling */
@@ -381,10 +403,12 @@
                 grid-template-columns: 1fr;
                 gap: 16px;
             }
+
             .clarent-popup-container {
                 padding: 30px 20px;
                 margin: 15px;
             }
+
             .clarent-popup-title {
                 font-size: 22px;
             }
@@ -419,8 +443,8 @@
             transform: scale(1.18) rotate(-8deg);
         }
 
-        .clarent-popup-input, 
-        .clarent-popup-select, 
+        .clarent-popup-input,
+        .clarent-popup-select,
         .clarent-popup-textarea {
             width: 100%;
             padding: 13px 16px 13px 44px;
@@ -475,7 +499,7 @@
             font-weight: 500 !important;
             padding: 8px !important;
         }
-        
+
         .clarent-popup-select option:disabled {
             color: #8a99ad !important;
         }
@@ -508,8 +532,8 @@
         }
 
         /* Beautiful focus animations for inputs */
-        .clarent-popup-input:focus, 
-        .clarent-popup-select:focus, 
+        .clarent-popup-input:focus,
+        .clarent-popup-select:focus,
         .clarent-popup-textarea:focus {
             background: #ffffff;
             border-color: #5135ff;
@@ -538,8 +562,8 @@
             box-sizing: border-box;
         }
 
-        .clarent-popup-container .nice-select:active, 
-        .clarent-popup-container .nice-select.open, 
+        .clarent-popup-container .nice-select:active,
+        .clarent-popup-container .nice-select.open,
         .clarent-popup-container .nice-select:focus {
             border-color: #5135ff !important;
             background: #ffffff;
@@ -600,8 +624,8 @@
             transition: all 0.2s ease;
         }
 
-        .clarent-popup-container .nice-select .option:hover, 
-        .clarent-popup-container .nice-select .option.focus, 
+        .clarent-popup-container .nice-select .option:hover,
+        .clarent-popup-container .nice-select .option.focus,
         .clarent-popup-container .nice-select .option.selected.focus {
             background-color: rgba(81, 53, 255, 0.08) !important;
             color: #5135ff !important;
@@ -614,7 +638,7 @@
         }
 
         /* Error States */
-        .clarent-popup-input.error, 
+        .clarent-popup-input.error,
         .clarent-popup-textarea.error,
         .clarent-popup-select.error,
         .clarent-popup-container .nice-select.error {
@@ -622,7 +646,7 @@
             background: rgba(255, 84, 85, 0.02) !important;
         }
 
-        .clarent-popup-input.error:focus, 
+        .clarent-popup-input.error:focus,
         .clarent-popup-textarea.error:focus,
         .clarent-popup-select.error:focus,
         .clarent-popup-container .nice-select.error:focus {
@@ -631,9 +655,21 @@
 
         /* Shake animation on validation error */
         @keyframes clarent-modal-shake {
-            0%, 100% { transform: scale(1) translateY(0) translateX(0); }
-            20%, 60% { transform: scale(1) translateY(0) translateX(-6px); }
-            40%, 80% { transform: scale(1) translateY(0) translateX(6px); }
+
+            0%,
+            100% {
+                transform: scale(1) translateY(0) translateX(0);
+            }
+
+            20%,
+            60% {
+                transform: scale(1) translateY(0) translateX(-6px);
+            }
+
+            40%,
+            80% {
+                transform: scale(1) translateY(0) translateX(6px);
+            }
         }
 
         .clarent-popup-container.shake {
@@ -671,12 +707,10 @@
             left: -150%;
             width: 50%;
             height: 100%;
-            background: linear-gradient(
-                to right,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.35) 50%,
-                rgba(255, 255, 255, 0) 100%
-            );
+            background: linear-gradient(to right,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.35) 50%,
+                    rgba(255, 255, 255, 0) 100%);
             transform: skewX(-25deg);
             transition: none;
         }
@@ -702,9 +736,20 @@
 
         /* Plane fly animation on submission */
         @keyframes plane-fly-out {
-            0% { transform: translate(0, 0) scale(1) rotate(0); opacity: 1; }
-            25% { transform: translate(-12px, 6px) scale(0.9) rotate(-18deg); opacity: 0.95; }
-            100% { transform: translate(180px, -90px) scale(1.4) rotate(35deg); opacity: 0; }
+            0% {
+                transform: translate(0, 0) scale(1) rotate(0);
+                opacity: 1;
+            }
+
+            25% {
+                transform: translate(-12px, 6px) scale(0.9) rotate(-18deg);
+                opacity: 0.95;
+            }
+
+            100% {
+                transform: translate(180px, -90px) scale(1.4) rotate(35deg);
+                opacity: 0;
+            }
         }
 
         .clarent-popup-btn.submitting i.fa-paper-plane {
@@ -744,16 +789,27 @@
         }
 
         .clarent-popup-success-view.active .clarent-success-checkmark {
-            transform: translateY(0); opacity: 1; transition-delay: 0.1s;
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.1s;
         }
+
         .clarent-popup-success-view.active .clarent-popup-success-title {
-            transform: translateY(0); opacity: 1; transition-delay: 0.25s;
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.25s;
         }
+
         .clarent-popup-success-view.active .clarent-popup-success-desc {
-            transform: translateY(0); opacity: 1; transition-delay: 0.35s;
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.35s;
         }
+
         .clarent-popup-success-view.active .clarent-popup-btn {
-            transform: translateY(0); opacity: 1; transition-delay: 0.48s;
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.48s;
         }
 
         /* Animated draw checkmark styling */
@@ -828,9 +884,20 @@
         }
 
         @keyframes pulse-success {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.45); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.45);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(40, 167, 69, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
         }
 
         .clarent-popup-success-view.active .check-icon {
@@ -872,9 +939,9 @@
             opacity: 0;
             visibility: hidden;
             transform: scale(0) rotate(-45deg);
-            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                        opacity 0.4s ease, 
-                        visibility 0.4s ease;
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.4s ease,
+                visibility 0.4s ease;
         }
 
         .clarent-popup-trigger-badge.visible {
@@ -900,9 +967,9 @@
             visibility: hidden;
             transform: translateY(12px) scale(0.9);
             transform-origin: bottom left;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                        opacity 0.4s ease, 
-                        visibility 0.4s ease;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                opacity 0.4s ease,
+                visibility 0.4s ease;
             font-family: inherit;
         }
 
@@ -947,42 +1014,32 @@
             <div class="spinner">
             </div>
             <div class="txt-loading">
-                <span data-text-preloader="T" class="letters-loading">
-                    C
-                </span>
                 <span data-text-preloader="E" class="letters-loading">
-                    L
-                </span>
-                <span data-text-preloader="C" class="letters-loading">
-                    A
-                </span>
-                <span data-text-preloader="M" class="letters-loading">
-                    R
-                </span>
-                <span data-text-preloader="O" class="letters-loading">
                     E
                 </span>
-                <span data-text-preloader="O" class="letters-loading">
+                <span data-text-preloader="V" class="letters-loading">
+                    V
+                </span>
+                <span data-text-preloader="I" class="letters-loading">
+                    I
+                </span>
+                <span data-text-preloader="D" class="letters-loading">
+                    D
+                </span>
+                <span data-text-preloader="E" class="letters-loading">
+                    E
+                </span>
+                <span data-text-preloader="N" class="letters-loading">
                     N
                 </span>
-                <span data-text-preloader="O" class="letters-loading">
+                <span data-text-preloader="T" class="letters-loading">
                     T
                 </span>
-
-                <span data-text-preloader="O" class="letters-loading">
-
+                <span data-text-preloader="I" class="letters-loading">
+                    I
                 </span>
-
-                <span data-text-preloader="O" class="letters-loading">
-                    3
-                </span>
-
-                <span data-text-preloader="O" class="letters-loading">
-                    6
-                </span>
-
-                <span data-text-preloader="O" class="letters-loading">
-                    0
+                <span data-text-preloader="A" class="letters-loading">
+                    A
                 </span>
             </div>
             <p class="text-center">Loading</p>
@@ -1044,8 +1101,11 @@
         </div>
         <div class="swiper-pagination"></div>
     </section> -->
+    <div class="mouse-follower">
+        <span class="cursor-outline"></span>
+        <span class="cursor-dot"></span>
+    </div>
 
-    
 
 
     <section class="modern-cyber-hero" id="cyber-banner-mount">
@@ -1098,466 +1158,6 @@
         </div>
     </section>
 
-    <!-- About 04 start -->
-    <section class="about-section04 fix whitebg section-padding space-bottom">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                    <div class="section-title mb-xxl-5 mb-xl-4 mb-3">
-                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">
-                            ABOUT CLARENT360
-                        </span>
-
-                        <h2 class="mb-xxl-4 mb-3 wow fadeInUp black fw-bold visible-slowly-right text-smalll"
-                            data-wow-delay=".3s">
-                            Trust engineered through security
-                        </h2>
-
-                        <p class="pra fs-seven mb-4">
-                            Clarent360 delivers strategic cybersecurity, digital assurance and risk management
-                            solutions that help organizations strengthen governance, reduce cyber risk and
-                            accelerate secure business transformation.
-                        </p>
-
-                        <p class="pra fs-seven mb-4">
-                            At Clarent360, we help organizations build trust in an evolving digital world through
-                            practical cybersecurity, governance and digital assurance solutions. Our approach is
-                            focused on helping businesses understand cyber risk, strengthen resilience and securely
-                            accelerate digital transformation. By combining security engineering, compliance,
-                            cloud protection and strategic advisory services, we enable organizations to operate
-                            with confidence while protecting critical systems, data and digital ecosystems.
-                        </p>
-
-                        <p class="pra fs-seven mb-4">
-                            We believe cybersecurity is more than technology — it is about creating sustainable
-                            security cultures, improving operational resilience and enabling long-term business
-                            growth through secure innovation and trusted digital experiences.
-                        </p>
-                    </div>
-
-
-
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="about-thumb rounded-4 w-100 position-relative ps-lg-5 mt-lg-0 mt-2">
-                        <img src="assets/webimages/about.webp" alt="img" class="rounded-4 w-100">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="dealing-access-section bg-color fix section-padding">
-        <div class="container">
-            <div class="row justify-content-center mb-lg-5 mb-sm-5 mb-4 pb-lg-1">
-                <div class="col-lg-8">
-                    <div class="section-title text-center">
-                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">WHAT WE SOLVED
-                            WHAT WE OFFER FOR CUSTOMERS
-                        </span>
-                        <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                            Our Services
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center g-sm-6 g-4">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                        <a href="infrastructure-cyber-security.html">
-                    <div class="access-item text-center d-grid rounded-4 wow fadeInUp" data-wow-duration="0.5s">
-                        <h4 class="black mb-2 visible-from-bottom">
-                            Infrastructure & <br> Cyber Security
-                        </h4>
-                        <div class="icon-img">
-                            <img src="assets/img/icon/dealing2.png" alt="icon">
-                        </div>
-                        <span class="fs-seven pra">Protect, Govern and Operate with Confidence</span>
-
-                    </div>
-                </a>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                    <a href="analytical-and-engineering.html">
-                        <div class="access-item text-center d-grid rounded-4 wow fadeInUp" data-wow-duration="0.5s">
-                        <h4 class="black mb-2 visible-from-bottom">
-                            Analytics & <br> Engineering
-                        </h4>
-                        <div class="icon-img">
-                            <img src="assets/img/icon/dealing1.png" alt="icon">
-                        </div>
-                        <span class="fs-seven pra">Turn Data Into Decisions That Drive Performance</span>
-                    </div>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                    <a href="ai-bussiness-solutions.html">
-                        <div class="access-item text-center d-grid rounded-4 wow fadeInUp" data-wow-duration="0.5s">
-                        <h4 class="black mb-2 visible-from-bottom">
-                            AI & <br> Business Solutions
-                        </h4>
-                        <div class="icon-img">
-                            <img src="assets/img/icon/dealing3.png" alt="icon">
-                        </div>
-                        <span class="fs-seven pra">Intelligent Automation for Real Business Problems</span>
-                    </div>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                    <a href="hire-consultant.html">
-                        <div class="access-item text-center d-grid rounded-4 wow fadeInUp" data-wow-duration="0.5s">
-                        <h4 class="black mb-2 visible-from-bottom">
-                             Hire a <br> Consultant
-                        </h4>
-                        <div class="icon-img">
-                            <img src="assets/img/icon/dealing4.png" alt="icon">
-                        </div>
-                        <span class="fs-seven pra">Senior Expertise, On Your Terms</span>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Section start -->
-    <section class="techlogy-groth-section fix border-bottom section-padding">
-        <div class="container">
-            <div class="row g-4 justify-content-between">
-                <div class="col-lg-5 col-md-7">
-                    <div class="growth-path-item text-md-start text-center">
-                        <div class="section-title">
-                            <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
-                                SECURITY DELIVERY COVERAGE
-                            </span>
-                            <h2 class="wow fadeInUp black fw-bold visible-slowly-right text-smalll"
-                                data-wow-delay=".3s">
-                                Security, compliance
-                                and platform modernization
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-5">
-                    <div class="growth-path-item company-infowrapper p-0 m-0 bg-transparent">
-                        <div class="progress_bar d-grid gap-xxl-4 gap-3">
-                            <div class="progress_bar_item">
-                                <div class="d-flex align-items-center justify-content-between mb-xxl-2 mb-2">
-                                    <div class="item_label black fw-semibold">Security engineering</div>
-                                    <div class="item_value p1-clr fw-semibold">90%</div>
-                                </div>
-                                <div class="item_bar">
-                                    <div class="progress" data-progress="90" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="progress_bar_item">
-                                <div class="d-flex align-items-center justify-content-between mb-xxl-2 mb-2">
-                                    <div class="item_label black fw-semibold">Governance and compliance</div>
-                                    <div class="item_value p1-clr fw-semibold">95%</div>
-                                </div>
-                                <div class="item_bar">
-                                    <div class="progress" data-progress="80" style="width: 95%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Technology Section end -->
-
-    <!-- Project Section02 start -->
-    <section class="project-section fix">
-        <div class="container-fluid p-0">
-            <div class="row g-0">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="project-items04 d-flex justify-content-end flex-column gap-4">
-                        <div class="box d-flex flex-column gap-xxl-4 gap-3">
-                            <h5><a href="portfolio-details.html" class="white">Microsoft Security Reviews</a></h5>
-                            <p class="white">
-                                Microsoft 365, Purview, Defender and Intune compliance review services.
-                            </p>
-                            <a href="portfolio-details.html" class="arrows d-center rounded-circle">
-                                <i class="fa-solid fa-arrow-right white"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="project-items04 d-flex justify-content-end flex-column gap-4">
-                        <div class="box d-flex flex-column gap-xxl-4 gap-3">
-                            <h5><a href="portfolio-details.html" class="white">Zero Trust Architecture</a></h5>
-                            <p class="white">
-                                Security design, architecture and Zero Trust implementation planning.
-                            </p>
-                            <a href="portfolio-details.html" class="arrows d-center rounded-circle">
-                                <i class="fa-solid fa-arrow-right white"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="project-items04 d-flex justify-content-end flex-column gap-4">
-                        <div class="box d-flex flex-column gap-xxl-4 gap-3">
-                            <h5><a href="portfolio-details.html" class="white">PenTest Services</a></h5>
-                            <p class="white">
-                                Red teaming and web application penetration testing for real risk insight.
-                            </p>
-                            <a href="portfolio-details.html" class="arrows d-center rounded-circle">
-                                <i class="fa-solid fa-arrow-right white"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="project-items04 d-flex justify-content-end flex-column gap-4">
-                        <div class="box d-flex flex-column gap-xxl-4 gap-3">
-                            <h5><a href="portfolio-details.html" class="white">Training Solutions</a></h5>
-                            <p class="white">
-                                Cyber Security Essentials and ethical hacker training programs.
-                            </p>
-                            <a href="portfolio-details.html" class="arrows d-center rounded-circle">
-                                <i class="fa-solid fa-arrow-right white"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Business  -->
-    <section class="business-section space-bottom fix section-padding">
-        <div class="container">
-            <div class="section-title text-lg-start text-center mb-lg-5 mb-0 pb-lg-2">
-                <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                    Why clients choose our security team
-                </h2>
-            </div>
-            <div class="row g-4 justify-content-between">
-                <div class="col-lg-5 order-lg-0 order-1">
-                    <div class="business-thumbnail position-relative">
-                        <img src="assets/webimages/why.jpg" alt="img" class="mimg">
-                        <!-- Business -->
-                        <img src="assets/img/element/line-card.png" alt="img" class="line-card">
-                        <img src="assets/img/element/box-card.png" alt="img" class="box-card">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="business-content text-lg-start text-center">
-                        <p class="pra border-bottom pb-xxl-5 pb-4 mb-xxl-5 mb-4">
-                            We focus on security outcomes that can be implemented, audited and operated. Every
-                            engagement is mapped to the client's risk profile, platform stack and compliance priorities.
-                        </p>
-                    </div>
-                    <div class="row g-xxl-4 g-md-3 g-4">
-                        <div class="col-sm-6">
-                            <div class="business-items">
-                                <img src="assets/img/icon/business-icon1.png" alt="img" class="mb-4">
-                                <h5 class="black mb-md-3 mb-2">
-                                    <a href="services-details.html" class="black">End-to-end security delivery</a>
-                                </h5>
-                                <p class="pra fs-seven">
-                                    Advisory, implementation, review and managed services under one delivery model.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="business-items">
-                                <img src="assets/img/icon/business-icon2.png" alt="img" class="mb-4">
-                                <h5 class="black mb-md-3 mb-2">
-                                    <a href="services-details.html" class="black">Microsoft and AWS expertise</a>
-                                </h5>
-                                <p class="pra fs-seven">
-                                    Practical cloud security reviews across Microsoft, Intune, Defender, Purview and
-                                    AWS.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="business-items">
-                                <img src="assets/img/icon/business-icon3.png" alt="img" class="mb-4">
-                                <h5 class="black mb-md-3 mb-2">
-                                    <a href="services-details.html" class="black">Governance ready</a>
-                                </h5>
-                                <p class="pra fs-seven">
-                                    Baseline assessments, risk management audits, compliance audits and OT audits.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="business-items">
-                                <img src="assets/img/icon/business-icon4.png" alt="img" class="mb-4">
-                                <h5 class="black mb-md-3 mb-2">
-                                    <a href="services-details.html" class="black">Training led enablement</a>
-                                </h5>
-                                <p class="pra fs-seven">
-                                    Cybersecurity essentials and ethical hacker training for stronger internal
-                                    capability.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Project Section Start -->
-    <section class="project-planing-section fix space-bottom">
-        <div class="container">
-            <div class="project-planing-wrap">
-                <div class="project-planing-item d-flex align-items-center gap-xxl-4 gap-3">
-                    <span class="serial d-center rounded-circle fs-five fw-bold">01</span>
-                    <div class="cont">
-                        <h6 class="fw_700 white fs-six mb-2">
-                            Assess
-                        </h6>
-                        <p class="fs-seven white65">
-                            Review scope, controls,
-                            platforms and risk.
-                        </p>
-                    </div>
-                </div>
-                <div class="project-planing-item d-flex align-items-center gap-xxl-4 gap-3">
-                    <span class="serial d-center rounded-circle fs-five fw-bold">02</span>
-                    <div class="cont">
-                        <h6 class="fw_700 white fs-six mb-2">
-                            Implement
-                        </h6>
-                        <p class="fs-seven white65">
-                            Deploy security designs,
-                            policies and workflows.
-                        </p>
-                    </div>
-                </div>
-                <div class="project-planing-item d-flex align-items-center gap-xxl-4 gap-3">
-                    <span class="serial d-center rounded-circle fs-five fw-bold">03</span>
-                    <div class="cont">
-                        <h6 class="fw_700 white fs-six mb-2">
-                            Improve
-                        </h6>
-                        <p class="fs-seven white65">
-                            Audit, train and mature
-                            security operations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Project Section Start -->
-
-    <!-- Faq Section Start -->
-    <section class="faq-section section-padding fix bg-color">
-        <div class="container">
-            <div class="row g-4 justify-content-between">
-                <div class="col-lg-6">
-                    <div class="section-title pe-xxl-5 mb-lg-5 mb-4">
-                        <h6 class="sub-badge4 p1-clr fw-bold fs-seven text-uppercase d-block mb-xl-3 mb-2">
-                            QUESTIONS AND ANSWERS
-                        </h6>
-                        <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                            Common questions about
-                            our security services
-                        </h2>
-                    </div>
-                    <div class="faq-stresh d-flex align-items-center">
-                        <img src="assets/img/faq/faq-customer.png" alt="img" class="img rounded-circle">
-                        <div class="about-call d-flex align-items-center gap-3">
-                            <div class="icon p3-bg d-center rounded-circle">
-                                <i class="fa-solid fa-phone-volume fs-six white"></i>
-                            </div>
-                            <div class="cont">
-                                <span class="fs-seven pra d-block">Call us free</span>
-                                <a href="#0" class="fs-six black fw-semibold">
-                                    019 25648 62598
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="accordion border-0 d-flex flex-column gap-xxl-4 gap-3" id="accordionExample">
-                        <div class="accordion-item active">
-                            <div class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Which security engineering services do you provide?
-                                </button>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p class="fs-seven pra">
-                                            We provide DLP solutions, threat hunting, cloud security, Microsoft security
-                                            reviews, ServiceNow solutions, Zero Trust, RSA Archer, virtualization,
-                                            PenTest, GRC and training services.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    What Microsoft security reviews are included?
-                                </button>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>
-                                            We review Microsoft 365 security, Microsoft Purview, Microsoft Defender and
-                                            Microsoft Intune compliance configurations.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Do you support both SMB and enterprise virtualization?
-                                </button>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>
-                                            Yes. SMB solutions can include Proxmox, VMware Essentials and hyperconverged
-                                            infrastructure. Enterprise work can include VMware vSphere/ESXi and HPE
-                                            Morpheus for unified multi-cloud control.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div class="accordion-header" id="headingfour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                                    What GRC and audit services are available?
-                                </button>
-                                <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>
-                                            We support security baseline assessments, risk management audits, compliance
-                                            audits and OT audits aligned to frameworks such as Essential Eight or ISO
-                                            27001 depending on client requirements.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Sponsor Section Start -->
     <section class="sponsor-section border-bottom pb-5 fix pt-5">
         <div class="container">
@@ -1599,124 +1199,139 @@
     </section>
     <!-- Sponsor Section end -->
 
-    <!-- News Section Start -->
-    <section class="news-section section-padding fix">
+    <!-- About 04 start -->
+    <section class="about-section04 fix whitebg section-padding space-bottom">
         <div class="container">
-            <div class="section-title text-center mb-60">
-                <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
-                    SECURITY INSIGHTS
-                </span>
-                <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                    Read our latest focus areas
-                </h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-title mb-xxl-5 mb-xl-4 mb-3">
+
+                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">
+                            ABOUT EVIDENTIA
+                        </span>
+
+                        <h2 class="mb-xxl-4 mb-3 wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
+                            Advancing Research. Empowering Innovation.
+                        </h2>
+
+                        <p class="pra fs-seven mb-4">
+                            At Evidentia, with a deep understanding of the research landscape and a commitment to
+                            excellence, we aim to drive innovation and foster a thriving scientific ecosystem in India.
+                        </p>
+
+                        <p class="pra fs-seven mb-4">
+                            Our team consists of experienced researchers, consultants, and experts who are passionate
+                            about leveraging data and knowledge to empower individuals and organizations in their
+                            scientific endeavors. We hold a strong conviction that by utilizing the capabilities of
+                            research, we can unleash vast opportunities for progress and advancement in all prospects.
+                        </p>
+
+                        <p class="pra fs-seven mb-4">
+                            We provide comprehensive research solutions tailored to the unique needs of researchers,
+                            institutions, and industries. Our services encompass a wide range of areas, including
+                            research consulting, data analysis, project management, publication support, documentation
+                            and more. We combine our expertise with the latest tools and methodologies to offer
+                            evidence-based solutions that drive scientific progress.
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="about-thumb rounded-4 w-100 position-relative ps-lg-5 mt-lg-0 mt-2">
+                        <img src="assets/webimages/about.webp" alt="img" class="rounded-4 w-100">
+                    </div>
+                </div>
             </div>
-            <div class="news-wrapper">
-                <div class="row justify-content-center g-4">
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
-                            <a href="blog-details.html"
-                                class="news-image position-relative d-block rounded-3 overflow-hidden">
-                                <img src="assets/webimages/ss1.jpg" alt="news-img" class="rounded-3 overflow-hidden">
-                            </a>
-                            <div class="news-content px-0 pb-0">
-                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Cloud Security
-                                    </p>
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Microsoft
-                                    </p>
-                                </div>
-                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
-                                    <a href="blog-details.html" class="black visible-slowly-right">
-                                        How Microsoft 365 security reviews improve tenant resilience
+        </div>
+    </section>
+
+
+    <!-- Business  -->
+    <section class="business-section space-bottom fix section-padding bg-color2">
+        <div class="container">
+
+            <div class="row g-4 justify-content-between">
+                <div class="col-lg-5 order-lg-0 order-1">
+                    <div class="business-thumbnail position-relative">
+                        <img src="assets/webimages/why.jpg" alt="img" class="mimg">
+                        <!-- Business -->
+                        <img src="assets/img/element/line-card.png" alt="img" class="line-card">
+                        <img src="assets/img/element/box-card.png" alt="img" class="box-card">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="business-content text-lg-start text-center">
+                        <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
+                            Why clients choose our security team
+                        </h2>
+                        <p class="pra border-bottom pb-xxl-5 pb-4 mb-xxl-5 mb-4">
+                            At Evidentia, we combine research expertise, scientific integrity and evidence-based
+                            methodologies to deliver reliable research solutions.
+                        </p>
+                    </div>
+                    <div class="row g-xxl-4 g-md-3 g-4">
+                        <div class="col-sm-6">
+                            <div class="business-items">
+                                <img src="assets/img/icon/business-icon1.png" alt="img" class="mb-4">
+
+                                <h5 class="black mb-md-3 mb-2">
+                                    <a href="research.html" class="black">
+                                        Research Excellence
                                     </a>
-                                </h4>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="author d-flex align-items-center gap-2">
-                                        <img src="assets/img/blog/blog4-small1.png" alt="img"
-                                            class="rounded-circle author-img">
-                                        <div class="cont">
-                                            <h6 class="fs-seven fw_600 black">Security Advisory</h6>
-                                            <p class="fs-eight pra d-block">Security Review</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
-                                        <i class="fa-regular fa-eye pra"></i> 234,5k
-                                    </div>
-                                </div>
+                                </h5>
+
+                                <p class="pra fs-seven">
+                                    Delivering comprehensive research consulting and evidence-based solutions.
+                                </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
-                            <a href="blog-details.html"
-                                class="news-image position-relative d-block rounded-3 overflow-hidden">
-                                <img src="assets/webimages/ss1.jpg" alt="news-img" class="rounded-3 overflow-hidden">
-                            </a>
-                            <div class="news-content px-0 pb-0">
-                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        GRC
-                                    </p>
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Audit
-                                    </p>
-                                </div>
-                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
-                                    <a href="blog-details.html" class="black visible-slowly-right">
-                                        Building security baseline assessments for measurable improvement
+                        <div class="col-sm-6">
+                            <div class="business-items">
+                                <img src="assets/img/icon/business-icon2.png" alt="img" class="mb-4">
+
+                                <h5 class="black mb-md-3 mb-2">
+                                    <a href="data-analysis.html" class="black">
+                                        Expert Research Team
                                     </a>
-                                </h4>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="author d-flex align-items-center gap-2">
-                                        <img src="assets/img/blog/blog4-small2.png" alt="img"
-                                            class="rounded-circle author-img">
-                                        <div class="cont">
-                                            <h6 class="fs-seven fw_600 black">GRC Team</h6>
-                                            <p class="fs-eight pra d-block">Compliance Audit</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
-                                        <i class="fa-regular fa-eye pra"></i> 234,5k
-                                    </div>
-                                </div>
+                                </h5>
+
+                                <p class="pra fs-seven">
+                                    Our experienced researchers, consultants and domain experts.
+                                </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
-                            <a href="blog-details.html"
-                                class="news-image position-relative d-block rounded-3 overflow-hidden">
-                                <img src="assets/webimages/ss1.jpg" alt="news-img" class="rounded-3 overflow-hidden">
-                            </a>
-                            <div class="news-content px-0 pb-0">
-                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        PenTest
-                                    </p>
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Red Teaming
-                                    </p>
-                                </div>
-                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
-                                    <a href="blog-details.html" class="black visible-slowly-right">
-                                        Why red teaming and web application pentesting belong together
+                        <div class="col-sm-6">
+                            <div class="business-items">
+                                <img src="assets/img/icon/business-icon3.png" alt="img" class="mb-4">
+
+                                <h5 class="black mb-md-3 mb-2">
+                                    <a href="publication-support.html" class="black">
+                                        End-to-End Research Support
                                     </a>
-                                </h4>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="author d-flex align-items-center gap-2">
-                                        <img src="assets/img/blog/blog4-small3.png" alt="img"
-                                            class="rounded-circle author-img">
-                                        <div class="cont">
-                                            <h6 class="fs-seven fw_600 black">PenTest Team</h6>
-                                            <p class="fs-eight pra d-block">Threat Validation</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
-                                        <i class="fa-regular fa-eye pra"></i> 234,5k
-                                    </div>
-                                </div>
+                                </h5>
+
+                                <p class="pra fs-seven">
+                                    From project management and data analysis to publication support.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="business-items">
+                                <img src="assets/img/icon/business-icon4.png" alt="img" class="mb-4">
+
+                                <h5 class="black mb-md-3 mb-2">
+                                    <a href="training.html" class="black">
+                                        Innovation Through Knowledge
+                                    </a>
+                                </h5>
+
+                                <p class="pra fs-seven">
+                                    We empower researchers and organizations by transforming knowledge.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1725,8 +1340,770 @@
         </div>
     </section>
 
+    <!-- network Section Start -->
+    <section class="network-section fix space-top space-bottom">
+        <div class="container">
+            <div class="row justify-content-center mb-lg-5 mb-4 pb-3 text-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
+                            Advancing Research Through Innovation & Global Collaboration
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="netwrok-items border-top pt-4">
 
+                        <span class="d-flex align-items-center gap-2 fs-six pra fw-semibold mb-4 pb-lg-3">
+                            <i class="fas fa-circle p1-clr fs-eight"></i>
+                            Years of Research Excellence
+                        </span>
 
+                        <div class="content d-flex align-items-center gap-0 mb-4 pb-xl-3 pb-1">
+                            <span class="count">20</span>
+                            <span>+</span>
+                        </div>
+
+                        <p class="pra fs-seven">
+                            Two decades of empowering researchers and institutions through innovative, evidence-based
+                            research solutions.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="netwrok-items border-top pt-4">
+
+                        <span class="d-flex align-items-center gap-2 fs-six pra fw-semibold mb-4 pb-lg-3">
+                            <i class="fas fa-circle p1-clr fs-eight"></i>
+                            Research Partners
+                        </span>
+
+                        <div class="content d-flex align-items-center gap-0 mb-4 pb-xl-3 pb-1">
+                            <span class="count">250</span>
+                            <span>+</span>
+                        </div>
+
+                        <p class="pra fs-seven">
+                            Trusted collaborations with universities, healthcare organizations, industries and research
+                            professionals.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="netwrok-items border-top pt-4">
+
+                        <span class="d-flex align-items-center gap-2 fs-six pra fw-semibold mb-4 pb-lg-3">
+                            <i class="fas fa-circle p1-clr fs-eight"></i>
+                            Research Projects Delivered
+                        </span>
+
+                        <div class="content d-flex align-items-center gap-0 mb-4 pb-xl-3 pb-1">
+                            <span class="count">500</span>
+                            <span>+</span>
+                        </div>
+
+                        <p class="pra fs-seven">
+                            Successfully delivering high-quality research, publications and scientific consulting across
+                            multiple domains.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global Map -->
+            <div class="global-map mt-5 pt-5">
+
+                <img src="assets/img/map.jpg" alt="Global Map">
+
+                <!-- North America -->
+                <div class="marker marker1">
+                    <span class="label">North America</span>
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <!-- Europe -->
+                <div class="marker marker2">
+                    <span class="label">Europe</span>
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <!-- Middle East -->
+                <div class="marker marker3">
+                    <span class="label">Middle East</span>
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <!-- South Asia -->
+                <div class="marker marker4">
+                    <span class="label">South Asia</span>
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <!-- South East Asia -->
+                <div class="marker marker5">
+                    <span class="label">South-East Asia</span>
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="testimonial-section section-padding">
+        <div class="container-fluid">
+
+            <div class="testimonial-wrapper">
+
+                <!-- Left Content -->
+                <div class="testimonial-left">
+
+                    <span class="sub-title">
+                        TESTIMONIALS
+                    </span>
+
+                    <h2>
+                        What people are
+                        saying
+                        about Evidentia
+                    </h2>
+
+                    <p>
+                        Hear from researchers, institutions and industry professionals
+                        who have partnered with Evidentia to achieve impactful research,
+                        quality publications and successful project outcomes.
+                    </p>
+
+                    <a href="contact.html" class="theme-btn">
+                        Share Your Experience
+                    </a>
+
+                </div>
+
+                <!-- Right Slider -->
+                <div class="testimonial-right">
+
+                    <div class="testimonial-track">
+
+                        <!-- Card -->
+
+                        <div class="testimonial-card">
+
+                            <div class="quote">
+                                &#10077;
+                            </div>
+
+                            <p>
+                                Evidentia provided exceptional research support throughout
+                                our project. Their professionalism and domain expertise
+                                helped us complete our work with confidence.
+                            </p>
+
+                            <h4>Dr. Rajesh Kumar</h4>
+
+                            <span>Research Scientist</span>
+
+                        </div>
+
+                        <div class="testimonial-card">
+
+                            <div class="quote">
+                                &#10077;
+                            </div>
+
+                            <p>
+                                Their publication support and documentation services were
+                                outstanding. The team was responsive, knowledgeable and
+                                committed to quality.
+                            </p>
+
+                            <h4>Dr. Priya Menon</h4>
+
+                            <span>Professor</span>
+
+                        </div>
+
+                        <div class="testimonial-card">
+
+                            <div class="quote">
+                                &#10077;
+                            </div>
+
+                            <p>
+                                Evidentia helped simplify our research management process.
+                                Their guidance significantly improved the quality of our
+                                scientific documentation.
+                            </p>
+
+                            <h4>Arun Kumar</h4>
+
+                            <span>Research Associate</span>
+
+                        </div>
+
+                        <div class="testimonial-card">
+
+                            <div class="quote">
+                                &#10077;
+                            </div>
+
+                            <p>
+                                A reliable research partner with excellent analytical
+                                capabilities. We highly recommend Evidentia for academic
+                                and industrial research projects.
+                            </p>
+
+                            <h4>Prof. Meena Ravi</h4>
+
+                            <span>Academic Consultant</span>
+
+                        </div>
+
+                        <!-- Duplicate Cards for Infinite Scroll -->
+
+                        <div class="testimonial-card">
+
+                            <div class="quote">
+                                &#10077;
+                            </div>
+
+                            <p>
+                                Evidentia provided exceptional research support throughout
+                                our project. Their professionalism and domain expertise
+                                helped us complete our work with confidence.
+                            </p>
+
+                            <h4>Dr. Rajesh Kumar</h4>
+
+                            <span>Research Scientist</span>
+
+                        </div>
+
+                        <div class="testimonial-card">
+
+                            <div class="quote">
+                                &#10077;
+                            </div>
+
+                            <p>
+                                Their publication support and documentation services were
+                                outstanding. The team was responsive, knowledgeable and
+                                committed to quality.
+                            </p>
+
+                            <h4>Dr. Priya Menon</h4>
+
+                            <span>Professor</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- News Section Start -->
+    <section class="news-section section-padding fix">
+        <div class="container">
+            <div class="section-title text-center mb-60">
+                <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
+                    NEWS & EVENTS
+                </span>
+                <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
+                    Stay Updated with Our Latest Research Activities
+                </h2>
+            </div>
+            <div class="news-wrapper">
+                <div class="row justify-content-center g-4">
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
+
+                            <a href="news-details.html"
+                                class="news-image position-relative d-block rounded-3 overflow-hidden">
+                                <img src="assets/webimages/ss1.jpg" alt="Research & Innovation"
+                                    class="rounded-3 overflow-hidden">
+                            </a>
+
+                            <div class="news-content px-0 pb-0">
+
+                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
+                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
+                                        Research
+                                    </p>
+
+                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
+                                        Innovation
+                                    </p>
+                                </div>
+
+                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
+                                    <a href="news-details.html" class="black visible-slowly-right">
+                                        Advancing Scientific Research Through Collaborative Innovation
+                                    </a>
+                                </h4>
+
+                                <div class="d-flex align-items-center justify-content-between">
+
+                                    <div class="author d-flex align-items-center gap-2">
+                                        <img src="assets/img/blog/blog4-small1.png" alt="img"
+                                            class="rounded-circle author-img">
+
+                                        <div class="cont">
+                                            <h6 class="fs-seven fw_600 black">
+                                                Evidentia Research Team
+                                            </h6>
+
+                                            <p class="fs-eight pra d-block">
+                                                Research Initiative
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
+                                        <i class="fa-regular fa-calendar"></i> 15 Jul 2026
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
+
+                            <a href="news-details.html"
+                                class="news-image position-relative d-block rounded-3 overflow-hidden">
+                                <img src="assets/webimages/ss1.jpg" alt="Training" class="rounded-3 overflow-hidden">
+                            </a>
+
+                            <div class="news-content px-0 pb-0">
+
+                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
+
+                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
+                                        Workshop
+                                    </p>
+
+                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
+                                        Training
+                                    </p>
+
+                                </div>
+
+                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
+                                    <a href="news-details.html" class="black visible-slowly-right">
+                                        Empowering Researchers Through Capacity Building & Professional Development
+                                    </a>
+                                </h4>
+
+                                <div class="d-flex align-items-center justify-content-between">
+
+                                    <div class="author d-flex align-items-center gap-2">
+                                        <img src="assets/img/blog/blog4-small2.png" alt="img"
+                                            class="rounded-circle author-img">
+
+                                        <div class="cont">
+                                            <h6 class="fs-seven fw_600 black">
+                                                Training Division
+                                            </h6>
+
+                                            <p class="fs-eight pra d-block">
+                                                Professional Development
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
+                                        <i class="fa-regular fa-calendar"></i> 08 Jul 2026
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
+
+                            <a href="news-details.html"
+                                class="news-image position-relative d-block rounded-3 overflow-hidden">
+                                <img src="assets/webimages/ss1.jpg" alt="Publication" class="rounded-3 overflow-hidden">
+                            </a>
+
+                            <div class="news-content px-0 pb-0">
+
+                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
+
+                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
+                                        Publication
+                                    </p>
+
+                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
+                                        Academic
+                                    </p>
+
+                                </div>
+
+                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
+                                    <a href="news-details.html" class="black visible-slowly-right">
+                                        Supporting High-Quality Research Publications & Scientific Documentation
+                                    </a>
+                                </h4>
+
+                                <div class="d-flex align-items-center justify-content-between">
+
+                                    <div class="author d-flex align-items-center gap-2">
+                                        <img src="assets/img/blog/blog4-small3.png" alt="img"
+                                            class="rounded-circle author-img">
+
+                                        <div class="cont">
+                                            <h6 class="fs-seven fw_600 black">
+                                                Publication Support Team
+                                            </h6>
+
+                                            <p class="fs-eight pra d-block">
+                                                Academic Publication
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
+                                        <i class="fa-regular fa-calendar"></i> 01 Jul 2026
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Section Start -->
+    <section class="custom-contact-section bg-color2 fix">
+        <div class="container-fluid p-0">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-5 order-lg-0 order-1">
+                    <div class="contact-thumb1 w-100">
+                        <img src="assets/img/contact/contact-thumb1.png" alt="img" class="w-100">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="custom-contact-form">
+                        <div class="box">
+                            <h3 class="black mb-4 pb-lg-2">Get in Touch</h3>
+                            <div class="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-sm-3 gap-2 flex-wrap mb-40">
+                                <a href="#" class="d-flex align-items-center gap-1 pra fw_500">
+                                    <span class="cion p1-bg d-center rounded-circle">
+                                        <i class="fas fa-phone-volume"></i>
+                                    </span>
+                                    (+806) 000 88 99
+                                </a>
+                                <a href="#" class="d-flex align-items-center gap-1 pra fw_500">
+                                    <span class="cion p1-bg d-center rounded-circle">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.1 8.99946C6.1 9.16515 5.96569 9.29946 5.8 9.29946C5.63431 9.29946 5.5 9.16515 5.5 8.99946C5.5 8.83378 5.63431 8.69946 5.8 8.69946C5.96569 8.69946 6.1 8.83378 6.1 8.99946ZM9.3 8.99946C9.3 9.16515 9.16569 9.29946 9 9.29946C8.83431 9.29946 8.7 9.16515 8.7 8.99946C8.7 8.83378 8.83431 8.69946 9 8.69946C9.16569 8.69946 9.3 8.83378 9.3 8.99946ZM12.5 8.99946C12.5 9.16515 12.3657 9.29946 12.2 9.29946C12.0343 9.29946 11.9 9.16515 11.9 8.99946C11.9 8.83378 12.0343 8.69946 12.2 8.69946C12.3657 8.69946 12.5 8.83378 12.5 8.99946Z"
+                                                stroke="white" />
+                                            <path
+                                                d="M13 2.07026C11.8233 1.38958 10.4571 1 9 1C4.58172 1 1 4.58172 1 9C1 10.2797 1.30049 11.4893 1.83477 12.562C1.97675 12.847 2.02401 13.1729 1.94169 13.4805L1.46521 15.2613C1.25836 16.0344 1.96561 16.7416 2.73868 16.5348L4.51951 16.0583C4.82715 15.976 5.15297 16.0233 5.43802 16.1652C6.51069 16.6995 7.72025 17 9 17C13.4183 17 17 13.4183 17 9C17 7.54285 16.6104 6.17669 15.9297 5"
+                                                stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                    contact@info.com
+                                </a>
+                            </div>
+                            <form action="#0" class="row g-4">
+                                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="form-grp">
+                                        <input type="text" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="form-grp">
+                                        <input type="email" placeholder="Enter your email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="form-grp">
+                                        <input type="text" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="form-grp">
+                                        <input type="text" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="form-grp">
+                                        <textarea name="message" rows="5" placeholder="Your message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="btn-ara">
+                                        <a href="contact.html"
+                                            class="common-btn box-style cmn-style1 box-bg white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5">
+                                            Send Message
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Custom Section end -->
+
+    <!-- Faq Section Start -->
+    <!-- FAQ Section Start -->
+    <section class="faq-section section-padding fix">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+
+                <div class="col-lg-6">
+
+                    <div class="section-title pe-xxl-5 mb-lg-5 mb-4">
+
+                        <h6 class="sub-badge4 p1-clr fw-bold fs-seven text-uppercase d-block mb-xl-3 mb-2">
+                            FREQUENTLY ASKED QUESTIONS
+                        </h6>
+
+                        <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
+                            Common Questions About
+                            Evidentia Research Solutions
+                        </h2>
+
+                    </div>
+
+                    <div class="faq-stresh d-flex align-items-center">
+
+                        <img src="assets/img/faq/faq-customer.png" alt="Support" class="img rounded-circle">
+
+                        <div class="about-call d-flex align-items-center gap-3">
+
+                            <div class="icon p3-bg d-center rounded-circle">
+                                <i class="fa-solid fa-envelope fs-six white"></i>
+                            </div>
+
+                            <div class="cont">
+                                <span class="fs-seven pra d-block">
+                                    Need assistance?
+                                </span>
+
+                                <a href="mailto:info@evidentia.in" class="fs-six black fw-semibold">
+                                    info@evidentia.in
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="accordion border-0 d-flex flex-column gap-xxl-4 gap-3" id="accordionExample">
+
+                        <!-- FAQ 1 -->
+
+                        <div class="accordion-item active">
+
+                            <div class="accordion-header" id="headingOne">
+
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+                                    What research services does Evidentia provide?
+
+                                </button>
+
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <p class="fs-seven pra">
+                                            Evidentia offers comprehensive research consulting,
+                                            data analysis, project management, publication support,
+                                            documentation, capacity building and scientific advisory
+                                            services for researchers, academic institutions and industries.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- FAQ 2 -->
+
+                        <div class="accordion-item">
+
+                            <div class="accordion-header" id="headingTwo">
+
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+
+                                    Who can benefit from Evidentia's services?
+
+                                </button>
+
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <p>
+                                            Our services are designed for researchers,
+                                            universities, healthcare professionals,
+                                            government organizations, industries,
+                                            research institutions and students seeking
+                                            expert guidance throughout their research journey.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- FAQ 3 -->
+
+                        <div class="accordion-item">
+
+                            <div class="accordion-header" id="headingThree">
+
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+
+                                    Does Evidentia provide publication support?
+
+                                </button>
+
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <p>
+                                            Yes. We assist researchers with publication planning,
+                                            manuscript preparation, scientific editing,
+                                            documentation, journal selection and overall
+                                            publication support to improve research quality
+                                            and visibility.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- FAQ 4 -->
+
+                        <div class="accordion-item">
+
+                            <div class="accordion-header" id="headingFour">
+
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+
+                                    Do you offer research training and workshops?
+
+                                </button>
+
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <p>
+                                            Yes. Evidentia conducts workshops,
+                                            faculty development programs, research methodology
+                                            training, scientific writing sessions,
+                                            capacity-building initiatives and professional
+                                            development programs for researchers and institutions.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- FAQ 5 -->
+
+                        <div class="accordion-item">
+
+                            <div class="accordion-header" id="headingFive">
+
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+
+                                    How can I collaborate with Evidentia?
+
+                                </button>
+
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <p>
+                                            Researchers, institutions and organizations can
+                                            collaborate with Evidentia through research
+                                            partnerships, consultancy projects, academic
+                                            collaborations, training initiatives and
+                                            multidisciplinary research programs.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <div id="footer"></div>
 
@@ -1742,75 +2119,7 @@
             <button class="clarent-popup-close-btn" id="clarentPopupClose" aria-label="Close popup">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            
-            <!-- Form View -->
-            <div class="clarent-popup-form-view" id="clarentPopupFormView">
-                <div class="clarent-popup-header">
-                    <span class="clarent-popup-subtitle">Get in Touch</span>
-                    <h3 class="clarent-popup-title">How Can We Help You?</h3>
-                    <p class="clarent-popup-desc">Specify your details and choose the service you require. Our team will get back to you shortly.</p>
-                </div>
-                
-                <form class="clarent-popup-form" id="clarentPopupForm" novalidate>
-                    <!-- Name and Email Row -->
-                    <div class="clarent-popup-row">
-                        <div class="clarent-popup-group">
-                            <div class="clarent-popup-input-wrapper">
-                                <i class="fa-solid fa-user field-icon"></i>
-                                <input type="text" class="clarent-popup-input" id="popupName" placeholder="Full Name" required autocomplete="name">
-                            </div>
-                        </div>
-                        <div class="clarent-popup-group">
-                            <div class="clarent-popup-input-wrapper">
-                                <i class="fa-solid fa-envelope field-icon"></i>
-                                <input type="email" class="clarent-popup-input" id="popupEmail" placeholder="Email Address" required autocomplete="email">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Phone and Service Row -->
-                    <div class="clarent-popup-row">
-                        <div class="clarent-popup-group">
-                            <div class="clarent-popup-input-wrapper">
-                                <i class="fa-solid fa-phone field-icon"></i>
-                                <input type="tel" class="clarent-popup-input" id="popupPhone" placeholder="Phone Number" required autocomplete="tel">
-                            </div>
-                        </div>
-                        <div class="clarent-popup-group">
-                            <div class="clarent-popup-input-wrapper clarent-popup-select-wrapper">
-                                <i class="fa-solid fa-bell field-icon"></i>
-                                <select class="clarent-popup-select" id="popupService" required>
-                                    <option value="" disabled selected data-display="Select Service Needed">Select Service Needed</option>
-                                    <option value="IT Service & Cyber Security">IT Service & Cyber Security</option>
-                                    <option value="Analytics & Engineering">Analytics & Engineering</option>
-                                    <option value="Machine Learning & AI">Machine Learning & AI</option>
-                                    <option value="Blockchain Development">Blockchain Development</option>
-                                    <option value="Microsoft Security Reviews">Microsoft Security Reviews</option>
-                                    <option value="Zero Trust Architecture">Zero Trust Architecture</option>
-                                    <option value="PenTest Services">PenTest Services</option>
-                                    <option value="GRC and Audit Services">GRC & Audit Services</option>
-                                    <option value="Other Support">Other Support / Inquiry</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Textarea Message -->
-                    <div class="clarent-popup-group">
-                        <div class="clarent-popup-input-wrapper">
-                            <i class="fa-solid fa-comment-dots field-icon" style="top: 17px;"></i>
-                            <textarea class="clarent-popup-textarea" id="popupMessage" placeholder="How can we assist you? Tell us about your project..." required></textarea>
-                        </div>
-                    </div>
-                    
-                    <!-- Submit Button -->
-                    <button type="submit" class="clarent-popup-btn" id="popupSubmitBtn">
-                        <span>Send Request</span>
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
-            
+
             <!-- Success View -->
             <div class="clarent-popup-success-view" id="clarentPopupSuccessView">
                 <div class="clarent-success-checkmark">
@@ -1822,8 +2131,10 @@
                     </div>
                 </div>
                 <h3 class="clarent-popup-success-title" id="successTitle">Thank you!</h3>
-                <p class="clarent-popup-success-desc" id="successDesc">Your request has been received. Our team will contact you shortly.</p>
-                <button class="clarent-popup-btn" style="max-width: 200px; margin-top: 24px;" id="successCloseBtn" type="button">
+                <p class="clarent-popup-success-desc" id="successDesc">Your request has been received. Our team will
+                    contact you shortly.</p>
+                <button class="clarent-popup-btn" style="max-width: 200px; margin-top: 24px;" id="successCloseBtn"
+                    type="button">
                     <span>Close Window</span>
                 </button>
             </div>
@@ -1869,386 +2180,54 @@
 
     <script src="assets/js/common-header.js"></script>
 
+
     <!-- Clarent Popup Trigger and Form Validation Logic -->
     <script>
-        (function() {
-            function initPopup() {
-                const overlay = document.getElementById('clarentPopupOverlay');
-                const container = document.getElementById('clarentPopupContainer');
-                const formView = document.getElementById('clarentPopupFormView');
-                const successView = document.getElementById('clarentPopupSuccessView');
-                const form = document.getElementById('clarentPopupForm');
-                const badge = document.getElementById('clarentPopupBadge');
-                
-                if (!overlay || !container || !formView || !successView || !form || !badge) {
-                    console.error("Clarent Popup: Essential DOM elements not found!");
-                    return;
-                }
-                
-                const closeBtn = document.getElementById('clarentPopupClose');
-                const successCloseBtn = document.getElementById('successCloseBtn');
-                
-                const fields = [
-                    document.getElementById('popupName'),
-                    document.getElementById('popupEmail'),
-                    document.getElementById('popupPhone'),
-                    document.getElementById('popupService'),
-                    document.getElementById('popupMessage')
-                ];
+        new Swiper(".testimonialSwiper", {
 
-                function resetPopupForm() {
-                    // Reset form fields
-                    form.reset();
-                    
-                    // Re-enable input elements and remove error states
-                    fields.forEach(f => {
-                        if (f) {
-                            f.disabled = false;
-                            f.classList.remove('error');
-                        }
-                    });
-                    
-                    // Reset niceSelect
-                    const serviceField = document.getElementById('popupService');
-                    if (serviceField) {
-                        const niceSelect = serviceField.nextElementSibling;
-                        if (niceSelect && niceSelect.classList.contains('nice-select')) {
-                            niceSelect.classList.remove('disabled', 'error');
-                        }
-                        if (window.jQuery) {
-                            jQuery('#popupService').niceSelect('update');
-                        }
-                    }
-                    
-                    // Reset Submit Button
-                    const submitBtn = document.getElementById('popupSubmitBtn');
-                    if (submitBtn) {
-                        submitBtn.disabled = false;
-                        submitBtn.classList.remove('submitting');
-                        
-                        const planeIcon = submitBtn.querySelector('.fa-paper-plane');
-                        if (planeIcon) {
-                            planeIcon.style.display = '';
-                        }
-                        
-                        const btnText = submitBtn.querySelector('span');
-                        if (btnText) {
-                            btnText.textContent = 'Send Request';
-                        }
-                        
-                        const loader = submitBtn.querySelector('.loader-icon');
-                        if (loader) {
-                            loader.remove();
-                        }
-                    }
-                    
-                    // Reset View displays and classes
-                    formView.style.display = 'block';
-                    formView.style.opacity = '1';
-                    formView.style.transition = '';
-                    
-                    successView.style.display = 'none';
-                    successView.classList.remove('active');
-                }
-                               // Make floating badge always visible immediately on page load
-                showBadge();
+            loop: true,
 
-                function showPopup() {
-                    resetPopupForm();
-                    overlay.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                    badge.classList.add('active-modal'); // add colorful animated styles
-                    console.log("Clarent Popup: Modal opened successfully.");
+            speed: 3000,          // Slow transition
+
+            autoplay: {
+
+                delay: 0,          // Continuous movement
+                disableOnInteraction: false,
+
+            },
+
+            freeMode: true,
+
+            grabCursor: true,
+
+            slidesPerView: 3,
+
+            spaceBetween: 30,
+
+            navigation: {
+
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+
+            },
+
+            breakpoints: {
+
+                320: {
+                    slidesPerView: 1
+                },
+
+                768: {
+                    slidesPerView: 2
+                },
+
+                1200: {
+                    slidesPerView: 3
                 }
-                
-                function closePopup() {
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                    sessionStorage.setItem('clarent_popup_closed', 'true');
-                    badge.classList.remove('active-modal'); // restore default state
-                    console.log("Clarent Popup: Modal closed.");
-                }
-                
-                function showBadge() {
-                    badge.classList.add('visible');
-                    console.log("Clarent Trigger Badge: Displayed.");
-                }
-                
-                function hideBadge() {
-                    badge.classList.remove('visible');
-                    console.log("Clarent Trigger Badge: Hidden.");
-                }
-                
-                // Trigger timing
-                const isLocal = window.location.protocol === 'file:' || 
-                                window.location.hostname === 'localhost' || 
-                                window.location.hostname === '127.0.0.1' ||
-                                window.location.hash === '#test-popup';
-                                
-                const alreadyClosed = sessionStorage.getItem('clarent_popup_closed');
-                const alreadySubmitted = sessionStorage.getItem('clarent_popup_submitted');
-                
-                if (isLocal || (!alreadyClosed && !alreadySubmitted)) {
-                    console.log("Clarent Popup: Scheduled to show in 5 seconds.");
-                    setTimeout(showPopup, 5000);
-                } else {
-                    console.log("Clarent Popup: Suppressed by sessionStorage.");
-                }
-                
-                // Closing actions
-                if (closeBtn) closeBtn.addEventListener('click', closePopup);
-                if (successCloseBtn) successCloseBtn.addEventListener('click', closePopup);
-                
-                // Badge toggle trigger behavior
-                if (badge) {
-                    badge.addEventListener('click', function() {
-                        if (overlay.classList.contains('active')) {
-                            closePopup();
-                        } else {
-                            showPopup();
-                        }
-                    });
-                }
-                
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) {
-                        closePopup();
-                    }
-                });
-                
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                        closePopup();
-                    }
-                });
-                
-                // Input focus resets
-                fields.forEach(field => {
-                    if (!field) return;
-                    
-                    const clearError = () => {
-                        field.classList.remove('error');
-                        if (field.tagName === 'SELECT') {
-                            const niceSelect = field.nextElementSibling;
-                            if (niceSelect && niceSelect.classList.contains('nice-select')) {
-                                niceSelect.classList.remove('error');
-                            }
-                        }
-                    };
-                    
-                    field.addEventListener('input', clearError);
-                    if (field.tagName === 'SELECT') {
-                        field.addEventListener('change', clearError);
-                    } else {
-                        // Close Nice Select dropdown if the user focuses or clicks on any other inputs
-                        const closeNiceSelect = () => {
-                            const serviceField = document.getElementById('popupService');
-                            if (serviceField) {
-                                const niceSelect = serviceField.nextElementSibling;
-                                if (niceSelect && niceSelect.classList.contains('nice-select')) {
-                                    niceSelect.classList.remove('open');
-                                }
-                            }
-                        };
-                        field.addEventListener('focus', closeNiceSelect);
-                        field.addEventListener('click', closeNiceSelect);
-                    }
-                });
-                
-                // Form processing & validation
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const nameField = document.getElementById('popupName');
-                    const emailField = document.getElementById('popupEmail');
-                    const phoneField = document.getElementById('popupPhone');
-                    const serviceField = document.getElementById('popupService');
-                    const messageField = document.getElementById('popupMessage');
-                    const submitBtn = document.getElementById('popupSubmitBtn');
-                    
-                    let isValid = true;
-                    
-                    if (!nameField.value.trim()) {
-                        nameField.classList.add('error');
-                        isValid = false;
-                    }
-                    
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailField.value.trim() || !emailRegex.test(emailField.value.trim())) {
-                        emailField.classList.add('error');
-                        isValid = false;
-                    }
-                    
-                    if (!phoneField.value.trim() || phoneField.value.trim().length < 6) {
-                        phoneField.classList.add('error');
-                        isValid = false;
-                    }
-                    
-                    if (!serviceField.value) {
-                        serviceField.classList.add('error');
-                        const niceSelect = serviceField.nextElementSibling;
-                        if (niceSelect && niceSelect.classList.contains('nice-select')) {
-                            niceSelect.classList.add('error');
-                        }
-                        isValid = false;
-                    }
-                    
-                    if (!messageField.value.trim()) {
-                        messageField.classList.add('error');
-                        isValid = false;
-                    }
-                    
-                    if (!isValid) {
-                        container.classList.add('shake');
-                        setTimeout(() => {
-                            container.classList.remove('shake');
-                        }, 400);
-                        return;
-                    }
-                    
-                    // Show loading indicator & trigger paper plane fly animation
-                    submitBtn.disabled = true;
-                    submitBtn.classList.add('submitting');
-                    
-                    // Construct submit layout references
-                    const btnText = submitBtn.querySelector('span');
-                    const planeIcon = submitBtn.querySelector('.fa-paper-plane');
-                    
-                    // Create a spin loader dynamically and append it
-                    const loader = document.createElement('i');
-                    loader.className = 'fa-solid fa-spinner fa-spin loader-icon';
-                    loader.style.marginLeft = '6px';
-                    loader.style.display = 'none';
-                    submitBtn.appendChild(loader);
-                    
-                    // Plane flights off first, then text updates and spinner appears
-                    setTimeout(() => {
-                        if (planeIcon) planeIcon.style.display = 'none';
-                        if (btnText) btnText.textContent = 'Sending Request...';
-                        loader.style.display = 'inline-block';
-                    }, 400);
-                    
-                    fields.forEach(f => {
-                        if (f) f.disabled = true;
-                    });
-                    
-                    const niceSelect = serviceField.nextElementSibling;
-                    if (niceSelect && niceSelect.classList.contains('nice-select')) {
-                        niceSelect.classList.add('disabled');
-                    }
-                    
-                    // Custom Confetti Burst Explosion Particle System
-                    function triggerConfetti() {
-                        const colors = ['#5135ff', '#ff5455', '#28a745', '#ffc107', '#17a2b8', '#fd7e14'];
-                        const count = 75;
-                        
-                        for (let i = 0; i < count; i++) {
-                            const confetti = document.createElement('div');
-                            const size = Math.floor(Math.random() * 8) + 6;
-                            const color = colors[Math.floor(Math.random() * colors.length)];
-                            
-                            confetti.style.width = `${size}px`;
-                            confetti.style.height = `${size}px`;
-                            confetti.style.backgroundColor = color;
-                            confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-                            confetti.style.position = 'fixed';
-                            confetti.style.zIndex = '999999';
-                            
-                            const startX = window.innerWidth / 2;
-                            const startY = window.innerHeight / 2 - 30;
-                            
-                            confetti.style.left = `${startX}px`;
-                            confetti.style.top = `${startY}px`;
-                            
-                            document.body.appendChild(confetti);
-                            
-                            const angle = Math.random() * Math.PI * 2;
-                            const speed = Math.random() * 9 + 6;
-                            let velX = Math.cos(angle) * speed;
-                            let velY = Math.sin(angle) * speed - 2.5; // slight upward vector
-                            let posX = startX;
-                            let posY = startY;
-                            let rotation = Math.random() * 360;
-                            const rotationSpeed = Math.random() * 16 - 8;
-                            const gravity = 0.28;
-                            
-                            let opacity = 1;
-                            const startTime = Date.now();
-                            
-                            function updateConfetti() {
-                                velY += gravity;
-                                velX *= 0.98;
-                                posX += velX;
-                                posY += velY;
-                                rotation += rotationSpeed;
-                                
-                                confetti.style.left = `${posX}px`;
-                                confetti.style.top = `${posY}px`;
-                                confetti.style.transform = `rotate(${rotation}deg)`;
-                                
-                                const elapsed = Date.now() - startTime;
-                                if (elapsed > 1200) {
-                                    opacity = 1 - (elapsed - 1200) / 800;
-                                    confetti.style.opacity = opacity;
-                                }
-                                
-                                if (elapsed < 2000) {
-                                    requestAnimationFrame(updateConfetti);
-                                } else {
-                                    confetti.remove();
-                                }
-                            }
-                            
-                            requestAnimationFrame(updateConfetti);
-                        }
-                    }
-                    
-                    // Simulating network request (1.3s delay)
-                    setTimeout(function() {
-                        sessionStorage.setItem('clarent_popup_submitted', 'true');
-                        
-                        const userName = nameField.value.trim().split(' ')[0];
-                        const userEmail = emailField.value.trim();
-                        const userPhone = phoneField.value.trim();
-                        const chosenService = serviceField.value;
-                        
-                        document.getElementById('successTitle').textContent = `Thank you, ${userName}!`;
-                        document.getElementById('successDesc').innerHTML = `Your request for <strong>${chosenService}</strong> has been received.<br>Our engineering team will contact you at <strong>${userEmail}</strong> or <strong>${userPhone}</strong> within 24 hours.`;
-                        
-                        formView.style.transition = 'opacity 0.3s ease';
-                        formView.style.opacity = '0';
-                        
-                        setTimeout(function() {
-                            formView.style.display = 'none';
-                            successView.style.display = 'flex';
-                            
-                            setTimeout(function() {
-                                // Activate success class to trigger staggering & draw animations
-                                successView.classList.add('active');
-                                
-                                // Trigger colorful particle confetti explosion
-                                triggerConfetti();
-                                
-                                // Autoclose after success screen view
-                                setTimeout(function() {
-                                    if (overlay.classList.contains('active') && successView.classList.contains('active')) {
-                                        closePopup();
-                                    }
-                                }, 7000);
-                            }, 50);
-                        }, 300);
-                        
-                    }, 1300);
-                });
+
             }
 
-            // Robust document ready state listener
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initPopup);
-            } else {
-                initPopup();
-            }
-        })();
+        });
     </script>
 
 </body>

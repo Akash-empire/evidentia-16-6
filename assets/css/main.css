@@ -2973,7 +2973,7 @@ footer {
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-inline-end: 26px;
+  margin-inline-end: 16px;
 }
 
 .header-main .main-menu ul li:last-child {
