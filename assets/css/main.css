@@ -119,7 +119,7 @@ Primary use:    Visa
 }
 
 .box-style.cmn-style1::before {
-  background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
+  background: #FF5455;
   transition: all 0.7s ease;
   z-index: -1;
 }
@@ -137,7 +137,7 @@ Primary use:    Visa
 }
 
 .box-bg {
-  background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
+  background: #ffffff;
 }
 
 .cmn-tag {
@@ -423,7 +423,7 @@ footer {
 }
 
 .p1-bg {
-  background: var(--p1-clr) !important;
+  background: #ff5455;
 }
 
 .p2-clr {
@@ -2464,7 +2464,7 @@ footer {
 
 .portfolio-video {
   position: absolute;
-  width: 96px;
+  width: 360px;
   height: 96px;
   background: var(--p1-clr);
   z-index: 1;
@@ -4842,7 +4842,7 @@ footer {
 .banner-section-section05 .banner-wrapper5 .banner-counter5 {
   max-width: 320px;
   padding: 50px 50px;
-  background: linear-gradient(95deg, #5135ff 0.27%, #ff5455 99.73%);
+  background: #214080;
   clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 14%);
 }
 
@@ -5593,12 +5593,12 @@ footer {
 }
 
 .benefit-thumb3 .portfolio-video {
-  background: var(--white);
+  background: #ffffff00;
 }
 
 .benefit-thumb3 .portfolio-video::after,
 .benefit-thumb3 .portfolio-video::before {
-  border-color: var(--white);
+  border-color: #ffffff00;
 }
 
 .benefit-content-wrap .benefit-content-inner {

@@ -2214,12 +2214,6 @@ Global Map
     text-align:center;
 }
 
-.global-map img{
-    width:100%;
-    max-width:1100px;
-    opacity:.95;
-}
-
 /* Marker */
 
 .marker{
@@ -2263,31 +2257,31 @@ Global Map
     margin-top:-1px;
 }
 
-/* Locations */
+/* India Marker Positions */
 
-.marker1{
-    left:16%;
-    top:6%;
+.marker1{   /* Tamil Nadu */
+    left:49%;
+    top:76%;
 }
 
-.marker2{
-    left:45%;
-    top:18%;
+.marker2{   /* Karnataka */
+    left:43%;
+    top:58%;
 }
 
-.marker3{
-    left:56%;
-    top:11%;
+.marker3{   /* Maharashtra */
+    left:38%;
+    top:40%;
 }
 
-.marker4{
-    left:64%;
-    top:3%;
+.marker4{   /* Gujarat */
+    left:24%;
+    top:28%;
 }
 
-.marker5{
-    left:72%;
-    top:13%;
+.marker5{   /* West Bengal */
+    left:67%;
+    top:28%;
 }
 
 /* Responsive */
@@ -2296,10 +2290,6 @@ Global Map
 
 .global-map{
     overflow-x:auto;
-}
-
-.global-map img{
-    min-width:900px;
 }
 
 }
