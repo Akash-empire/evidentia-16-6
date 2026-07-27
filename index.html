@@ -1003,6 +1003,692 @@
             background: linear-gradient(135deg, #5135ff, #ff5455, #00f3ff, #ffc107);
             box-shadow: 0 10px 30px rgba(3, 23, 64, 0.2);
         }
+
+
+        /*==============================
+BENEFIT SECTION
+==============================*/
+
+        .benefit-section {
+            width: 100%;
+            padding: 0px 0;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .benefit-container {
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 0px;
+            align-items: stretch;
+        }
+
+        /*==============================
+LEFT SLIDER
+==============================*/
+
+        .left-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            width: 100%;
+            position: relative;
+        }
+
+        .left-slide {
+            display: none;
+            animation: fade .6s ease;
+        }
+
+        .left-slide.active {
+            display: block;
+        }
+
+        .left-slide img {
+            width: 100%;
+            height: 760px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .left-content {
+            position: absolute;
+            left: 50px;
+            bottom: 50px;
+            width: 75%;
+            background: #fff;
+            padding: 45px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .15);
+        }
+
+        .subtitle {
+            display: inline-block;
+            color: #ff6b00;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .left-content h2 {
+            font-size: 46px;
+            line-height: 58px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 25px;
+        }
+
+        .left-content p {
+            font-size: 16px;
+            line-height: 30px;
+            color: #666;
+        }
+
+        /*==============================
+ARROWS
+==============================*/
+
+        .slider-arrows {
+            position: absolute;
+            right: 35px;
+            bottom: 35px;
+            display: flex;
+            gap: 15px;
+            z-index: 50;
+        }
+
+        .slider-arrows button {
+            width: 58px;
+            height: 58px;
+            border: none;
+            background: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: .35s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+        }
+
+        .slider-arrows button:hover {
+            background: #ff6b00;
+            color: #fff;
+        }
+
+        /*==========================================
+RIGHT SIDE
+==========================================*/
+
+        .right-sliders {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0px;
+            height: 100%;
+        }
+
+        /*==========================================
+COMMON SLIDER
+==========================================*/
+
+        .small-slider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .small-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .small-card {
+            display: none;
+            animation: fade .6s ease;
+        }
+
+        .small-card.active {
+            display: block;
+        }
+
+        /*==========================================
+IMAGE
+==========================================*/
+
+        .small-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /*==========================================
+WHITE CONTENT BOX
+==========================================*/
+
+        .small-content {
+            background: #ffffff;
+            padding: 45px 35px;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .small-content h4 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #111;
+            line-height: 38px;
+        }
+
+        .small-content p {
+            color: #666;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        /*==========================================
+BLACK CONTENT BOX
+==========================================*/
+
+        .small-content.dark {
+            background: #111111;
+        }
+
+        .small-content.dark h4 {
+            color: #ffffff;
+        }
+
+        .small-content.dark p {
+            color: #d6d6d6;
+        }
+
+        /*==========================================
+REVERSE LAYOUT
+==========================================*/
+
+        .reverse-slider .small-card {
+            display: none;
+        }
+
+        .reverse-slider .small-card.active {
+            display: block;
+        }
+
+        .reverse-slider .small-content {
+            order: 1;
+        }
+
+        .reverse-slider img {
+            order: 2;
+        }
+
+        /*==========================================
+CARD SHADOW
+==========================================*/
+
+        .small-card {
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
+            transition: .4s;
+        }
+
+        .small-card:hover {
+            transform: translateY(-6px);
+        }
+
+        /*==========================================
+ARROWS
+==========================================*/
+
+        .small-arrow {
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            gap: 12px;
+            z-index: 99;
+        }
+
+        .small-arrow button {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: none;
+            background: #ffffff;
+            color: #111;
+            cursor: pointer;
+            font-size: 18px;
+            transition: .35s;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
+        }
+
+        .small-arrow button:hover {
+            background: #ff6b00;
+            color: #fff;
+        }
+
+        /*==========================================
+ANIMATION
+==========================================*/
+
+        @keyframes fade {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /*==========================================
+RESPONSIVE
+==========================================*/
+
+        @media (max-width:1400px) {
+
+            .left-slide img {
+                height: 680px;
+            }
+
+            .left-content {
+                width: 82%;
+                padding: 35px;
+            }
+
+            .left-content h2 {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            .small-card img {
+                height: 320px;
+            }
+
+            .small-content {
+                min-height: 220px;
+                padding: 30px;
+            }
+
+            .small-content h4 {
+                font-size: 24px;
+                line-height: 34px;
+            }
+
+        }
+
+        @media (max-width:1200px) {
+
+            .benefit-container {
+                width: 95%;
+                gap: 25px;
+            }
+
+            .left-slide img {
+                height: 600px;
+            }
+
+            .left-content {
+                width: 88%;
+                left: 30px;
+                bottom: 30px;
+            }
+
+            .left-content h2 {
+                font-size: 34px;
+                line-height: 45px;
+            }
+
+            .small-card img {
+                height: 280px;
+            }
+
+            .small-content {
+                min-height: 200px;
+            }
+
+            .small-content h4 {
+                font-size: 22px;
+            }
+
+        }
+
+        @media (max-width:991px) {
+
+            .benefit-container {
+                grid-template-columns: 1fr;
+            }
+
+            .right-sliders {
+                grid-template-columns: 1fr 1fr;
+                margin-top: 40px;
+            }
+
+            .left-slide img {
+                height: 560px;
+            }
+
+            .left-content {
+                width: 85%;
+            }
+
+        }
+
+        @media (max-width:768px) {
+
+            .benefit-section {
+                padding: 70px 0;
+            }
+
+            .right-sliders {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .left-slide img {
+                height: 450px;
+            }
+
+            .left-content {
+                position: relative;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                box-shadow: none;
+                padding: 35px 25px;
+            }
+
+            .left-content h2 {
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+            .small-card img {
+                height: 260px;
+            }
+
+            .small-content {
+                min-height: auto;
+            }
+
+            .slider-arrows,
+            .small-arrow {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+        }
+
+        @media (max-width:576px) {
+
+            .benefit-container {
+                width: 92%;
+            }
+
+            .left-slide img {
+                height: 320px;
+            }
+
+            .left-content {
+                padding: 25px;
+            }
+
+            .left-content h2 {
+                font-size: 24px;
+                line-height: 34px;
+            }
+
+            .left-content p {
+                font-size: 15px;
+                line-height: 26px;
+            }
+
+            .small-card img {
+                height: 220px;
+            }
+
+            .small-content {
+                padding: 25px;
+            }
+
+            .small-content h4 {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .small-content p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+
+            .slider-arrows button,
+            .small-arrow button {
+                width: 46px;
+                height: 46px;
+                font-size: 16px;
+            }
+
+        }
+
+        /*==========================================
+SMOOTH TRANSITIONS
+==========================================*/
+
+        .left-slide,
+        .small-card {
+            transition: all .5s ease;
+        }
+
+        .left-slide img,
+        .small-card img {
+            transition: transform .5s ease;
+        }
+
+        .left-slide:hover img,
+        .small-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .left-content,
+        .small-content {
+            transition: all .35s ease;
+        }
+
+        .small-card:hover .small-content {
+            background: #f7f7f7;
+        }
+
+        .reverse-slider .small-card:hover .small-content.dark {
+            background: #1d1d1d;
+        }
+
+        /*==========================================
+IMAGE RADIUS
+==========================================*/
+
+        .left-slide img,
+        .small-card img {
+            border-radius: 8px;
+        }
+
+        .left-content {
+            border-radius: 8px;
+        }
+
+        .small-content {
+            border-radius: 0 0 8px 8px;
+        }
+
+        .reverse-slider .small-content {
+            border-radius: 8px 8px 0 0;
+        }
+
+        /*==========================================
+SHADOW
+==========================================*/
+
+        .left-slide {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
+        }
+
+        .small-card {
+            box-shadow: 0 15px 45px rgba(0, 0, 0, .08);
+        }
+
+        /*==========================================
+ACTIVE ANIMATION
+==========================================*/
+
+        .left-slide.active,
+        .small-card.active {
+            animation: fade .6s ease;
+        }
+
+        @keyframes fade {
+
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .service-card {
+
+            height: 310px;
+
+            padding: 60px;
+
+            margin-bottom: 80px;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            border-radius: 8px;
+
+        }
+
+        .service-card h3 {
+
+            color: #fff;
+
+            font-size: 42px;
+
+            line-height: 56px;
+
+            font-weight: 700;
+
+        }
+
+        .red {
+
+            background: #e30613;
+
+        }
+
+        .blue {
+
+            background: #1b4dff;
+
+        }
+
+        .purple {
+
+            background: #6200ea;
+
+        }
+
+        .green {
+
+            background: #0f9d58;
+
+        }
+
+        .orange {
+
+            background: #ff7a00;
+
+        }
+
+        .yellow {
+            background: #fbbc05;
+        }
+
+        .audit-section {
+            position: relative;
+            background: #000 !important;
+            padding: 120px 0;
+            overflow: hidden;
+        }
+
+        .audit-fixed-content {
+            position: sticky;
+            top: 120px;
+            left: 80px;
+            width: 45%;
+            height: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .audit-tagline {
+            display: block;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .audit-heading {
+            color: #fff;
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 1.05;
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        /* keep cards above heading */
+
+        .audit-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card {
+            width: 100%;
+            min-height: 320px;
+            padding: 50px;
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 120px;
+            color: #fff;
+        }
+
+        .service-card h3 {
+            color: #fff;
+            font-size: 38px;
+            line-height: 48px;
+            font-weight: 700;
+        }
     </style>
 </head>
 
@@ -1109,76 +1795,44 @@
 
 
     <!-- Banner Section Start -->
-    <section class="banner-section-section05 fix">
+    <section class="banner-section2 fix">
         <div class="container">
-            <div class="banner-wrapper5">
-                <div class="contents">
-                    <h1 class="wow fadeInUp" data-wow-delay=".4s">
-                        The Digital Innovation
-                        Studio, where creativity
-                        meets technology
-                    </h1>
-                </div>
-                <div class="banner-counter5">
-                    <div class="mb-lg-5 mb-4">
-                        <h5 class="black mb-2 white">Agency insight</h5>
-                        <p class="fs-seven white">
-                            A future focused technology
-                        </p>
+            <div class="row g-4 justify-content-lg-between justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-content text-lg-start text-center">
+
+
+
+                        <div class="type-line white" id="typeline" style="margin-bottom: 18px;">
+                            <h1 id="typeline-text" class="white"></h1>
+                        </div>
+
+                        <div class="d-flex justify-content-lg-start justify-content-center align-items-center gap-sm-3 gap-1 wow fadeInUp"
+                            data-wow-delay=".7s">
+
+                            <div class="">
+                                <a href="services.html"
+                                    class="common-btn box-style cmn-style1 w-100 white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden bg-transparent rounded-5 n0-border">
+                                    View Services
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="banner-counter-inner d-grid gap-lg-4 gap-3">
-                        <div class="banner-counter-item d-flex align-items-center justify-content-between gap-2">
-                            <div class="cont">
-                                <h2 class="white mb-2">
-                                    97%
-                                </h2>
-                                <p class="white75">
-                                    Project successfully
-                                    completed
-                                </p>
-                            </div>
-                            <a href="about.html">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.30273 18.5996L17.3155 6.58681" stroke="white" stroke-width="1.5"
-                                        stroke-miterlimit="10" />
-                                    <path d="M17.8887 16.6206C14.9573 13.6893 15.0992 8.80347 18.2059 5.69681"
-                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
-                                    <path d="M18.2064 5.69689C15.0998 8.80354 10.214 8.94541 7.28264 6.01408"
-                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
-                                </svg>
-                            </a>
+                </div>
+                <div class="col-lg-5">
+                    <div class="banner-thumb2-wrap mt-lg-0 mt-3">
+                        <div class="thumb1">
+                            <img src="assets/img/banner/hero2-thumb.png" alt="img">
                         </div>
-                        <div class="line"></div>
-                        <div class="banner-counter-item d-flex align-items-center justify-content-between gap-2">
-                            <div class="cont">
-                                <h2 class="white mb-2">
-                                    85%
-                                </h2>
-                                <p class="white75">
-                                    Happy clients in the
-                                    worlds
-                                </p>
-                            </div>
-                            <a href="about.html">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.30273 18.5996L17.3155 6.58681" stroke="white" stroke-width="1.5"
-                                        stroke-miterlimit="10" />
-                                    <path d="M17.8887 16.6206C14.9573 13.6893 15.0992 8.80347 18.2059 5.69681"
-                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
-                                    <path d="M18.2064 5.69689C15.0998 8.80354 10.214 8.94541 7.28264 6.01408"
-                                        stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
-                                </svg>
-                            </a>
-                        </div>
+                        <!-- Ele -->
+                        <img src="assets/img/element/flowwer-ele.png" alt="img" class="flower-ele">
+                        <img src="assets/img/element/dot-cmns.png" alt="img" class="cmns-dots">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="banner-thumb5 w-100">
-            <img src="assets/img/banner/hero-thumb5.png" alt="img" class="w-100">
-        </div>
+        <!--  -->
+        <img src="assets/img/element/dot-cmns.png" alt="img" class="cmns-dots">
     </section>
     <!-- Banner Section Start -->
 
@@ -1252,7 +1906,6 @@
 
                 <div class="col-lg-8 col-md-8 wow fadeInUp" data-wow-delay=".5s">
                     <div class="studies-right-box p1-bg rounded-3 p-xxl-5 p-xl-4 p-3">
-                        <span class="d-block fs-seven white mb-xxl-4 mb-xl-3 mb-2">Who We Are </span>
                         <h4 style="margin-bottom: 15px;">
                             <a href="portfolio-details.html" class="white">
                                 User-friendly interface
@@ -1260,21 +1913,9 @@
                             </a>
                         </h4>
                         <p class="fs-seven white">
-                            At Evidentia, with a deep understanding of the research landscape and a commitment to
-                            excellence, we aim to drive innovation and foster a thriving scientific ecosystem in India.
-                        </p>
-                        <p class="fs-seven white">
-                            Our team consists of experienced researchers, consultants, and experts who are passionate
-                            about leveraging data and knowledge to empower individuals and organizations in their
-                            scientific endeavors. We hold a strong conviction that by utilizing the capabilities of
-                            research, we can unleash vast opportunities for progress and advancement in all prospects.
-                        </p>
-                        <p class="fs-seven white">
-                            We provide comprehensive research solutions tailored to the unique needs of researchers,
-                            institutions, and industries. Our services encompass a wide range of areas, including
-                            research consulting, data analysis, project management, publication support, documentation
-                            and more. We combine our expertise with the latest tools and methodologies to offer
-                            evidence-based solutions that drive scientific progress.
+                            Evidentia Research Solutions helps turn complex questions into meaningful evidence. We
+                            partner with researchers, organizations, NGOs, businesses, and governments to deliver
+                            end-to-end research that informs decisions and creates lasting impact.
                         </p>
 
                     </div>
@@ -1286,12 +1927,16 @@
 
                             <div class="cont-area d-flex align-items-end justify-content-between">
                                 <div class="cont">
-                                    <h4>
+                                    <h4 style="margin-bottom: 15px;">
                                         <a href="portfolio-details.html" class="white">
-                                            Theme’s Figma design source files
-                                            go with your purchase.
+                                            "Research is meaningful when it helps someone make a better decision.”
                                         </a>
                                     </h4>
+                                    <p class="fs-seven white">
+                                        At Evidentia, we believe research should guide future actions. Every project
+                                        here is driven by scientific rigour, ethical practice, and a commitment to
+                                        creating evidence and delivers meaningful outcome.
+                                    </p>
                                 </div>
 
                             </div>
@@ -1304,106 +1949,321 @@
         </div>
     </section>
 
-    <!-- Benefit Section Start -->
-    <section class="benifit-section fix space-top">
-        <div class="container-fluid p-0">
-            <div class="row g-md-0 g-4 align-items-lg-end">
-                <div class="col-lg-5 col-md-5">
-                    <div class="benefit-thumb3 position-relative d-center w-100">
-                        <img src="assets/img/watch/benifit-thumb1.png" alt="img" class="w-100">
-                        <div class="portfolio-video">
-                            <h2 class="mb-xxl-4 wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                                Let’s build your success
-                                with Teclo solution
+    <!-- ===========================
+     BENEFITS / PORTFOLIO SECTION
+============================ -->
+    <section class="benefit-section">
+
+        <div class="benefit-container">
+
+            <!-- LEFT BIG SLIDER -->
+            <div class="left-slider">
+
+                <div class="slider-wrapper" id="leftSlider">
+
+                    <!-- Slide 1 -->
+                    <div class="left-slide active">
+
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                            alt="">
+
+                        <div class="left-content">
+                            <span class="subtitle">
+                                COMPANY BENEFITS
+                            </span>
+
+                            <h2>
+                                Let's build your success
+                                with Teclo Solution
                             </h2>
-                            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
-                                iure ipsam explicabo sapiente in error nobis? Optio unde quo odio!</p>
+
+                            <p>
+                                Design studio founded in London and expanded our
+                                services into a multinational company providing
+                                innovative digital solutions.
+                            </p>
                         </div>
 
                     </div>
-                </div>
-                <div class="col-lg-7 col-md-7">
-                    <div class="benefit-content-wrap">
-                        <div class="benefit-content-inner">
-                            <div class="section-title mb-xxl-5 mb-xl-4 mb-4">
-                                <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">
-                                    COMPANY BENIFITS
-                                </span>
-                                <h2 class="mb-xxl-4 mb-3 wow fadeInUp black fw-bold visible-slowly-right"
-                                    data-wow-delay=".3s">
-                                    Let’s build your success
-                                    with Teclo solution
-                                </h2>
 
-                            </div>
+                    <!-- Slide 2 -->
+                    <div class="left-slide">
+
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                            alt="">
+
+                        <div class="left-content">
+
+                            <span class="subtitle">
+                                COMPANY BENEFITS
+                            </span>
+
+                            <h2>
+                                Creative Technology
+                                for Modern Business
+                            </h2>
+
+                            <p>
+                                We create powerful experiences through strategy,
+                                design and technology that help brands grow.
+                            </p>
 
                         </div>
-                        <div class="row g-0">
 
-                            <div class="col-lg-6 col-md-12 col-sm-6">
-                                <div class="thumb w-100">
-                                    <img src="assets/img/watch/benifit-thumb2.png" alt="img" class="w-100">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-6">
-                                <div class="benefit-content-box p-xxl-0 p-4 h-100 d-center">
-                                    <div class="boxin">
-                                        <div class="box wow fadeInUp" data-wow-delay=".3s">
-                                            <h4 class="black mb-xxl-3 mb-2">Service and gurantees</h4>
-                                            <p class="fs-seven pra">
-                                                Design studio founded in London and expanded our services, and become a
-                                                multinational firm, offering services and
-                                                solutions.
-                                            </p>
-                                        </div>
-                                        <div class="box wow fadeInUp" data-wow-delay=".5s">
-                                            <h4 class="black mb-xxl-3 mb-2">Team of professionals</h4>
-                                            <p class="fs-seven pra">
-                                                Design studio founded in London and expanded our services, and become a
-                                                multinational firm, offering services and
-                                                solutions.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row g-0">
-                            <div class="col-lg-6 col-md-12 col-sm-6">
-                                <div class="benefit-content-box p-xxl-0 p-4 h-100 d-center"
-                                    style="background-color: #000000;">
-                                    <div class="boxin">
-                                        <div class="box wow fadeInUp" data-wow-delay=".3s">
-                                            <h4 class="black mb-xxl-3 mb-2" style="color: #fff;">Service and gurantees
-                                            </h4>
-                                            <p class="fs-seven pra" style="color: #fff;">
-                                                Design studio founded in London and expanded our services, and become a
-                                                multinational firm, offering services and
-                                                solutions.
-                                            </p>
-                                        </div>
-                                        <div class="box wow fadeInUp" data-wow-delay=".5s">
-                                            <h4 class="black mb-xxl-3 mb-2" style="color: #fff;">Team of professionals
-                                            </h4>
-                                            <p class="fs-seven pra" style="color: #fff;">
-                                                Design studio founded in London and expanded our services, and become a
-                                                multinational firm, offering services and
-                                                solutions.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-6">
-                                <div class="thumb w-100">
-                                    <img src="assets/img/watch/benifit-thumb2.png" alt="img" class="w-100">
-                                </div>
-                            </div>
-                        </div>
                     </div>
+
+                    <!-- Slide 3 -->
+                    <div class="left-slide">
+
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                            alt="">
+
+                        <div class="left-content">
+
+                            <span class="subtitle">
+                                COMPANY BENEFITS
+                            </span>
+
+                            <h2>
+                                We Deliver Smart
+                                Digital Solutions
+                            </h2>
+
+                            <p>
+                                Helping organizations transform their ideas into
+                                scalable digital products and services.
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
+                <!-- LEFT ARROWS -->
+
+                <div class="slider-arrows">
+
+                    <button id="leftPrev">
+
+                        <i class="fas fa-arrow-left"></i>
+
+                    </button>
+
+                    <button id="leftNext">
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
             </div>
+
+
+
+            <!-- =======================
+             RIGHT SIDE
+        ======================== -->
+
+            <div class="right-sliders">
+
+
+
+                <!-- FIRST COLUMN -->
+
+                <div class="small-slider">
+
+                    <div class="small-wrapper" id="middleSlider">
+
+                        <!-- CARD 1 -->
+
+                        <div class="small-card active">
+
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                                alt="">
+
+                            <div class="small-content">
+
+                                <h4>
+                                    Service &
+                                    Guarantees
+                                </h4>
+
+                                <p>
+                                    We ensure high quality services with
+                                    experienced professionals.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CARD 2 -->
+
+                        <div class="small-card">
+
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                                alt="">
+
+                            <div class="small-content">
+
+                                <h4>
+                                    Dedicated Team
+                                </h4>
+
+                                <p>
+                                    Our skilled professionals deliver
+                                    innovative business solutions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CARD 3 -->
+
+                        <div class="small-card">
+
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                                alt="">
+
+                            <div class="small-content">
+
+                                <h4>
+                                    Modern Strategy
+                                </h4>
+
+                                <p>
+                                    Helping brands achieve better
+                                    digital growth.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="slider-arrows small-arrow">
+
+                        <button id="middlePrev">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+
+                        <button id="middleNext">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- SECOND COLUMN (Reverse Layout) -->
+
+                <div class="small-slider reverse-slider">
+
+                    <div class="small-wrapper" id="rightSlider">
+
+                        <!-- CARD 1 -->
+
+                        <div class="small-card active">
+
+                            <div class="small-content dark">
+
+                                <h4>
+                                    Service &
+                                    Guarantees
+                                </h4>
+
+                                <p>
+                                    We provide dependable solutions backed by
+                                    industry expertise and long-term support.
+                                </p>
+
+                            </div>
+
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                                alt="">
+
+                        </div>
+
+
+
+                        <!-- CARD 2 -->
+
+                        <div class="small-card">
+
+                            <div class="small-content dark">
+
+                                <h4>
+                                    Professional Team
+                                </h4>
+
+                                <p>
+                                    Our experienced specialists work closely
+                                    with every client to achieve success.
+                                </p>
+
+                            </div>
+
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                                alt="">
+
+                        </div>
+
+
+
+                        <!-- CARD 3 -->
+
+                        <div class="small-card">
+
+                            <div class="small-content dark">
+
+                                <h4>
+                                    Business Growth
+                                </h4>
+
+                                <p>
+                                    Helping organizations grow through
+                                    innovative digital transformation.
+                                </p>
+
+                            </div>
+
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/708/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg"
+                                alt="">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Right Slider Arrows -->
+
+                    <div class="slider-arrows small-arrow">
+
+                        <button id="rightPrev">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+
+                        <button id="rightNext">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
     <!-- network Section Start -->
@@ -1416,20 +2276,22 @@
                             Advancing Research Through Innovation & Global Collaboration
                         </h2>
 
-                        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet
+                        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor
+                            sit amet
                             consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Quisquam, quod.
-                        </p> 
+                        </p>
                         <br>
-                        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet
+                        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor
+                            sit amet
                             consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Quisquam, quod.
                         </p>
                     </div>
                 </div>
             </div>
-           
-           
+
+
 
         </div>
     </section>
@@ -1510,47 +2372,74 @@
                 </div>
             </div>
 
-            <!-- Global Map -->
-            <div class="global-map">
-                 <img src="assets/img/map.jpg" alt="Global Map">
 
-    <!-- Tamil Nadu -->
-    <div class="marker marker1">
-        <span class="label">Tamil Nadu</span>
-        <span class="line"></span>
-        <span class="dot"></span>
-    </div>
 
-    <!-- Karnataka -->
-    <div class="marker marker2">
-        <span class="label">Karnataka</span>
-        <span class="line"></span>
-        <span class="dot"></span>
-    </div>
+        </div>
+    </section>
 
-    <!-- Maharashtra -->
-    <div class="marker marker3">
-        <span class="label">Maharashtra</span>
-        <span class="line"></span>
-        <span class="dot"></span>
-    </div>
+    <section class="audit-section fix">
+        <div class="audit-fixed-content">
+            <span class="audit-tagline">
+                We support every stage of your journey.
+            </span>
 
-    <!-- Gujarat -->
-    <div class="marker marker4">
-        <span class="label">Gujarat</span>
-        <span class="line"></span>
-        <span class="dot"></span>
-    </div>
+            <h2 class="audit-heading">
+                How We Can Help
+            </h2>
+        </div>
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                    <div class="service-card red">
+                        <h3>Research & Evaluation</h3>
+                    </div>
 
-    <!-- West Bengal -->
-    <div class="marker marker5">
-        <span class="label">West Bengal</span>
-        <span class="line"></span>
-        <span class="dot"></span>
-    </div>
 
-</div>
+                </div>
 
+                <div class="col-lg-6">
+                    <div class="service-card blue">
+                        <h3>Monitoring & Evaluation</h3>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-6"></div>
+
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                    <div class="service-card purple">
+                        <h3>Data Analytics</h3>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card green">
+                        <h3>Scientific Writing & Publications</h3>
+                    </div>
+
+                </div>
+                <div class="col-lg-6"></div>
+
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                    <div class="service-card orange">
+                        <h3>Documentation & Knowledge Products</h3>
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card yellow">
+                        <h3>Capacity Building & Training</h3>
+                    </div>
+
+                </div>
+                <div class="col-lg-6"></div>
+            </div>
         </div>
     </section>
 
@@ -1567,15 +2456,11 @@
                     </span>
 
                     <h2>
-                        What people are
-                        saying
-                        about Evidentia
+                        Why They Choose Evidentia
                     </h2>
 
                     <p>
-                        Hear from researchers, institutions and industry professionals
-                        who have partnered with Evidentia to achieve impactful research,
-                        quality publications and successful project outcomes.
+                        Hear from the people and organizations we've partnered with.
                     </p>
 
                     <a href="contact.html" class="theme-btn">
@@ -1598,14 +2483,14 @@
                             </div>
 
                             <p>
-                                Evidentia provided exceptional research support throughout
-                                our project. Their professionalism and domain expertise
-                                helped us complete our work with confidence.
+                                Evidentia has been an invaluable partner in strengthening our monitoring and evaluation
+                                systems. Their support has significantly improved how we measure, understand, and
+                                communicate our impact.
                             </p>
 
-                            <h4>Dr. Rajesh Kumar</h4>
+                            <h4>Vaishnavi Welfare &amp; Charitable Trust</h4>
 
-                            <span>Research Scientist</span>
+                            <span>NGO Partner</span>
 
                         </div>
 
@@ -1616,14 +2501,14 @@
                             </div>
 
                             <p>
-                                Their publication support and documentation services were
-                                outstanding. The team was responsive, knowledgeable and
-                                committed to quality.
+                                It's been a pleasant journey all the way, working with a dedicated team of young
+                                professionals who are always willing to customize their services based on client needs
+                                within the specified deadlines.
                             </p>
 
-                            <h4>Dr. Priya Menon</h4>
+                            <h4>D. Padmalakshmi</h4>
 
-                            <span>Professor</span>
+                            <span>Research Scholar</span>
 
                         </div>
 
@@ -1634,14 +2519,13 @@
                             </div>
 
                             <p>
-                                Evidentia helped simplify our research management process.
-                                Their guidance significantly improved the quality of our
-                                scientific documentation.
+                                Their willingness to listen, understand our needs, and simplify complex proposal
+                                development made all the difference.
                             </p>
 
-                            <h4>Arun Kumar</h4>
+                            <h4>Andhra Mahila Sabha Skill Development Centre</h4>
 
-                            <span>Research Associate</span>
+                            <span>Institutional Partner</span>
 
                         </div>
 
@@ -1652,14 +2536,13 @@
                             </div>
 
                             <p>
-                                A reliable research partner with excellent analytical
-                                capabilities. We highly recommend Evidentia for academic
-                                and industrial research projects.
+                                Thank you so much for the session. Sevathal conducted it in a very engaging and
+                                interactive manner. We would love to plan more sessions like this in the future.
                             </p>
 
-                            <h4>Prof. Meena Ravi</h4>
+                            <h4>Aarvam NGO</h4>
 
-                            <span>Academic Consultant</span>
+                            <span>Capacity Building Partner</span>
 
                         </div>
 
@@ -1672,14 +2555,13 @@
                             </div>
 
                             <p>
-                                Evidentia provided exceptional research support throughout
-                                our project. Their professionalism and domain expertise
-                                helped us complete our work with confidence.
+                                The team is knowledgeable, patient, and persistent. Under Dr. Niraimathi's leadership,
+                                every project was executed to perfection.
                             </p>
 
-                            <h4>Dr. Rajesh Kumar</h4>
+                            <h4>Sayee Bhuvaneswari</h4>
 
-                            <span>Research Scientist</span>
+                            <span>Research Scholar</span>
 
                         </div>
 
@@ -1690,14 +2572,14 @@
                             </div>
 
                             <p>
-                                Their publication support and documentation services were
-                                outstanding. The team was responsive, knowledgeable and
-                                committed to quality.
+                                Evidentia has been an invaluable partner in strengthening our monitoring and evaluation
+                                systems. Their support has significantly improved how we measure, understand, and
+                                communicate our impact.
                             </p>
 
-                            <h4>Dr. Priya Menon</h4>
+                            <h4>Vaishnavi Welfare &amp; Charitable Trust</h4>
 
-                            <span>Professor</span>
+                            <span>NGO Partner</span>
 
                         </div>
 
@@ -1710,187 +2592,6 @@
         </div>
     </section>
 
-    <!-- News Section Start -->
-    <section class="news-section section-padding fix">
-        <div class="container">
-            <div class="section-title text-center mb-60">
-                <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
-                    NEWS & EVENTS
-                </span>
-                <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                    Stay Updated with Our Latest Research Activities
-                </h2>
-            </div>
-            <div class="news-wrapper">
-                <div class="row justify-content-center g-4">
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
-
-                            <a href="news-details.html"
-                                class="news-image position-relative d-block rounded-3 overflow-hidden">
-                                <img src="assets/webimages/ss1.jpg" alt="Research & Innovation"
-                                    class="rounded-3 overflow-hidden">
-                            </a>
-
-                            <div class="news-content px-0 pb-0">
-
-                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Research
-                                    </p>
-
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Innovation
-                                    </p>
-                                </div>
-
-                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
-                                    <a href="news-details.html" class="black visible-slowly-right">
-                                        Advancing Scientific Research Through Collaborative Innovation
-                                    </a>
-                                </h4>
-
-                                <div class="d-flex align-items-center justify-content-between">
-
-                                    <div class="author d-flex align-items-center gap-2">
-                                        <img src="assets/img/blog/blog4-small1.png" alt="img"
-                                            class="rounded-circle author-img">
-
-                                        <div class="cont">
-                                            <h6 class="fs-seven fw_600 black">
-                                                Evidentia Research Team
-                                            </h6>
-
-                                            <p class="fs-eight pra d-block">
-                                                Research Initiative
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
-                                        <i class="fa-regular fa-calendar"></i> 15 Jul 2026
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
-
-                            <a href="news-details.html"
-                                class="news-image position-relative d-block rounded-3 overflow-hidden">
-                                <img src="assets/webimages/ss1.jpg" alt="Training" class="rounded-3 overflow-hidden">
-                            </a>
-
-                            <div class="news-content px-0 pb-0">
-
-                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
-
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Workshop
-                                    </p>
-
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Training
-                                    </p>
-
-                                </div>
-
-                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
-                                    <a href="news-details.html" class="black visible-slowly-right">
-                                        Empowering Researchers Through Capacity Building & Professional Development
-                                    </a>
-                                </h4>
-
-                                <div class="d-flex align-items-center justify-content-between">
-
-                                    <div class="author d-flex align-items-center gap-2">
-                                        <img src="assets/img/blog/blog4-small2.png" alt="img"
-                                            class="rounded-circle author-img">
-
-                                        <div class="cont">
-                                            <h6 class="fs-seven fw_600 black">
-                                                Training Division
-                                            </h6>
-
-                                            <p class="fs-eight pra d-block">
-                                                Professional Development
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
-                                        <i class="fa-regular fa-calendar"></i> 08 Jul 2026
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="news-single-items rounded-3 p-xxl-4 p-xl-3 p-3 border overflow-hidden style1">
-
-                            <a href="news-details.html"
-                                class="news-image position-relative d-block rounded-3 overflow-hidden">
-                                <img src="assets/webimages/ss1.jpg" alt="Publication" class="rounded-3 overflow-hidden">
-                            </a>
-
-                            <div class="news-content px-0 pb-0">
-
-                                <div class="d-flex align-items-center gap-2 mb-xl-4 mb-3">
-
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Publication
-                                    </p>
-
-                                    <p class="border rounded-5 fs-nine pra d-inline-block py-2 px-4 text-center">
-                                        Academic
-                                    </p>
-
-                                </div>
-
-                                <h4 class="mb-xxl-4 mb-3 pb-xxl-1">
-                                    <a href="news-details.html" class="black visible-slowly-right">
-                                        Supporting High-Quality Research Publications & Scientific Documentation
-                                    </a>
-                                </h4>
-
-                                <div class="d-flex align-items-center justify-content-between">
-
-                                    <div class="author d-flex align-items-center gap-2">
-                                        <img src="assets/img/blog/blog4-small3.png" alt="img"
-                                            class="rounded-circle author-img">
-
-                                        <div class="cont">
-                                            <h6 class="fs-seven fw_600 black">
-                                                Publication Support Team
-                                            </h6>
-
-                                            <p class="fs-eight pra d-block">
-                                                Academic Publication
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
-                                        <i class="fa-regular fa-calendar"></i> 01 Jul 2026
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Custom Section Start -->
     <section class="custom-contact-section bg-color2 fix" style="background-color: #214080;">
@@ -2018,7 +2719,7 @@
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
-                                    What research services does Evidentia provide?
+                                    Who do you work with?
 
                                 </button>
 
@@ -2028,10 +2729,9 @@
                                     <div class="accordion-body">
 
                                         <p class="fs-seven pra">
-                                            Evidentia offers comprehensive research consulting,
-                                            data analysis, project management, publication support,
-                                            documentation, capacity building and scientific advisory
-                                            services for researchers, academic institutions and industries.
+                                            We collaborate with researchers, universities, healthcare institutions,
+                                            NGOs, government agencies, development organizations, and private-sector
+                                            partners.
                                         </p>
 
                                     </div>
@@ -2051,7 +2751,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 
-                                    Who can benefit from Evidentia's services?
+                                    What stage of research can you support?
 
                                 </button>
 
@@ -2061,11 +2761,9 @@
                                     <div class="accordion-body">
 
                                         <p>
-                                            Our services are designed for researchers,
-                                            universities, healthcare professionals,
-                                            government organizations, industries,
-                                            research institutions and students seeking
-                                            expert guidance throughout their research journey.
+                                            From refining research questions and designing studies to data collection,
+                                            analysis, monitoring &amp; evaluation, scientific publications, and capacity
+                                            building, we support every stage of the research journey.
                                         </p>
 
                                     </div>
@@ -2085,7 +2783,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 
-                                    Does Evidentia provide publication support?
+                                    Can your services be customized to our project?
 
                                 </button>
 
@@ -2095,11 +2793,8 @@
                                     <div class="accordion-body">
 
                                         <p>
-                                            Yes. We assist researchers with publication planning,
-                                            manuscript preparation, scientific editing,
-                                            documentation, journal selection and overall
-                                            publication support to improve research quality
-                                            and visibility.
+                                            Absolutely. Every project is different. We tailor our approach, methodology,
+                                            timelines, and deliverables to align with your objectives and requirements.
                                         </p>
 
                                     </div>
@@ -2119,7 +2814,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
 
-                                    Do you offer research training and workshops?
+                                    Can Evidentia undertake research for organizations and institutions?
 
                                 </button>
 
@@ -2129,11 +2824,9 @@
                                     <div class="accordion-body">
 
                                         <p>
-                                            Yes. Evidentia conducts workshops,
-                                            faculty development programs, research methodology
-                                            training, scientific writing sessions,
-                                            capacity-building initiatives and professional
-                                            development programs for researchers and institutions.
+                                            Yes. We partner with organizations on commissioned research, impact
+                                            evaluations, monitoring &amp; evaluation, needs assessments, policy
+                                            research, implementation research, and other evidence-based projects.
                                         </p>
 
                                     </div>
@@ -2153,7 +2846,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
 
-                                    How can I collaborate with Evidentia?
+                                    Do you support scientific publications and knowledge products?
 
                                 </button>
 
@@ -2163,11 +2856,38 @@
                                     <div class="accordion-body">
 
                                         <p>
-                                            Researchers, institutions and organizations can
-                                            collaborate with Evidentia through research
-                                            partnerships, consultancy projects, academic
-                                            collaborations, training initiatives and
-                                            multidisciplinary research programs.
+                                            Yes. We assist with manuscript development, scientific writing, technical
+                                            reports, policy briefs, evidence synthesis, and publication support to help
+                                            translate research into meaningful outputs.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="accordion-item">
+
+                            <div class="accordion-header" id="headingSix">
+
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+
+                                    How do we get started?
+
+                                </button>
+
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#accordionExample">
+
+                                    <div class="accordion-body">
+
+                                        <p>
+                                            Simply share your research idea or organizational requirement. We'll
+                                            understand your goals, discuss the best approach, and recommend the support
+                                            that fits your needs.
                                         </p>
 
                                     </div>
@@ -2309,6 +3029,210 @@
             }
 
         });
+    </script>
+
+    <script>
+        /*=========================================
+LEFT SLIDER
+=========================================*/
+
+        const leftSlides = document.querySelectorAll("#leftSlider .left-slide");
+
+        let leftIndex = 0;
+
+        function showLeftSlide(index) {
+
+            if (index >= leftSlides.length) {
+                leftIndex = 0;
+            }
+
+            if (index < 0) {
+                leftIndex = leftSlides.length - 1;
+            }
+
+            leftSlides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            leftSlides[leftIndex].classList.add("active");
+        }
+
+        document.getElementById("leftNext").addEventListener("click", () => {
+
+            leftIndex++;
+
+            showLeftSlide(leftIndex);
+
+        });
+
+        document.getElementById("leftPrev").addEventListener("click", () => {
+
+            leftIndex--;
+
+            showLeftSlide(leftIndex);
+
+        });
+
+
+        /*=========================================
+        MIDDLE SLIDER
+        =========================================*/
+
+        const middleSlides = document.querySelectorAll("#middleSlider .small-card");
+
+        let middleIndex = 0;
+
+        function showMiddleSlide(index) {
+
+            if (index >= middleSlides.length) {
+                middleIndex = 0;
+            }
+
+            if (index < 0) {
+                middleIndex = middleSlides.length - 1;
+            }
+
+            middleSlides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            middleSlides[middleIndex].classList.add("active");
+
+        }
+
+        document.getElementById("middleNext").addEventListener("click", () => {
+
+            middleIndex++;
+
+            showMiddleSlide(middleIndex);
+
+        });
+
+        document.getElementById("middlePrev").addEventListener("click", () => {
+
+            middleIndex--;
+
+            showMiddleSlide(middleIndex);
+
+        });
+
+
+        /*=========================================
+        RIGHT SLIDER
+        =========================================*/
+
+        const rightSlides = document.querySelectorAll("#rightSlider .small-card");
+
+        let rightIndex = 0;
+
+        function showRightSlide(index) {
+
+            if (index >= rightSlides.length) {
+                rightIndex = 0;
+            }
+
+            if (index < 0) {
+                rightIndex = rightSlides.length - 1;
+            }
+
+            rightSlides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            rightSlides[rightIndex].classList.add("active");
+
+        }
+
+        document.getElementById("rightNext").addEventListener("click", () => {
+
+            rightIndex++;
+
+            showRightSlide(rightIndex);
+
+        });
+
+        document.getElementById("rightPrev").addEventListener("click", () => {
+
+            rightIndex--;
+
+            showRightSlide(rightIndex);
+
+        });
+
+
+        /*=========================================
+        AUTO PLAY
+        =========================================*/
+
+        setInterval(() => {
+
+            leftIndex++;
+
+            showLeftSlide(leftIndex);
+
+        }, 5000);
+
+
+        setInterval(() => {
+
+            middleIndex++;
+
+            showMiddleSlide(middleIndex);
+
+        }, 5500);
+
+
+        setInterval(() => {
+
+            rightIndex++;
+
+            showRightSlide(rightIndex);
+
+        }, 6000);
+
+
+        /*=========================================
+        INITIALIZE
+        =========================================*/
+
+        showLeftSlide(leftIndex);
+
+        showMiddleSlide(middleIndex);
+
+        showRightSlide(rightIndex);
+
+    </script>
+
+    <script>
+        const phrases = [
+            "End-to-end research solutions, tailored to every challenge",
+            "Research, evaluation, analytics, and scientific support ~ All under one roof",
+            "Helping organizations make confident decisions through research"
+        ];
+        const el = document.getElementById('typeline-text');
+        let pIndex = 0, cIndex = 0, deleting = false;
+
+        function typeTick() {
+            const current = phrases[pIndex];
+            if (!deleting) {
+                cIndex++;
+                el.textContent = current.slice(0, cIndex);
+                if (cIndex === current.length) {
+                    deleting = true;
+                    setTimeout(typeTick, 1400);
+                    return;
+                }
+            } else {
+                cIndex--;
+                el.textContent = current.slice(0, cIndex);
+                if (cIndex === 0) {
+                    deleting = false;
+                    pIndex = (pIndex + 1) % phrases.length;
+                }
+            }
+            setTimeout(typeTick, deleting ? 22 : 32);
+        }
+        typeTick();
     </script>
 
 </body>

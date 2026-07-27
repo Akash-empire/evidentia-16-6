@@ -4441,7 +4441,7 @@ footer {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  padding: 230px 0 145px;
+  padding: 90px 0 90px;
   z-index: 1;
 }
 
@@ -4495,7 +4495,7 @@ footer {
 }
 
 .banner-section2 .banner-content h1 {
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 90px;
   letter-spacing: -1.6px;
