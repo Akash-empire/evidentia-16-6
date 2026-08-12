@@ -9588,3 +9588,565 @@ EVENTS SECTION
 }
 
 }
+
+/* =====================================================
+   KIDS LEARNING HERO
+===================================================== */
+
+.kids-learning-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 720px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 230, 190, 0.65),
+            transparent 48%
+        ),
+        #fffefa;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.kids-hero-content {
+    position: relative;
+
+    z-index: 20;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding-top: 55px;
+
+    box-sizing: border-box;
+}
+
+
+/* Badge */
+
+.kids-hero-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    background: #f5f5f2;
+
+    border: 1px solid #e8e8e3;
+
+    color: #555;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-bottom: 16px;
+}
+
+.kids-hero-badge span {
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.kids-hero-content h1 {
+    margin: 0;
+
+    color: #080808;
+
+    font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
+    font-size: clamp(48px, 6vw, 88px);
+
+    font-weight: 900;
+
+    line-height: 0.92;
+
+    letter-spacing: -2px;
+
+    text-transform: uppercase;
+}
+
+.kids-hero-content h1 span {
+    color: #16a84b;
+}
+
+
+/* Subtitle */
+
+.kids-hero-subtitle {
+    margin: 18px 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #333;
+
+    font-weight: 500;
+}
+
+
+
+
+/* =====================================================
+   HORIZONTAL SCROLL WRAPPER
+===================================================== */
+
+.kids-scroll-wrapper {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 20px;
+
+    width: 100%;
+
+    z-index: 10;
+
+    overflow-x: auto;
+
+    overflow-y: visible;
+
+    cursor: grab;
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #18b94f transparent;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.kids-scroll-wrapper::-webkit-scrollbar {
+    height: 5px;
+}
+
+.kids-scroll-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.kids-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #18b94f;
+
+    border-radius: 20px;
+}
+
+
+/* When dragging */
+
+.kids-scroll-wrapper:active {
+    cursor: grabbing;
+}
+
+
+/* =====================================================
+   SCROLL TRACK
+===================================================== */
+
+.kids-scroll-track {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 45px;
+
+    width: max-content;
+
+    min-width: 100%;
+
+    padding: 50px 80px 45px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.kids-floating-card {
+
+    position: relative;
+
+    flex: 0 0 240px;
+
+    width: 190px;
+
+    height: 225px;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.12);
+
+    box-sizing: border-box;
+
+    transform: rotate(6deg);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Alternate rotation */
+
+.kids-card-tilt-left {
+    transform: rotate(-5deg);
+}
+
+
+/* Hover */
+
+.kids-floating-card:hover {
+
+    transform:
+        translateY(-18px)
+        rotate(0deg);
+
+    box-shadow:
+        0 22px 42px rgba(0, 0, 0, 0.18);
+
+    z-index: 20;
+}
+
+
+/* =====================================================
+   CARD IMAGE
+===================================================== */
+
+.kids-card-image {
+
+    width: 100%;
+
+    height: 145px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #e8eee9;
+}
+
+.kids-card-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.kids-floating-card:hover .kids-card-image img {
+
+    transform: scale(1.07);
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.kids-card-info {
+
+    padding: 9px 5px 4px;
+}
+
+.kids-card-info h4 {
+
+    margin: 0 0 3px;
+
+    font-size: 13px;
+
+    line-height: 1.2;
+
+    color: #111;
+
+    font-weight: 700;
+}
+
+.kids-card-info p {
+
+    margin: 0;
+
+    font-size: 9px;
+
+    line-height: 1.3;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   GREEN PIN
+===================================================== */
+
+.kids-card-pin {
+
+    position: absolute;
+
+    width: 12px;
+
+    height: 20px;
+
+    top: -17px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #18b94f;
+
+    border-radius: 2px 2px 5px 5px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.kids-card-pin::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 5px;
+
+    left: 50%;
+
+    top: 3px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   SCROLL HINT
+===================================================== */
+
+.kids-scroll-hint {
+
+    position: absolute;
+
+    z-index: 25;
+
+    bottom: 3px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 6px 14px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.85);
+
+    color: #555;
+
+    font-size: 10px;
+
+    pointer-events: none;
+}
+
+.kids-scroll-hint span {
+
+    color: #18a94a;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   DECORATIVE BUTTON
+===================================================== */
+
+.kids-hero-decoration {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 30;
+}
+
+.kids-hero-decoration span {
+
+    font-size: 27px;
+
+    color: #111;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .kids-learning-hero {
+
+        min-height: 650px;
+    }
+
+    .kids-scroll-track {
+
+        gap: 35px;
+
+        padding-left: 50px;
+
+        padding-right: 50px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .kids-learning-hero {
+
+        min-height: 650px;
+    }
+
+    .kids-hero-content {
+
+        padding: 40px 20px 0;
+    }
+
+    .kids-hero-content h1 {
+
+        font-size: 46px;
+
+        letter-spacing: -1px;
+    }
+
+    .kids-hero-subtitle {
+
+        font-size: 12px;
+    }
+
+    .kids-scroll-wrapper {
+
+        bottom: 15px;
+
+        scrollbar-width: none;
+    }
+
+    .kids-scroll-wrapper::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    .kids-scroll-track {
+
+        gap: 25px;
+
+        padding:
+
+            45px
+
+            30px
+
+            45px;
+    }
+
+    .kids-floating-card {
+
+        flex-basis: 170px;
+
+        width: 170px;
+
+        height: 210px;
+    }
+
+    .kids-card-image {
+
+        height: 130px;
+    }
+
+    .kids-scroll-hint {
+
+        display: none;
+    }
+
+    .kids-hero-decoration {
+
+        width: 48px;
+
+        height: 48px;
+
+        right: 15px;
+
+        bottom: 15px;
+    }
+
+}
