@@ -362,8 +362,8 @@ document.addEventListener("DOMContentLoaded", () => {
             Email Address
         </span>
 
-        <a href="mailto:research@evidentia.co.in" class="white fw-semibold">
-            research@evidentia.co.in
+        <a href="mailto:admin@evidentia.co.in" class="white fw-semibold">
+            admin@evidentia.co.in
         </a>
     </div>
 
