@@ -9439,7 +9439,7 @@ EVENTS SECTION
 
 .ps-events-heading h2{
     margin-top:10px;
-    font-size:46px;
+    font-size:40px;
     font-weight:700;
 }
 
@@ -9523,7 +9523,7 @@ EVENTS SECTION
 
 .ps-events-content h3{
 
-    font-size:34px;
+    font-size:28px;
 
     margin-bottom:12px;
 }
@@ -10152,284 +10152,347 @@ EVENTS SECTION
 
 }
 
-/* ================================
+/* ==========================================
    RESEARCH INSIGHTS SECTION
-================================ */
+========================================== */
 
-.research-insights-section {
+.research-insights {
     width: 100%;
-    padding: 80px 0;
-    background: #f5f5fa;
+    padding: 70px 0 85px;
+    background: #f7f7f7;
     overflow: hidden;
 }
 
-.research-insights-container {
+
+/* Container */
+
+.research-container {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-/* Heading */
 
-.research-insights-header {
-    padding: 0 40px;
-    margin-bottom: 35px;
+/* ==========================================
+   HEADING
+========================================== */
+
+.research-heading {
+    padding: 0 38px;
+    margin-bottom: 28px;
 }
 
-.research-insights-header h2 {
+.research-heading h2 {
     margin: 0;
-    font-size: 42px;
-    line-height: 1.15;
-    font-weight: 500;
-    color: #182b2d;
-    letter-spacing: -1.5px;
+
+    color: #263638;
+
+    font-size: 34px;
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
 }
 
-/* Slider */
+
+/* ==========================================
+   SLIDER
+========================================== */
 
 .research-slider {
-    width: 100%;
     position: relative;
+
+    width: 100%;
+
     overflow: hidden;
 }
+
 
 /* Track */
 
 .research-track {
     display: flex;
-    width: max-content;
+
     gap: 20px;
-    animation: researchScroll 45s linear infinite;
+
+    width: max-content;
+
+    transform: translateX(0);
+
+    will-change: transform;
+
+    transition: transform 0.5s ease;
 }
 
-/* Pause when mouse is over section */
 
-.research-slider:hover .research-track {
-    animation-play-state: paused;
-}
-
-/* Cards */
+/* ==========================================
+   CARD
+========================================== */
 
 .research-card {
     width: 310px;
+
     flex: 0 0 310px;
+
     background: #ffffff;
-    border-radius: 10px;
+
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .research-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
-/* Image */
 
-.research-image {
+/* ==========================================
+   IMAGE
+========================================== */
+
+.research-card-image {
     position: relative;
+
     width: 100%;
+
     height: 75%;
+
     overflow: hidden;
+
     background: #e8e8e8;
 }
 
-.research-image img {
+.research-card-image img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
+
     transition: transform 0.4s ease;
 }
 
-.research-card:hover .research-image img {
-    transform: scale(1.05);
+.research-card:hover
+.research-card-image img {
+    transform: scale(1.04);
 }
+
 
 /* Tag */
 
-.research-tag {
+.research-card-image span {
     position: absolute;
+
     left: 10px;
-    bottom: 10px;
-    padding: 4px 9px;
+    bottom: 8px;
+
+    padding: 3px 7px;
+
     background: rgba(255, 255, 255, 0.92);
-    color: #526066;
-    font-size: 10px;
+
+    color: #5d6769;
+
+    font-size: 9px;
+
     line-height: 1;
-    border-radius: 3px;
+
+    border-radius: 2px;
 }
 
-/* Content */
 
-.research-content {
-    padding: 18px 18px 22px;
+/* ==========================================
+   CONTENT
+========================================== */
+
+.research-card-content {
+    min-height: 145px;
+
+    padding: 15px 17px 18px;
 }
 
-.research-content h3 {
-    margin: 0 0 8px;
-    font-size: 18px;
-    line-height: 1.3;
-    font-weight: 600;
+.research-card-content h3 {
+    margin: 0 0 7px;
+
     color: #263638;
+
+    font-size: 16px;
+
+    line-height: 1.35;
+
+    font-weight: 600;
 }
 
-.research-content p {
+.research-card-content p {
     margin: 0;
-    font-size: 13px;
-    line-height: 1.55;
-    color: #667477;
+
+    color: #6b7678;
+
+    font-size: 12px;
+
+    line-height: 1.5;
 }
 
-/* Arrow */
+.research-card-content p a {
+    color: #526066;
 
-.research-next {
-    position: absolute;
-    right: 25px;
-    bottom: 18px;
+    text-decoration: none;
+}
 
-    width: 62px;
-    height: 62px;
-
-    border: none;
-    border-radius: 0;
-
-    background: #ffffff;
+.research-card-content p a:hover {
     color: #111111;
 
-    font-size: 30px;
-    line-height: 1;
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.research-navigation {
+    position: absolute;
+
+    right: 25px;
+    bottom: 0;
+
+    display: flex;
+
+    z-index: 20;
+}
+
+
+/* Reference-style square arrow */
+
+.research-arrow {
+    width: 58px;
+    height: 58px;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
 
     cursor: pointer;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
-
-    z-index: 5;
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.12);
 
     transition:
         background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
+        color 0.25s ease;
 }
 
-.research-next:hover {
+.research-arrow:hover {
     background: #111111;
+
     color: #ffffff;
-    transform: translateY(-3px);
 }
 
-/* Infinite Right -> Left animation */
 
-@keyframes researchScroll {
-
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-50% - 10px));
-    }
-
-}
-
-/* ================================
+/* ==========================================
    TABLET
-================================ */
+========================================== */
 
 @media (max-width: 991px) {
 
-    .research-insights-section {
-        padding: 60px 0;
+    .research-insights {
+        padding: 60px 0 70px;
     }
 
-    .research-insights-header {
+    .research-heading {
         padding: 0 25px;
-        margin-bottom: 25px;
     }
 
-    .research-insights-header h2 {
-        font-size: 34px;
+    .research-heading h2 {
+        font-size: 32px;
     }
 
     .research-card {
         width: 280px;
+
         flex-basis: 280px;
     }
 
-    .research-image {
-        height: 175px;
+    .research-card-image {
+        height: 170px;
     }
 
-    .research-next {
-        width: 55px;
-        height: 55px;
-        right: 18px;
-    }
 }
 
-/* ================================
+
+/* ==========================================
    MOBILE
-================================ */
+========================================== */
 
 @media (max-width: 575px) {
 
-    .research-insights-section {
-        padding: 45px 0;
+    .research-insights {
+        padding: 45px 0 60px;
     }
 
-    .research-insights-header {
+    .research-heading {
         padding: 0 18px;
-        margin-bottom: 22px;
+
+        margin-bottom: 20px;
     }
 
-    .research-insights-header h2 {
-        font-size: 28px;
+    .research-heading h2 {
+        font-size: 27px;
+
         letter-spacing: -0.5px;
     }
 
     .research-track {
         gap: 14px;
-        animation-duration: 38s;
     }
 
     .research-card {
         width: 260px;
+
         flex-basis: 260px;
     }
 
-    .research-image {
+    .research-card-image {
         height: 160px;
     }
 
-    .research-content {
-        padding: 15px 15px 18px;
+    .research-card-content {
+        padding: 14px 15px 17px;
     }
 
-    .research-content h3 {
-        font-size: 17px;
+    .research-card-content h3 {
+        font-size: 16px;
     }
 
-    .research-content p {
-        font-size: 12px;
+    .research-navigation {
+        right: 12px;
     }
 
-    .research-next {
+    .research-arrow {
         width: 48px;
         height: 48px;
-        right: 12px;
-        bottom: 12px;
-        font-size: 24px;
-    }
-}
 
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .research-track {
-        animation: none;
+        font-size: 22px;
     }
 
 }
