@@ -1522,7 +1522,7 @@ footer {
 
 .sponsor-item {
   max-width: 114px;
-  height: 28px;
+  height: 90px;
 }
 
 .sponsor-item img {
@@ -9597,7 +9597,7 @@ EVENTS SECTION
     position: relative;
 
     width: 100%;
-    min-height: 720px;
+    min-height: 560px;
 
     overflow: hidden;
 
@@ -9690,7 +9690,7 @@ EVENTS SECTION
 }
 
 .kids-hero-content h1 span {
-    color: #16a84b;
+    color: #214080;
     font-size: clamp(48px, 6vw, 88px);
 }
 
@@ -9700,7 +9700,7 @@ EVENTS SECTION
 .kids-hero-subtitle {
     margin: 18px 0;
 
-    font-size: 13px;
+    font-size: 28px;
 
     line-height: 1.5;
 
@@ -9738,7 +9738,7 @@ EVENTS SECTION
 
     scrollbar-width: thin;
 
-    scrollbar-color: #18b94f transparent;
+    scrollbar-color: #214080 transparent;
 }
 
 
@@ -9931,7 +9931,7 @@ EVENTS SECTION
 
     transform: translateX(-50%);
 
-    background: #18b94f;
+    background: #214080;
 
     border-radius: 2px 2px 5px 5px;
 
