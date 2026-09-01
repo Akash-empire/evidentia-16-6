@@ -4497,7 +4497,7 @@ footer {
 .banner-section2 .banner-content h1 {
   font-size: 50px;
   font-weight: 700;
-  line-height: 90px;
+  line-height: 60px;
   letter-spacing: -1.6px;
 }
 
@@ -9169,7 +9169,7 @@ input.main-search-input::placeholder {
 
 .ps-showcase-section{
     position: relative;
-    padding:120px 0;
+    padding:80px 0px 120px 0px;
     overflow:hidden;
     background:linear-gradient(
         to bottom,

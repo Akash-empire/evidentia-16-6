@@ -99,82 +99,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     <li>
+        <a href="index.html">Home</a>
+    </li>
+    <li>
         <a href="about.html">About Us</a>
     </li>
-
-    <!-- Research -->
-    <li class="has-dropdown">
-        <a href="#">
-            Research
-            <i class="fas fa-angle-down"></i>
-        </a>
-
-        <ul class="submenu">
-            <li><a href="research-consulting.html">Research Consulting</a></li>
-            <li><a href="data-analysis.html">Data Analysis</a></li>
-            <li><a href="project-management.html">Project Management</a></li>
-            <li><a href="publication-support.html">Publication Support</a></li>
-            <li><a href="documentation.html">Documentation</a></li>
-        </ul>
+    <li>
+        <a href="services.html">Services</a>
     </li>
-
-    <!-- Distinct Capacities -->
-    <li class="has-dropdown">
-        <a href="#">
-            Distinct Capacities
-            <i class="fas fa-angle-down"></i>
-        </a>
-
-        <ul class="submenu">
-            <li><a href="capacity-building.html">Capacity Building</a></li>
-            <li><a href="community-development.html">Community Development</a></li>
-            <li><a href="research-collaboration.html">Research Collaboration</a></li>
-        </ul>
+    <li>
+        <a href="projects.html">Projects</a>
     </li>
-
-    <!-- Training -->
-    <li class="has-dropdown">
-        <a href="#">
-            Training
-            <i class="fas fa-angle-down"></i>
-        </a>
-
-        <ul class="submenu">
-            <li><a href="training-programs.html">Training Programs</a></li>
-            <li><a href="workshops.html">Workshops</a></li>
-            <li><a href="webinars.html">Webinars</a></li>
-        </ul>
-    </li>
-
-    <!-- Resource Centre -->
-    <li class="has-dropdown">
-        <a href="#">
-            Resource Centre
-            <i class="fas fa-angle-down"></i>
-        </a>
-
-        <ul class="submenu">
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
-            <li><a href="downloads.html">Downloads</a></li>
-        </ul>
-    </li>
-
-    <!-- Opportunities -->
-    <li class="has-dropdown">
-        <a href="#">
-            Opportunities
-            <i class="fas fa-angle-down"></i>
-        </a>
-
-        <ul class="submenu">
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="internships.html">Internships</a></li>
-            <li><a href="collaborate.html">Collaborate With Us</a></li>
-        </ul>
-    </li>
-
-    <!-- News -->
     <li>
         <a href="news-events.html">
             News & Events
