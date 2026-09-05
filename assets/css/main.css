@@ -9448,15 +9448,10 @@ EVENTS SECTION
 .ps-events-item{
 
     display:grid;
-
     grid-template-columns:120px 320px 1fr;
-
     gap:40px;
-
     align-items:center;
-
     padding:45px 0;
-
     border-top:1px solid #ddd;
 }
 
@@ -9475,26 +9470,18 @@ EVENTS SECTION
 .ps-month{
 
     display:block;
-
     color:#777;
-
     font-size:14px;
-
     letter-spacing:3px;
-
     margin-bottom:10px;
-
     font-weight:600;
 }
 
 .ps-events-date h3{
 
     font-size:60px;
-
     margin:0;
-
     color:#222;
-
     font-weight:700;
 }
 
@@ -9508,9 +9495,7 @@ EVENTS SECTION
 .ps-events-image img{
 
     width:100%;
-
     display:block;
-
     transition:.5s;
 }
 
@@ -9524,38 +9509,29 @@ EVENTS SECTION
 .ps-events-content h3{
 
     font-size:28px;
-
     margin-bottom:12px;
 }
 
 .ps-events-content h5{
 
     color:#777;
-
     font-size:18px;
-
     margin-bottom:20px;
-
     font-weight:500;
 }
 
 .ps-events-content p{
 
     color:#666;
-
     line-height:1.9;
-
     margin-bottom:25px;
 }
 
 .ps-events-content a{
 
     color:#111;
-
     text-decoration:none;
-
     font-weight:600;
-
     transition:.3s;
 }
 
@@ -9571,7 +9547,6 @@ EVENTS SECTION
 .ps-events-item{
 
     grid-template-columns:1fr;
-
     text-align:center;
 }
 
@@ -9583,7 +9558,6 @@ EVENTS SECTION
 .ps-events-image{
 
     max-width:400px;
-
     margin:auto;
 }
 
@@ -9593,14 +9567,15 @@ EVENTS SECTION
    KIDS LEARNING HERO
 ===================================================== */
 
+/* =====================================================
+   KIDS LEARNING HERO - LIFE AT EVIDENTIA
+===================================================== */
+
 .kids-learning-hero {
     position: relative;
-
     width: 100%;
-    min-height: 560px;
-
+    min-height: 600px;
     overflow: hidden;
-
     background:
         radial-gradient(
             circle at 50% 100%,
@@ -9608,8 +9583,8 @@ EVENTS SECTION
             transparent 48%
         ),
         #fffefa;
-
     box-sizing: border-box;
+    padding-bottom: 20px;
 }
 
 
@@ -9619,47 +9594,11 @@ EVENTS SECTION
 
 .kids-hero-content {
     position: relative;
-
     z-index: 20;
-
     width: 100%;
-
     text-align: center;
-
-    padding-top: 55px;
-
+    padding-top: 50px;
     box-sizing: border-box;
-}
-
-
-/* Badge */
-
-.kids-hero-badge {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    padding: 7px 14px;
-
-    border-radius: 30px;
-
-    background: #f5f5f2;
-
-    border: 1px solid #e8e8e3;
-
-    color: #555;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    margin-bottom: 16px;
-}
-
-.kids-hero-badge span {
-    font-size: 10px;
 }
 
 
@@ -9669,47 +9608,52 @@ EVENTS SECTION
 
 .kids-hero-content h1 {
     margin: 0;
-
     color: #080808;
-
     font-family:
         Impact,
         Haettenschweiler,
         "Arial Narrow Bold",
         sans-serif;
-
-    font-size: clamp(48px, 6vw, 88px);
-
+    font-size: clamp(44px, 5.5vw, 76px);
     font-weight: 100;
-
-    line-height: 0.92;
-
-    letter-spacing: -2px;
-
+    line-height: 0.95;
+    letter-spacing: -1.5px;
     text-transform: uppercase;
 }
 
 .kids-hero-content h1 span {
     color: #214080;
-    font-size: clamp(48px, 6vw, 88px);
+    font-size: inherit;
+    font-family: inherit;
 }
 
 
 /* Subtitle */
 
 .kids-hero-subtitle {
-    margin: 18px 0;
-
-    font-size: 28px;
-
-    line-height: 1.5;
-
-    color: #333;
-
+    margin: 16px 0 20px;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #333333;
     font-weight: 500;
 }
 
 
+/* =====================================================
+   HANGING CLOTHESLINE WIRE
+/* =====================================================
+   HANGING CLOTHESLINE WIRE
+===================================================== */
+
+.kids-hanging-wire-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
 
 
 /* =====================================================
@@ -9717,32 +9661,18 @@ EVENTS SECTION
 ===================================================== */
 
 .kids-scroll-wrapper {
-
     position: absolute;
-
     left: 0;
-
     right: 0;
-
-    bottom: 20px;
-
+    bottom: 10px;
     width: 100%;
-
     z-index: 10;
-
     overflow-x: auto;
-
     overflow-y: visible;
-
     cursor: grab;
-
     scrollbar-width: thin;
-
     scrollbar-color: #214080 transparent;
 }
-
-
-/* Chrome / Edge / Safari */
 
 .kids-scroll-wrapper::-webkit-scrollbar {
     height: 5px;
@@ -9753,13 +9683,9 @@ EVENTS SECTION
 }
 
 .kids-scroll-wrapper::-webkit-scrollbar-thumb {
-    background: #18b94f;
-
+    background: #214080;
     border-radius: 20px;
 }
-
-
-/* When dragging */
 
 .kids-scroll-wrapper:active {
     cursor: grabbing;
@@ -9771,19 +9697,13 @@ EVENTS SECTION
 ===================================================== */
 
 .kids-scroll-track {
-
+    position: relative;
     display: flex;
-
-    align-items: flex-end;
-
-    gap: 45px;
-
+    align-items: flex-start;
+    gap: 30px;
     width: max-content;
-
     min-width: 100%;
-
-    padding: 50px 80px 45px;
-
+    padding: 105px 60px 120px;
     box-sizing: border-box;
 }
 
@@ -9793,53 +9713,39 @@ EVENTS SECTION
 ===================================================== */
 
 .kids-floating-card {
-
     position: relative;
-
-    flex: 0 0 240px;
-
-    width: 190px;
-
-    height: 225px;
-
-    padding: 10px;
-
+    z-index: 2;
+    flex: 0 0 220px;
+    width: 220px;
+    padding: 10px 10px 14px 10px;
     background: #ffffff;
-
     border-radius: 18px;
-
-    box-shadow:
-        0 12px 28px rgba(0, 0, 0, 0.12);
-
+    /* box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.10); */
     box-sizing: border-box;
-
-    transform: rotate(6deg);
-
     transition:
-        transform 0.35s ease,
+        transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1),
         box-shadow 0.35s ease;
 }
 
-
-/* Alternate rotation */
-
-.kids-card-tilt-left {
-    transform: rotate(-5deg);
-}
-
+/* Arc Droop Rotations along curved line */
+.card-arc-1 { transform: translateY(0px) rotate(4deg); }
+.card-arc-2 { transform: translateY(16px) rotate(2deg); }
+.card-arc-3 { transform: translateY(28px) rotate(0deg); }
+.card-arc-4 { transform: translateY(32px) rotate(-1deg); }
+.card-arc-5 { transform: translateY(28px) rotate(-2deg); }
+.card-arc-6 { transform: translateY(16px) rotate(2deg); }
+.card-arc-7 { transform: translateY(4px) rotate(3deg); }
 
 /* Hover */
-
 .kids-floating-card:hover {
-
     transform:
-        translateY(-18px)
-        rotate(0deg);
-
+        translateY(-14px)
+        rotate(0deg)
+        scale(1.04);
     box-shadow:
-        0 22px 42px rgba(0, 0, 0, 0.18);
-
-    z-index: 20;
+        0 20px 44px rgba(0, 0, 0, 0.16);
+    z-index: 30;
 }
 
 
@@ -9848,34 +9754,23 @@ EVENTS SECTION
 ===================================================== */
 
 .kids-card-image {
-
     width: 100%;
-
-    height: 145px;
-
+    height: 150px;
     overflow: hidden;
-
     border-radius: 12px;
-
     background: #e8eee9;
 }
 
 .kids-card-image img {
-
     width: 100%;
-
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
 .kids-floating-card:hover .kids-card-image img {
-
-    transform: scale(1.07);
+    transform: scale(1.06);
 }
 
 
@@ -9884,163 +9779,87 @@ EVENTS SECTION
 ===================================================== */
 
 .kids-card-info {
-
-    padding: 9px 5px 4px;
+    padding: 9px 5px 0;
+    text-align: left;
 }
 
 .kids-card-info h4 {
-
     margin: 0 0 3px;
-
-    font-size: 13px;
-
+    font-size: 14px;
     line-height: 1.2;
-
-    color: #111;
-
+    color: #111111;
     font-weight: 700;
 }
 
 .kids-card-info p {
-
     margin: 0;
-
-    font-size: 9px;
-
+    font-size: 10px;
     line-height: 1.3;
-
-    color: #777;
+    color: #777777;
 }
 
 
 /* =====================================================
-   GREEN PIN
+   EVIDENTIA THEMED CLOTHESPIN PIN
 ===================================================== */
 
 .kids-card-pin {
-
     position: absolute;
-
-    width: 12px;
-
-    height: 20px;
-
-    top: -17px;
-
+    width: 13px;
+    height: 24px;
+    top: -16px;
     left: 50%;
-
     transform: translateX(-50%);
-
     background: #214080;
-
-    border-radius: 2px 2px 5px 5px;
-
+    border-radius: 3px 3px 5px 5px;
     box-shadow:
-        0 2px 5px rgba(0, 0, 0, 0.12);
+        0 3px 6px rgba(0, 0, 0, 0.18);
+    z-index: 15;
 }
 
 .kids-card-pin::after {
-
     content: "";
-
     position: absolute;
-
     width: 5px;
-
     height: 5px;
-
     left: 50%;
-
     top: 3px;
-
     transform: translateX(-50%);
-
     border-radius: 50%;
-
     background: #ffffff;
 }
 
 
 /* =====================================================
-   SCROLL HINT
-===================================================== */
-
-.kids-scroll-hint {
-
-    position: absolute;
-
-    z-index: 25;
-
-    bottom: 3px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    padding: 6px 14px;
-
-    border-radius: 30px;
-
-    background: rgba(255,255,255,0.85);
-
-    color: #555;
-
-    font-size: 10px;
-
-    pointer-events: none;
-}
-
-.kids-scroll-hint span {
-
-    color: #18a94a;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   DECORATIVE BUTTON
+   DECORATIVE FLOATING BUTTON
 ===================================================== */
 
 .kids-hero-decoration {
-
     position: absolute;
-
-    right: 25px;
-
-    bottom: 25px;
-
-    width: 58px;
-
-    height: 58px;
-
+    right: 28px;
+    bottom: 28px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
-
-    background: #fff;
-
+    background: #ffffff;
     box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.12);
-
+        0 6px 22px rgba(0, 0, 0, 0.12);
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     z-index: 30;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.kids-hero-decoration:hover {
+    transform: scale(1.08);
 }
 
 .kids-hero-decoration span {
-
-    font-size: 27px;
-
-    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -10049,21 +9868,15 @@ EVENTS SECTION
 ===================================================== */
 
 @media (max-width: 1100px) {
-
     .kids-learning-hero {
-
-        min-height: 650px;
+        min-height: 580px;
     }
 
     .kids-scroll-track {
-
-        gap: 35px;
-
-        padding-left: 50px;
-
-        padding-right: 50px;
+        gap: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
-
 }
 
 
@@ -10072,93 +9885,41 @@ EVENTS SECTION
 ===================================================== */
 
 @media (max-width: 767px) {
-
     .kids-learning-hero {
-
-        min-height: 650px;
+        min-height: 560px;
     }
 
     .kids-hero-content {
-
-        padding: 40px 20px 0;
-    }
-
-    .kids-hero-content h1 {
-
-        font-size: 46px;
-
-        letter-spacing: -1px;
+        padding-top: 35px;
     }
 
     .kids-hero-subtitle {
-
-        font-size: 12px;
-    }
-
-    .kids-scroll-wrapper {
-
-        bottom: 15px;
-
-        scrollbar-width: none;
-    }
-
-    .kids-scroll-wrapper::-webkit-scrollbar {
-
-        display: none;
+        font-size: 18px;
     }
 
     .kids-scroll-track {
-
-        gap: 25px;
-
-        padding:
-
-            45px
-
-            30px
-
-            45px;
+        gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .kids-floating-card {
-
-        flex-basis: 170px;
-
-        width: 170px;
-
-        height: 210px;
+        flex: 0 0 185px;
+        width: 185px;
     }
 
     .kids-card-image {
-
         height: 130px;
     }
-
-    .kids-scroll-hint {
-
-        display: none;
-    }
-
-    .kids-hero-decoration {
-
-        width: 48px;
-
-        height: 48px;
-
-        right: 15px;
-
-        bottom: 15px;
-    }
-
 }
 
 /* ==========================================
-   RESEARCH INSIGHTS SECTION
+   RESEARCH INSIGHTS
 ========================================== */
 
 .research-insights {
     width: 100%;
-    padding: 70px 0 85px;
+    padding: 45px 0 45px;
     background: #f7f7f7;
     overflow: hidden;
 }
@@ -10179,19 +9940,15 @@ EVENTS SECTION
 
 .research-heading {
     padding: 0 38px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 
 .research-heading h2 {
     margin: 0;
-
     color: #263638;
-
     font-size: 34px;
     line-height: 1.2;
-
     font-weight: 400;
-
     letter-spacing: -1px;
 }
 
@@ -10202,10 +9959,9 @@ EVENTS SECTION
 
 .research-slider {
     position: relative;
-
     width: 100%;
-
     overflow: hidden;
+    padding: 4px 0 6px;
 }
 
 
@@ -10213,15 +9969,11 @@ EVENTS SECTION
 
 .research-track {
     display: flex;
-
+    align-items: flex-start;
     gap: 20px;
-
     width: max-content;
-
     transform: translateX(0);
-
     will-change: transform;
-
     transition: transform 0.5s ease;
 }
 
@@ -10232,17 +9984,14 @@ EVENTS SECTION
 
 .research-card {
     width: 310px;
-
     flex: 0 0 310px;
-
     background: #ffffff;
 
     overflow: hidden;
-
     border-radius: 5px;
 
-    box-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.05);
+    /* box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.05); */
 
     transition:
         transform 0.3s ease,
@@ -10251,7 +10000,6 @@ EVENTS SECTION
 
 .research-card:hover {
     transform: translateY(-4px);
-
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.10);
 }
@@ -10263,24 +10011,17 @@ EVENTS SECTION
 
 .research-card-image {
     position: relative;
-
     width: 100%;
-
-    height: 75%;
-
+    height: 240px;
     overflow: hidden;
-
     background: #e8e8e8;
 }
 
 .research-card-image img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
     transition: transform 0.4s ease;
 }
 
@@ -10294,20 +10035,13 @@ EVENTS SECTION
 
 .research-card-image span {
     position: absolute;
-
     left: 10px;
     bottom: 8px;
-
     padding: 3px 7px;
-
     background: rgba(255, 255, 255, 0.92);
-
     color: #5d6769;
-
     font-size: 9px;
-
     line-height: 1;
-
     border-radius: 2px;
 }
 
@@ -10317,58 +10051,47 @@ EVENTS SECTION
 ========================================== */
 
 .research-card-content {
-    min-height: 145px;
-
-    padding: 15px 17px 18px;
+    min-height: auto;
+    padding: 12px 16px 12px;
 }
 
 .research-card-content h3 {
-    margin: 0 0 7px;
-
+    margin: 0;
     color: #263638;
-
-    font-size: 16px;
-
+    font-size: 18px;
     line-height: 1.35;
-
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .research-card-content p {
     margin: 0;
-
     color: #6b7678;
-
     font-size: 12px;
-
     line-height: 1.5;
 }
 
 .research-card-content p a {
     color: #526066;
-
     text-decoration: none;
 }
 
 .research-card-content p a:hover {
     color: #111111;
-
     text-decoration: underline;
 }
 
 
 /* ==========================================
-   NAVIGATION
+   NAVIGATION (BELOW SLIDER)
 ========================================== */
 
 .research-navigation {
-    position: absolute;
-
-    right: 25px;
-    bottom: 0;
-
     display: flex;
-
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 38px;
+    margin-top: 16px;
+    gap: 8px;
     z-index: 20;
 }
 
@@ -10376,10 +10099,10 @@ EVENTS SECTION
 /* Reference-style square arrow */
 
 .research-arrow {
-    width: 58px;
-    height: 58px;
+    width: 44px;
+    height: 44px;
 
-    border: none;
+    border: 1px solid #d4d4d4;
 
     background: #ffffff;
 
@@ -10390,22 +10113,30 @@ EVENTS SECTION
     align-items: center;
     justify-content: center;
 
-    font-size: 28px;
+    font-size: 20px;
 
     cursor: pointer;
 
+    border-radius: 4px;
+
     box-shadow:
-        0 4px 18px rgba(0, 0, 0, 0.12);
+        0 2px 8px rgba(0, 0, 0, 0.06);
 
     transition:
         background 0.25s ease,
-        color 0.25s ease;
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease;
 }
 
 .research-arrow:hover {
     background: #111111;
 
     color: #ffffff;
+
+    border-color: #111111;
+
+    transform: translateY(-1px);
 }
 
 
@@ -10416,15 +10147,16 @@ EVENTS SECTION
 @media (max-width: 991px) {
 
     .research-insights {
-        padding: 60px 0 70px;
+        padding: 40px 0 40px;
     }
 
     .research-heading {
         padding: 0 25px;
+        margin-bottom: 16px;
     }
 
     .research-heading h2 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .research-card {
@@ -10437,6 +10169,11 @@ EVENTS SECTION
         height: 170px;
     }
 
+    .research-navigation {
+        padding: 0 25px;
+        margin-top: 14px;
+    }
+
 }
 
 
@@ -10447,17 +10184,17 @@ EVENTS SECTION
 @media (max-width: 575px) {
 
     .research-insights {
-        padding: 45px 0 60px;
+        padding: 35px 0 35px;
     }
 
     .research-heading {
         padding: 0 18px;
 
-        margin-bottom: 20px;
+        margin-bottom: 14px;
     }
 
     .research-heading h2 {
-        font-size: 27px;
+        font-size: 26px;
 
         letter-spacing: -0.5px;
     }
@@ -10477,22 +10214,25 @@ EVENTS SECTION
     }
 
     .research-card-content {
-        padding: 14px 15px 17px;
+        min-height: auto;
+        padding: 10px 14px 10px;
     }
 
     .research-card-content h3 {
-        font-size: 16px;
+        margin: 0;
+        font-size: 15px;
     }
 
     .research-navigation {
-        right: 12px;
+        padding: 0 18px;
+        margin-top: 12px;
     }
 
     .research-arrow {
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
 
-        font-size: 22px;
+        font-size: 18px;
     }
 
 }
