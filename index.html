@@ -1011,9 +1011,33 @@ BENEFIT SECTION
 
         .benefit-section {
             width: 100%;
-            padding: 0px 0;
+            padding: 0;
             background: #fff;
             overflow: hidden;
+        }
+
+        .benefit-section-header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding: 0 24px;
+        }
+
+        .benefit-section-label {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #70A6B1;
+            margin-bottom: 12px;
+        }
+
+        .benefit-section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #031740;
+            line-height: 1.25;
+            margin: 0;
         }
 
         .benefit-container {
@@ -1021,7 +1045,7 @@ BENEFIT SECTION
             margin: auto;
             display: grid;
             grid-template-columns: 50% 50%;
-            gap: 0px;
+            gap: 0;
             align-items: stretch;
         }
 
@@ -1051,43 +1075,37 @@ LEFT SLIDER
 
         .left-slide img {
             width: 100%;
-            height: 760px;
+            height: 620px;
             object-fit: cover;
             display: block;
         }
 
         .left-content {
             position: absolute;
-            left: 50px;
-            bottom: 50px;
-            width: 75%;
-            background: #fff;
-            padding: 45px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .15);
-        }
-
-        .subtitle {
-            display: inline-block;
-            color: #ff6b00;
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            background: rgba(3, 23, 64, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 28px 32px;
+            border-radius: 14px;
+            border: 1px solid rgba(112, 166, 177, 0.22);
         }
 
         .left-content h2 {
-            font-size: 46px;
-            line-height: 58px;
+            font-size: 22px;
+            line-height: 1.35;
             font-weight: 700;
-            color: #111;
-            margin-bottom: 25px;
+            color: #ffffff;
+            margin-bottom: 10px;
         }
 
         .left-content p {
-            font-size: 16px;
-            line-height: 30px;
-            color: #666;
+            font-size: 15px;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.82);
+            margin: 0;
         }
 
         /*==============================
@@ -1096,27 +1114,29 @@ ARROWS
 
         .slider-arrows {
             position: absolute;
-            right: 35px;
-            bottom: 35px;
+            right: 24px;
+            top: 24px;
             display: flex;
-            gap: 15px;
+            gap: 10px;
             z-index: 50;
         }
 
         .slider-arrows button {
-            width: 58px;
-            height: 58px;
+            width: 44px;
+            height: 44px;
             border: none;
-            background: #fff;
+            background: rgba(240, 244, 253, 0.92);
+            backdrop-filter: blur(8px);
             border-radius: 50%;
             cursor: pointer;
-            font-size: 20px;
-            transition: .35s;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            color: #031740;
+            transition: .3s ease;
+            box-shadow: 0 4px 16px rgba(3, 23, 64, 0.18);
         }
 
         .slider-arrows button:hover {
-            background: #ff6b00;
+            background: #031740;
             color: #fff;
         }
 
@@ -1127,7 +1147,7 @@ RIGHT SIDE
         .right-sliders {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0px;
+            gap: 0;
             height: 100%;
         }
 
@@ -1138,20 +1158,26 @@ COMMON SLIDER
         .small-slider {
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .small-wrapper {
             position: relative;
             width: 100%;
+            flex: 1;
         }
 
         .small-card {
             display: none;
             animation: fade .6s ease;
+            height: 100%;
         }
 
         .small-card.active {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         /*==========================================
@@ -1160,9 +1186,10 @@ IMAGE
 
         .small-card img {
             width: 100%;
-            height: 380px;
+            height: 300px;
             object-fit: cover;
             display: block;
+            flex-shrink: 0;
         }
 
         /*==========================================
@@ -1171,33 +1198,34 @@ WHITE CONTENT BOX
 
         .small-content {
             background: #ffffff;
-            padding: 45px 35px;
-            min-height: 260px;
+            padding: 28px 24px;
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .small-content h4 {
-            font-size: 28px;
+            font-size: 17px;
             font-weight: 700;
-            margin-bottom: 18px;
-            color: #111;
-            line-height: 38px;
+            margin-bottom: 10px;
+            color: #031740;
+            line-height: 1.4;
         }
 
         .small-content p {
-            color: #666;
-            font-size: 16px;
-            line-height: 30px;
+            color: #49577A;
+            font-size: 14px;
+            line-height: 1.65;
+            margin: 0;
         }
 
         /*==========================================
-BLACK CONTENT BOX
+DARK CONTENT BOX  — Evidentia theme navy
 ==========================================*/
 
         .small-content.dark {
-            background: #111111;
+            background: #031740;
         }
 
         .small-content.dark h4 {
@@ -1205,7 +1233,7 @@ BLACK CONTENT BOX
         }
 
         .small-content.dark p {
-            color: #d6d6d6;
+            color: rgba(255, 255, 255, 0.78);
         }
 
         /*==========================================
@@ -1217,7 +1245,9 @@ REVERSE LAYOUT
         }
 
         .reverse-slider .small-card.active {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .reverse-slider .small-content {
@@ -1233,12 +1263,11 @@ CARD SHADOW
 ==========================================*/
 
         .small-card {
-            box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
             transition: .4s;
         }
 
         .small-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-4px);
         }
 
         /*==========================================
@@ -1246,29 +1275,29 @@ ARROWS
 ==========================================*/
 
         .small-arrow {
-            position: absolute;
-            bottom: 25px;
-            right: 25px;
+            padding: 12px 16px;
             display: flex;
-            gap: 12px;
-            z-index: 99;
+            gap: 10px;
+            background: #F0F4FD;
+            border-top: 1px solid #dce4ed;
+            justify-content: flex-end;
         }
 
         .small-arrow button {
-            width: 52px;
-            height: 52px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             border: none;
-            background: #ffffff;
-            color: #111;
+            background: #031740;
+            color: #fff;
             cursor: pointer;
-            font-size: 18px;
-            transition: .35s;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
+            font-size: 15px;
+            transition: .3s ease;
+            box-shadow: 0 4px 14px rgba(3, 23, 64, 0.18);
         }
 
         .small-arrow button:hover {
-            background: #ff6b00;
+            background: #70A6B1;
             color: #fff;
         }
 
@@ -1280,7 +1309,7 @@ ANIMATION
 
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(16px);
             }
 
             to {
@@ -1297,31 +1326,23 @@ RESPONSIVE
         @media (max-width:1400px) {
 
             .left-slide img {
-                height: 680px;
-            }
-
-            .left-content {
-                width: 82%;
-                padding: 35px;
+                height: 560px;
             }
 
             .left-content h2 {
-                font-size: 40px;
-                line-height: 50px;
+                font-size: 20px;
             }
 
             .small-card img {
-                height: 320px;
+                height: 270px;
             }
 
             .small-content {
-                min-height: 220px;
-                padding: 30px;
+                padding: 22px 20px;
             }
 
             .small-content h4 {
-                font-size: 24px;
-                line-height: 34px;
+                font-size: 16px;
             }
 
         }
@@ -1329,40 +1350,39 @@ RESPONSIVE
         @media (max-width:1200px) {
 
             .benefit-container {
-                width: 95%;
-                gap: 25px;
+                gap: 16px;
             }
 
             .left-slide img {
-                height: 600px;
+                height: 520px;
             }
 
             .left-content {
-                width: 88%;
-                left: 30px;
-                bottom: 30px;
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+                padding: 22px 24px;
             }
 
             .left-content h2 {
-                font-size: 34px;
-                line-height: 45px;
+                font-size: 18px;
             }
 
             .small-card img {
-                height: 280px;
+                height: 240px;
             }
 
-            .small-content {
-                min-height: 200px;
-            }
-
-            .small-content h4 {
-                font-size: 22px;
+            .right-sliders {
+                gap: 16px;
             }
 
         }
 
         @media (max-width:991px) {
+
+            .benefit-section {
+                padding: 60px 0;
+            }
 
             .benefit-container {
                 grid-template-columns: 1fr;
@@ -1370,15 +1390,11 @@ RESPONSIVE
 
             .right-sliders {
                 grid-template-columns: 1fr 1fr;
-                margin-top: 40px;
+                gap: 16px;
             }
 
             .left-slide img {
-                height: 560px;
-            }
-
-            .left-content {
-                width: 85%;
+                height: 480px;
             }
 
         }
@@ -1386,47 +1402,42 @@ RESPONSIVE
         @media (max-width:768px) {
 
             .benefit-section {
-                padding: 70px 0;
+                padding: 50px 0;
             }
 
             .right-sliders {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 16px;
             }
 
             .left-slide img {
-                height: 450px;
+                height: 380px;
             }
 
             .left-content {
                 position: relative;
                 left: 0;
+                right: 0;
                 bottom: 0;
-                width: 100%;
-                box-shadow: none;
-                padding: 35px 25px;
+                border-radius: 0 0 14px 14px;
+                backdrop-filter: none;
+                background: #031740;
             }
 
             .left-content h2 {
-                font-size: 30px;
-                line-height: 40px;
+                font-size: 17px;
             }
 
             .small-card img {
-                height: 260px;
+                height: 220px;
             }
 
-            .small-content {
-                min-height: auto;
-            }
-
-            .slider-arrows,
-            .small-arrow {
+            .slider-arrows {
                 position: relative;
                 right: auto;
-                bottom: auto;
-                margin-top: 20px;
-                justify-content: center;
+                top: auto;
+                margin: 12px 16px;
+                justify-content: flex-end;
             }
 
         }
@@ -1434,50 +1445,46 @@ RESPONSIVE
         @media (max-width:576px) {
 
             .benefit-container {
-                width: 92%;
+                width: 94%;
             }
 
             .left-slide img {
-                height: 320px;
+                height: 280px;
             }
 
             .left-content {
-                padding: 25px;
+                padding: 20px;
             }
 
             .left-content h2 {
-                font-size: 24px;
-                line-height: 34px;
+                font-size: 15px;
             }
 
             .left-content p {
-                font-size: 15px;
-                line-height: 26px;
+                font-size: 14px;
             }
 
             .small-card img {
-                height: 220px;
+                height: 180px;
             }
 
             .small-content {
-                padding: 25px;
+                padding: 20px;
             }
 
             .small-content h4 {
-                font-size: 20px;
-                line-height: 30px;
+                font-size: 15px;
             }
 
             .small-content p {
-                font-size: 15px;
-                line-height: 25px;
+                font-size: 13px;
             }
 
             .slider-arrows button,
             .small-arrow button {
-                width: 46px;
-                height: 46px;
-                font-size: 16px;
+                width: 38px;
+                height: 38px;
+                font-size: 14px;
             }
 
         }
@@ -1498,7 +1505,7 @@ SMOOTH TRANSITIONS
 
         .left-slide:hover img,
         .small-card:hover img {
-            transform: scale(1.05);
+            transform: scale(1.04);
         }
 
         .left-content,
@@ -1507,44 +1514,11 @@ SMOOTH TRANSITIONS
         }
 
         .small-card:hover .small-content {
-            background: #f7f7f7;
+            background: #f4f7fe;
         }
 
         .reverse-slider .small-card:hover .small-content.dark {
-            background: #1d1d1d;
-        }
-
-        /*==========================================
-IMAGE RADIUS
-==========================================*/
-
-        .left-slide img,
-        .small-card img {
-            border-radius: 8px;
-        }
-
-        .left-content {
-            border-radius: 8px;
-        }
-
-        .small-content {
-            border-radius: 0 0 8px 8px;
-        }
-
-        .reverse-slider .small-content {
-            border-radius: 8px 8px 0 0;
-        }
-
-        /*==========================================
-SHADOW
-==========================================*/
-
-        .left-slide {
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
-        }
-
-        .small-card {
-            box-shadow: 0 15px 45px rgba(0, 0, 0, .08);
+            background: #05204a;
         }
 
         /*==========================================
@@ -1560,7 +1534,7 @@ ACTIVE ANIMATION
 
             0% {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(16px);
             }
 
             100% {
@@ -1824,7 +1798,7 @@ ACTIVE ANIMATION
                 <div class="col-lg-5">
                     <div class="banner-thumb2-wrap mt-lg-0 mt-3">
                         <div class="thumb1">
-                            <img src="assets/img/banner/hero2-thumb.png" alt="img">
+                            <img src="assets/img/banner/hero2-thumb.png" alt="img" style="filter: brightness(1.25) drop-shadow(0 0 18px rgba(255, 200, 50, 0.55));">
                         </div>
                         <!-- Ele -->
                     </div>
@@ -1940,6 +1914,16 @@ ACTIVE ANIMATION
                             <img src="assets/img/sponsor/upes.png" alt="img">
                         </div>
                     </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item">
+                            <img src="assets/img/sponsor/andhra-mahila.jpg" alt="Andhra Mahila Sabha Arts & Science College for Women">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item">
+                            <img src="assets/img/sponsor/skpc.jpg" alt="SKPC Sri Kanyaka Parameswari Arts & Science College for Women">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1953,7 +1937,7 @@ ACTIVE ANIMATION
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-8">
                     <div class="growth-path-item text-md-start text-center">
                         <div class="section-title">
-                           
+
                             <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
                                 Client success stories.
                             </h2>
@@ -2358,7 +2342,9 @@ ACTIVE ANIMATION
 
                     </div>
 
-                   <a href="news-events.html"> <h4>Behaviour-Based Capacity Building Workshop Conducted for Ramana Hospital</h4></a>
+                    <a href="news-events.html">
+                        <h4>Behaviour-Based Capacity Building Workshop Conducted for Ramana Hospital</h4>
+                    </a>
 
                 </div>
 
@@ -2370,11 +2356,13 @@ ACTIVE ANIMATION
 
                     <div class="ps-showcase-image">
 
-                       <a href="news-events.html"><img src="assets/img/blog/blog-grid7.png" alt=""></a>
+                        <a href="news-events.html"><img src="assets/img/blog/blog-grid7.png" alt=""></a>
 
                     </div>
 
-                    <a href="news-events.html"><h4>Research Writing Workshop at Anna Adarsh College for Women</h4></a> 
+                    <a href="news-events.html">
+                        <h4>Research Writing Workshop at Anna Adarsh College for Women</h4>
+                    </a>
 
                 </div>
 
@@ -2390,7 +2378,9 @@ ACTIVE ANIMATION
 
                     </div>
 
-                    <a href="news-events.html"> <h4>Neurodiversity Summit 2026 at IIT Madras</h4></a> 
+                    <a href="news-events.html">
+                        <h4>Neurodiversity Summit 2026 at IIT Madras</h4>
+                    </a>
 
                 </div>
 
@@ -2406,7 +2396,9 @@ ACTIVE ANIMATION
 
                     </div>
 
-                    <a href="news-events.html"> <h4>AI for Data-Driven Decision-Making Workshop for TN Social Welfare Department</h4></a>
+                    <a href="news-events.html">
+                        <h4>AI for Data-Driven Decision-Making Workshop for TN Social Welfare Department</h4>
+                    </a>
 
                 </div>
 
@@ -2435,7 +2427,7 @@ ACTIVE ANIMATION
 
                         <span class="d-flex align-items-center gap-2 fs-six pra fw-semibold mb-4 pb-lg-3">
                             <i class="fas fa-circle p1-clr fs-eight"></i>
-                            Clients Supported 
+                            Clients Supported
                         </span>
 
                         <div class="content d-flex align-items-center gap-0 mb-4 pb-xl-3 pb-1">
@@ -2455,7 +2447,7 @@ ACTIVE ANIMATION
 
                         <span class="d-flex align-items-center gap-2 fs-six pra fw-semibold mb-4 pb-lg-3">
                             <i class="fas fa-circle p1-clr fs-eight"></i>
-                            Projects Delivered 
+                            Projects Delivered
                         </span>
 
                         <div class="content d-flex align-items-center gap-0 mb-4 pb-xl-3 pb-1">
@@ -2495,7 +2487,7 @@ ACTIVE ANIMATION
 
                         <span class="d-flex align-items-center gap-2 fs-six pra fw-semibold mb-4 pb-lg-3">
                             <i class="fas fa-circle p1-clr fs-eight"></i>
-                            Research Experts 
+                            Research Experts
                         </span>
 
                         <div class="content d-flex align-items-center gap-0 mb-4 pb-xl-3 pb-1">
@@ -2757,13 +2749,13 @@ ACTIVE ANIMATION
                                         <input type="text" placeholder="Name">
                                     </div>
                                 </div>
-                               
+
                                 <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                                     <div class="form-grp">
                                         <input type="text" placeholder="Mobile">
                                     </div>
                                 </div>
-                                 <div class="col-lg-12 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="col-lg-12 wow fadeInUp" data-wow-delay=".4s">
                                     <div class="form-grp">
                                         <input type="email" placeholder="Email">
                                     </div>
@@ -2800,7 +2792,7 @@ ACTIVE ANIMATION
 
                     <div class="section-title pe-xxl-5 mb-lg-5 mb-4">
 
-                        
+
 
                         <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
                             Common Questions About
