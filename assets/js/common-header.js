@@ -305,10 +305,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const navLinks = document.querySelectorAll(".main-menu ul li a");
         navLinks.forEach(link => {
             const linkHref = link.getAttribute("href");
-            if (linkHref === currentPage) {
+            if (linkHref === currentPage || (currentPage === "" && linkHref === "index.html")) {
                 document.querySelectorAll(".main-menu li").forEach(item => item.classList.remove("active"));
+                document.querySelectorAll(".main-menu li a").forEach(item => item.classList.remove("active"));
                 const closestLi = link.closest("li");
                 if (closestLi) closestLi.classList.add("active");
+                link.classList.add("active");
             }
         });
 

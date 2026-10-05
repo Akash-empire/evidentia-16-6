@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -119,23 +119,10 @@
                     </div>
                 </div>
 
-                <!-- Right Visual: Diagonal Capsule Photo Collage -->
+                <!-- Right Visual: Single Realistic Image -->
                 <div class="col-lg-6">
-                    <div class="gainlove-pill-collage-container mx-auto ms-lg-auto">
-                        <div class="gainlove-pill-wrapper">
-                            <!-- Capsule 1 -->
-                            <div class="gainlove-pill-item pill-1">
-                                <img src="assets/webimages/99.jpg" alt="Field Research 1">
-                            </div>
-                            <!-- Capsule 2 -->
-                            <div class="gainlove-pill-item pill-2">
-                                <img src="assets/webimages/1.jpg" alt="Field Research 2">
-                            </div>
-                            <!-- Capsule 3 -->
-                            <div class="gainlove-pill-item pill-3">
-                                <img src="assets/webimages/why.jpg" alt="Field Research 3">
-                            </div>
-                        </div>
+                    <div class="projects-hero-img-wrap text-center ms-lg-auto">
+                        <img src="assets/webimages/projects-hero-single.png" alt="Evidentia Research in the Field" class="img-fluid w-100" style="border-radius: 20px; box-shadow: 0 16px 40px rgba(3, 23, 64, 0.12); object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -1152,6 +1139,7 @@
         $(document).ready(function () {
             $("#header").load("header.html", function () {
                 $(".main-menu a[href='projects.html']").addClass("active");
+                $(".main-menu a[href='projects.html']").closest("li").addClass("active");
             });
             $("#footer").load("footer.html");
 
