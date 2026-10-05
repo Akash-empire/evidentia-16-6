@@ -163,18 +163,30 @@ select {
     margin-left: 100px;
 }
 
-#header-sticky {
-    z-index: 1002 !important;
+#header-sticky,
+#header-sticky.sticky,
+.header-1,
+.header-main,
+.mega-menu-wrapper {
+    z-index: 99999 !important;
 }
 
 #header-sticky:not(.position-absolute):not(.sticky) {
     position: relative !important;
 }
 
+/* Ensure service page sticky images sit safely below the header navbar and never overlap the menu */
+.gainlove-image-wrap,
+.svc-side-img-container,
+.svc-category-section .sticky-lg-top {
+    top: 120px !important;
+    z-index: 10 !important;
+}
+
 .services-mega-backdrop {
     position: fixed;
     inset: 0;
-    z-index: 1001;
+    z-index: 99998;
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
@@ -3576,6 +3588,7 @@ Global Map
         padding: 40px 30px;
         min-height: auto;
     }
+
     .charity-right-panel {
         padding: 40px 30px;
     }
@@ -4382,27 +4395,27 @@ Global Map
     .gainlove-hero-headline {
         font-size: 34px;
     }
-    
+
     .gainlove-pill-collage-container {
         height: 360px;
         margin-top: 20px;
     }
-    
+
     .gainlove-pill-item {
         width: 95px;
         border-width: 5px;
     }
-    
+
     .gainlove-pill-item.pill-1 {
         height: 270px;
         margin-top: 30px;
     }
-    
+
     .gainlove-pill-item.pill-2 {
         height: 330px;
         margin-top: -10px;
     }
-    
+
     .gainlove-pill-item.pill-3 {
         height: 290px;
         margin-top: -45px;
@@ -4830,12 +4843,29 @@ Global Map
     font-family: inherit;
 }
 
-.mosaic-tile.bg-teal { background-color: #70A6B1; }
-.mosaic-tile.bg-yellow { background-color: #f59e0b; }
-.mosaic-tile.bg-orange { background-color: #f97316; }
-.mosaic-tile.bg-navy { background-color: #031740; }
-.mosaic-tile.bg-green { background-color: #10b981; }
-.mosaic-tile.bg-pink { background-color: #ec4899; }
+.mosaic-tile.bg-teal {
+    background-color: #70A6B1;
+}
+
+.mosaic-tile.bg-yellow {
+    background-color: #f59e0b;
+}
+
+.mosaic-tile.bg-orange {
+    background-color: #f97316;
+}
+
+.mosaic-tile.bg-navy {
+    background-color: #031740;
+}
+
+.mosaic-tile.bg-green {
+    background-color: #10b981;
+}
+
+.mosaic-tile.bg-pink {
+    background-color: #ec4899;
+}
 
 .editorial-hero-title {
     font-size: 38px;
@@ -4910,8 +4940,10 @@ Global Map
 /* â”€â”€ White SVG curve â€” covers LEFT + bottom-left area â”€â”€ */
 .ref-iotcasa-curve {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     z-index: 1;
 }
@@ -4938,13 +4970,16 @@ Global Map
     background: #bdc8d5;
     z-index: 2;
 }
+
 .ref-strip img {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transform: rotate(35deg) scale(1.65);
     display: block;
     transition: transform 0.5s ease;
 }
+
 .ref-strip:hover img {
     transform: rotate(35deg) scale(1.78);
 }
@@ -4954,10 +4989,37 @@ Global Map
   Each strip steps ~175px down and ~165px right, creating the fan arc.
   Negative left values are clipped by overflow:hidden.
 */
-.ref-strip-1 { top: -30px; left: -20px; width: 400px; height: 245px; z-index: 6; }
-.ref-strip-2 { top: 158px; left: 145px; width: 410px; height: 255px; z-index: 5; }
-.ref-strip-3 { top: 348px; left: 310px; width: 410px; height: 255px; z-index: 4; }
-.ref-strip-4 { top: 538px; left: 474px; width: 410px; height: 255px; z-index: 3; }
+.ref-strip-1 {
+    top: -30px;
+    left: -20px;
+    width: 400px;
+    height: 245px;
+    z-index: 6;
+}
+
+.ref-strip-2 {
+    top: 158px;
+    left: 145px;
+    width: 410px;
+    height: 255px;
+    z-index: 5;
+}
+
+.ref-strip-3 {
+    top: 348px;
+    left: 310px;
+    width: 410px;
+    height: 255px;
+    z-index: 4;
+}
+
+.ref-strip-4 {
+    top: 538px;
+    left: 474px;
+    width: 410px;
+    height: 255px;
+    z-index: 3;
+}
 
 /* â”€â”€ Floating white pill badge on each strip â”€â”€ */
 .ref-strip-badge {
@@ -4968,8 +5030,8 @@ Global Map
     font-size: 13px;
     font-weight: 700;
     color: #0d1527;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.16);
-    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transform: rotate(35deg);
     display: inline-flex;
     align-items: center;
@@ -4977,11 +5039,31 @@ Global Map
     white-space: nowrap;
     z-index: 10;
 }
-.ref-strip-1 .ref-strip-badge { top: 80px; left: 80px; }
-.ref-strip-2 .ref-strip-badge { top: 26px; left: 50px; }
-.ref-strip-3 .ref-strip-badge { top: 26px; left: 50px; }
-.ref-strip-4 .ref-strip-badge { top: 26px; left: 50px; }
-.ref-strip-badge i { color: #70A6B1; font-size: 12px; }
+
+.ref-strip-1 .ref-strip-badge {
+    top: 80px;
+    left: 80px;
+}
+
+.ref-strip-2 .ref-strip-badge {
+    top: 26px;
+    left: 50px;
+}
+
+.ref-strip-3 .ref-strip-badge {
+    top: 26px;
+    left: 50px;
+}
+
+.ref-strip-4 .ref-strip-badge {
+    top: 26px;
+    left: 50px;
+}
+
+.ref-strip-badge i {
+    color: #70A6B1;
+    font-size: 12px;
+}
 
 /* â”€â”€ Text block: pinned bottom-left on white area â”€â”€ */
 .ref-iotcasa-text {
@@ -4999,6 +5081,7 @@ Global Map
     color: #445566;
     line-height: 1.4;
 }
+
 .ribbon-main-headline {
     font-size: 58px;
     font-weight: 800;
@@ -5006,6 +5089,7 @@ Global Map
     line-height: 1.08;
     letter-spacing: -2px;
 }
+
 .ribbon-hashtag {
     font-size: 14px;
     font-weight: 700;
@@ -5014,42 +5098,220 @@ Global Map
 
 /* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1399px) {
-    .ref-strip-1 { top: -35px; left: -70px; width: 370px; height: 228px; }
-    .ref-strip-2 { top: 138px; left:  68px; width: 380px; height: 235px; }
-    .ref-strip-3 { top: 318px; left: 220px; width: 380px; height: 235px; }
-    .ref-strip-4 { top: 498px; left: 368px; width: 380px; height: 235px; }
+    .ref-strip-1 {
+        top: -35px;
+        left: -70px;
+        width: 370px;
+        height: 228px;
+    }
+
+    .ref-strip-2 {
+        top: 138px;
+        left: 68px;
+        width: 380px;
+        height: 235px;
+    }
+
+    .ref-strip-3 {
+        top: 318px;
+        left: 220px;
+        width: 380px;
+        height: 235px;
+    }
+
+    .ref-strip-4 {
+        top: 498px;
+        left: 368px;
+        width: 380px;
+        height: 235px;
+    }
 }
 
 @media (max-width: 1199px) {
-    .ref-iotcasa-section  { min-height: 740px; }
-    .ribbon-main-headline { font-size: 46px; letter-spacing: -1px; }
-    .ref-photos-area      { width: 60%; }
-    .ref-strip-1 { top: -30px; left: -60px; width: 330px; height: 205px; }
-    .ref-strip-2 { top: 125px; left:  55px; width: 340px; height: 210px; }
-    .ref-strip-3 { top: 292px; left: 185px; width: 340px; height: 210px; }
-    .ref-strip-4 { top: 460px; left: 308px; width: 340px; height: 210px; }
-    .ref-iotcasa-text { width: 320px; left: 50px; bottom: 55px; }
+    .ref-iotcasa-section {
+        min-height: 740px;
+    }
+
+    .ribbon-main-headline {
+        font-size: 46px;
+        letter-spacing: -1px;
+    }
+
+    .ref-photos-area {
+        width: 60%;
+    }
+
+    .ref-strip-1 {
+        top: -30px;
+        left: -60px;
+        width: 330px;
+        height: 205px;
+    }
+
+    .ref-strip-2 {
+        top: 125px;
+        left: 55px;
+        width: 340px;
+        height: 210px;
+    }
+
+    .ref-strip-3 {
+        top: 292px;
+        left: 185px;
+        width: 340px;
+        height: 210px;
+    }
+
+    .ref-strip-4 {
+        top: 460px;
+        left: 308px;
+        width: 340px;
+        height: 210px;
+    }
+
+    .ref-iotcasa-text {
+        width: 320px;
+        left: 50px;
+        bottom: 55px;
+    }
 }
 
 @media (max-width: 991px) {
-    .ref-iotcasa-section  { min-height: 680px; }
-    .ribbon-main-headline { font-size: 38px; letter-spacing: -0.5px; }
-    .ref-photos-area      { width: 58%; }
-    .ref-strip-1 { top: -25px; left: -50px; width: 290px; height: 180px; }
-    .ref-strip-2 { top: 110px; left:  48px; width: 298px; height: 184px; }
-    .ref-strip-3 { top: 252px; left: 158px; width: 298px; height: 184px; }
-    .ref-strip-4 { top: 395px; left: 265px; width: 298px; height: 184px; }
-    .ref-iotcasa-text { width: 270px; left: 30px; bottom: 44px; }
+    .ref-iotcasa-section {
+        min-height: 680px;
+    }
+
+    .ribbon-main-headline {
+        font-size: 38px;
+        letter-spacing: -0.5px;
+    }
+
+    .ref-photos-area {
+        width: 58%;
+    }
+
+    .ref-strip-1 {
+        top: -25px;
+        left: -50px;
+        width: 290px;
+        height: 180px;
+    }
+
+    .ref-strip-2 {
+        top: 110px;
+        left: 48px;
+        width: 298px;
+        height: 184px;
+    }
+
+    .ref-strip-3 {
+        top: 252px;
+        left: 158px;
+        width: 298px;
+        height: 184px;
+    }
+
+    .ref-strip-4 {
+        top: 395px;
+        left: 265px;
+        width: 298px;
+        height: 184px;
+    }
+
+    .ref-iotcasa-text {
+        width: 270px;
+        left: 30px;
+        bottom: 44px;
+    }
 }
 
 @media (max-width: 767px) {
-    .ref-iotcasa-section { min-height: auto; padding-top: 360px; padding-bottom: 50px; }
-    .ref-photos-area     { width: 100%; height: 360px; top: 0; }
-    .ref-iotcasa-text    { position: relative; bottom: auto; left: auto; width: 100%; padding: 30px 20px 0; }
-    .ref-strip-1 { top:   0px; left:   0px; width: 250px; height: 155px; }
-    .ref-strip-2 { top:  92px; left: 110px; width: 258px; height: 160px; }
-    .ref-strip-3 { top: 188px; left: 208px; width: 258px; height: 160px; }
-    .ref-strip-4 { top: 284px; left: 298px; width: 258px; height: 160px; }
-    .ribbon-main-headline { font-size: 32px; }
+    .ref-iotcasa-section {
+        min-height: auto;
+        padding-top: 360px;
+        padding-bottom: 50px;
+    }
+
+    .ref-photos-area {
+        width: 100%;
+        height: 360px;
+        top: 0;
+    }
+
+    .ref-iotcasa-text {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        padding: 30px 20px 0;
+    }
+
+    .ref-strip-1 {
+        top: 0px;
+        left: 0px;
+        width: 250px;
+        height: 155px;
+    }
+
+    .ref-strip-2 {
+        top: 92px;
+        left: 110px;
+        width: 258px;
+        height: 160px;
+    }
+
+    .ref-strip-3 {
+        top: 188px;
+        left: 208px;
+        width: 258px;
+        height: 160px;
+    }
+
+    .ref-strip-4 {
+        top: 284px;
+        left: 298px;
+        width: 258px;
+        height: 160px;
+    }
+
+    .ribbon-main-headline {
+        font-size: 32px;
+    }
 }
 
+/* Even-Sized Client Success Cards: Dark & Light Alternating Pair */
+.studies-box-even-left {
+    background: linear-gradient(135deg, #031740 0%, #082b60 100%);
+    border-radius: 20px;
+    padding: 44px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 14px 36px rgba(3, 23, 64, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.studies-box-even-left:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(3, 23, 64, 0.18);
+}
+
+.studies-box-even-right {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 44px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 14px 36px rgba(3, 23, 64, 0.06);
+    border: 1.5px solid rgba(3, 23, 64, 0.1);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.studies-box-even-right:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(3, 23, 64, 0.12);
+}

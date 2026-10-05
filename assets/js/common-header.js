@@ -156,26 +156,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <!-- Company Info -->
                 <div class="col-xl-3 col-lg-3 col-md-12">
-                    <div class="footer-widget pe-lg-5">
+                    <div class="footer-widget pe-lg-4">
 
                         <a href="index.html" class="footer-logo d-inline-block mb-4">
-                            <img src="assets/webimages/log.png" width="270px" alt="logo" class="white-logoo">
+                            <img src="assets/webimages/log.png" width="240px" alt="logo" class="white-logoo">
                         </a>
 
                         <p class="white65 mb-4">
                             Empowering researchers, institutions and industries through innovative research consulting, scientific excellence and evidence-based solutions that drive knowledge.
                         </p>
 
-
                         <!-- Social -->
                         <div class="social-custom d-flex align-items-center gap-3 mt-4">
-                            <a href="#" class="black">
+                            <a href="#" class="black" aria-label="Instagram">
                                 <i class="fab fa-instagram white65"></i>
                             </a>
-
-                           
-
-                            <a href="#" class="black">
+                            <a href="#" class="black" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in white65"></i>
                             </a>
                         </div>
@@ -183,138 +179,82 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
 
-                <!-- Programs -->
+                <!-- Quick Links (Menus) -->
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
-                            <h5 class="white">Research</h5>
+                            <h5 class="white">Quick Links</h5>
                         </div>
 
-                        <ul class="list-area d-grid gap-1">
-
-    <li><a href="research-consulting.html">Research Consulting</a></li>
-
-    <li><a href="data-analysis.html">Data Analysis</a></li>
-
-    <li><a href="project-management.html">Project Management</a></li>
-
-    <li><a href="publication-support.html">Publication Support</a></li>
-
-    <li><a href="documentation.html">Documentation</a></li>
-
-    <li><a href="research-collaboration.html">Research Collaboration</a></li>
-
-    <li><a href="scientific-advisory.html">Scientific Advisory</a></li>
-
-</ul>
+                        <ul class="list-area d-grid gap-2">
+                            <li><a href="index.html"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>About Us</a></li>
+                            <li><a href="services.html"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Services</a></li>
+                            <li><a href="projects.html"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Projects</a></li>
+                            <li><a href="news-events.html"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>News & Events</a></li>
+                            <li><a href="contact.html"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Contact Us</a></li>
+                        </ul>
 
                     </div>
                 </div>
 
-                <!-- Frameworks -->
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <!-- Our Services (Particular Service Links) -->
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
-                            <h5 class="white">
-    Training
-</h5>
+                            <h5 class="white">Our Services</h5>
                         </div>
 
-                        <ul class="list-area d-grid gap-1">
-
-    <li><a href="research-methodology.html">Research Methodology</a></li>
-
-    <li><a href="scientific-writing.html">Scientific Writing</a></li>
-
-    <li><a href="publication-workshops.html">Publication Workshops</a></li>
-
-    <li><a href="faculty-development.html">Faculty Development</a></li>
-
-    <li><a href="capacity-building.html">Capacity Building</a></li>
-
-    <li><a href="professional-training.html">Professional Training</a></li>
-
-</ul>
-
-                    </div>
-                </div>
-
-                <!-- Resources -->
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                    <div class="footer-widget">
-
-                        <div class="widget-head mb-4">
-                           <h5 class="white">
-    Resource Centre
-</h5>
-                        </div>
-
-                        <ul class="list-area d-grid gap-1">
-
-    <li><a href="publications.html">Publications</a></li>
-
-    <li><a href="case-studies.html">Case Studies</a></li>
-
-    <li><a href="research-guides.html">Research Guides</a></li>
-
-    <li><a href="downloads.html">Downloads</a></li>
-
-    <li><a href="news-events.html">News & Events</a></li>
-
-    <li><a href="opportunities.html">Opportunities</a></li>
-
-</ul>
+                        <ul class="list-area d-grid gap-2">
+                            <li><a href="services.html#research-evaluation"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Research & Evaluation</a></li>
+                            <li><a href="services.html#monitoring-evaluation"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Monitoring & Evaluation</a></li>
+                            <li><a href="services.html#data-analytics"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Data Analytics</a></li>
+                            <li><a href="services.html#research-writing"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Research Writing</a></li>
+                            <li><a href="services.html#knowledge-products"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Knowledge Products</a></li>
+                            <li><a href="services.html#capacity-building"><i class="fa-solid fa-chevron-right fs-12 me-2 text-teal"></i>Capacity Building</a></li>
+                        </ul>
 
                     </div>
                 </div>
 
                 <!-- Contact Details -->
-                <div class="col-xl-2 col-lg-3 col-md-6">
+                <div class="col-xl-3 col-lg-3 col-md-4">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
                             <h5 class="white">Contact</h5>
                         </div>
 
-                        <div class="d-flex flex-column gap-4">
+                        <div class="d-flex flex-column gap-3">
 
-    <!-- Phone -->
-    <div>
-        <span class="fs-eight white65 d-block mb-1">
-            Support
-        </span>
+                            <!-- Phone -->
+                            <div>
+                                <span class="fs-eight white65 d-block mb-1">Support</span>
+                                <a href="tel:+919790615824" class="white fw-semibold">
+                                    +91 97906 15824
+                                </a>
+                            </div>
 
-        <a href="tel:+919790615824" class="white fw-semibold">
-            +91 97906 15824
-        </a>
-    </div>
+                            <!-- Email -->
+                            <div>
+                                <span class="fs-eight white65 d-block mb-1">Email Address</span>
+                                <a href="mailto:admin@evidentia.co.in" class="white fw-semibold">
+                                    admin@evidentia.co.in
+                                </a>
+                            </div>
 
-    <!-- Email -->
-    <div>
-        <span class="fs-eight white65 d-block mb-1">
-            Email Address
-        </span>
+                            <!-- Address -->
+                            <div>
+                                <span class="fs-eight white65 d-block mb-1">Office Address</span>
+                                <p class="white mb-0">
+                                    Aminjikarai,<br>
+                                    Chennai – 600029.
+                                </p>
+                            </div>
 
-        <a href="mailto:admin@evidentia.co.in" class="white fw-semibold">
-            admin@evidentia.co.in
-        </a>
-    </div>
-
-    <!-- Address -->
-    <div>
-        <span class="fs-eight white65 d-block mb-1">
-            Office Address
-        </span>
-
-        <p class="white mb-0">
-            Aminjikarai, <br>
-            Chennai – 600029.
-        </p>
-    </div>
-
-</div>
+                        </div>
 
                     </div>
                 </div>
@@ -330,14 +270,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="white65 mb-0">
                             © 2026
                             <a href="index.html" class="white fw-semibold">
-                                Evidentia
+                                Evidentia Research Solutions
                             </a>.
                             All Rights Reserved.
                         </p>
                     </div>
 
-                    <div class="col-lg-6 text-end">
-                        <p class="white65">Designed by <a href="https://impinfo.in" class="white fw-semibold">Imperial Info Systems</a></p>
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <p class="white65 mb-0">Designed by <a href="https://impinfo.in" target="_blank" class="white fw-semibold">Imperial Info Systems</a></p>
                     </div>
 
                 </div>
@@ -424,6 +364,62 @@ document.addEventListener("DOMContentLoaded", () => {
         footerContainer.innerHTML = FOOTER_HTML;
         document.dispatchEvent(new CustomEvent("footerLoaded"));
     }
+
+    // 2b. Smooth scroll and active pill update for footer service section links
+    function handleServiceHashLinks() {
+        const hashLinks = document.querySelectorAll('a[href*="services.html#"], a[href^="#"]');
+        hashLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (!href || !href.includes('#')) return;
+                const hash = href.substring(href.indexOf('#'));
+                if (!hash || hash === '#') return;
+
+                const isServicesPage = window.location.pathname.endsWith('services.html') || window.location.pathname.includes('services');
+                if (isServicesPage) {
+                    const targetEl = document.querySelector(hash);
+                    if (targetEl) {
+                        e.preventDefault();
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        if (history.pushState) {
+                            history.pushState(null, null, hash);
+                        }
+
+                        // Update banner pill active state
+                        const pills = document.querySelectorAll('.services-nav-pills .svc-pill-btn');
+                        pills.forEach(p => {
+                            const pAttr = p.getAttribute('href');
+                            if (pAttr === hash || (pAttr && pAttr.endsWith(hash))) {
+                                p.classList.add('active');
+                            } else {
+                                p.classList.remove('active');
+                            }
+                        });
+                    }
+                }
+            });
+        });
+
+        // Scroll to target if page loaded with a hash in URL
+        if (window.location.hash && window.location.pathname.includes('services.html')) {
+            setTimeout(() => {
+                const targetEl = document.querySelector(window.location.hash);
+                if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    const pills = document.querySelectorAll('.services-nav-pills .svc-pill-btn');
+                    pills.forEach(p => {
+                        const pAttr = p.getAttribute('href');
+                        if (pAttr === window.location.hash || (pAttr && pAttr.endsWith(window.location.hash))) {
+                            p.classList.add('active');
+                        } else {
+                            p.classList.remove('active');
+                        }
+                    });
+                }
+            }, 300);
+        }
+    }
+    handleServiceHashLinks();
 
     // 3. Inject Floating WhatsApp Chat Widget globally across all pages
     if (!document.getElementById("whatsapp-floating-widget")) {
