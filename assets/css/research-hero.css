@@ -1,0 +1,308 @@
+﻿/* ============================================================
+   RESEARCH HERO SECTION — Complete isolated CSS
+   Prefix: research-hero-  |  No Bootstrap. No framework.
+   Scoped: every rule under .research-hero-section
+   ============================================================ */
+
+/* ── 1. Section wrapper ── */
+.research-hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
+    overflow: hidden;
+    background-color: #eef2f6;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+}
+
+/* ── 2. Background — white organic oval creates the curved divider ──
+   A large white ellipse is positioned to the left.
+   Its protruding right edge creates the smooth organic curve
+   that separates the white text area from the grey image area.
+*/
+.research-hero-section .research-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.research-hero-section .research-hero-background::before {
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: -12%;
+    width: 68%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* ── 3. Text content: bottom-left on white oval area ── */
+.research-hero-section .research-hero-content {
+    position: absolute;
+    bottom: 72px;
+    left: 7%;
+    width: 36%;
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.85s ease 0.15s, transform 0.85s ease 0.15s;
+}
+
+.research-hero-section .research-hero-content.rh-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── 4. Eyebrow ── */
+.research-hero-section .research-hero-eyebrow {
+    margin: 0 0 14px 0;
+    font-size: 16.5px;
+    font-weight: 500;
+    color: #5a6b7d;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+}
+
+/* ── 5. Main heading ── */
+.research-hero-section .research-hero-title {
+    margin: 0 0 30px 0;
+    font-size: 54px;
+    font-weight: 800;
+    color: #0b1420;
+    line-height: 1.07;
+    letter-spacing: -2.5px;
+}
+
+/* ── 6. Button row ── */
+.research-hero-section .research-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.research-hero-section .research-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 30px;
+    background-color: #031740;
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 6px 24px rgba(3, 23, 64, 0.25);
+}
+
+.research-hero-section .research-hero-primary:hover {
+    background-color: #0d2a7a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(3, 23, 64, 0.35);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.research-hero-section .research-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    background: transparent;
+    color: #031740;
+    border: 2.5px solid #031740;
+    border-radius: 50px;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.research-hero-section .research-hero-secondary:hover {
+    background-color: #031740;
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* ── 7. Image gallery container (right 65%, clips overflow) ── */
+.research-hero-section .research-hero-gallery {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 3;
+}
+
+/* ── 8. Individual image strips: rotated -35deg arc fan ── */
+.research-hero-section .research-hero-image {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 22px 58px rgba(3, 23, 64, 0.24);
+    transform: rotate(-35deg) translateY(26px);
+    background-color: #b5c3d2;
+    opacity: 0;
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+/* Images fill strip, counter-rotated to restore horizontal view */
+.research-hero-section .research-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(35deg) scale(1.68);
+    transition: transform 0.55s ease;
+}
+
+.research-hero-section .research-hero-image:hover img {
+    transform: rotate(35deg) scale(1.80);
+}
+
+/* Visible state triggered by IntersectionObserver */
+.research-hero-section .research-hero-image.rh-visible {
+    opacity: 1;
+    transform: rotate(-35deg) translateY(0);
+}
+
+/* ── 9. Individual strip positions (arc fan: top → bottom-right) ──
+   Each step: +190px down, +165px right
+   Negative left is clipped by gallery overflow:hidden
+*/
+.research-hero-section .research-hero-image-1 {
+    top: -35px;
+    left: -25px;
+    width: 385px;
+    height: 238px;
+    z-index: 6;
+    transition-delay: 0.08s;
+}
+
+.research-hero-section .research-hero-image-2 {
+    top: 158px;
+    left: 142px;
+    width: 400px;
+    height: 250px;
+    z-index: 5;
+    transition-delay: 0.22s;
+}
+
+.research-hero-section .research-hero-image-3 {
+    top: 352px;
+    left: 308px;
+    width: 400px;
+    height: 250px;
+    z-index: 4;
+    transition-delay: 0.37s;
+}
+
+.research-hero-section .research-hero-image-4 {
+    top: 546px;
+    left: 474px;
+    width: 400px;
+    height: 250px;
+    z-index: 3;
+    transition-delay: 0.52s;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════════════ */
+
+/* ── Large desktop: 1400px ── */
+@media (max-width: 1400px) {
+    .research-hero-section .research-hero-image-1 { top: -30px; left: -20px; width: 360px; height: 222px; }
+    .research-hero-section .research-hero-image-2 { top: 146px; left: 128px; width: 372px; height: 232px; }
+    .research-hero-section .research-hero-image-3 { top: 326px; left: 278px; width: 372px; height: 232px; }
+    .research-hero-section .research-hero-image-4 { top: 506px; left: 428px; width: 372px; height: 232px; }
+}
+
+/* ── Medium desktop / laptop: 1200px ── */
+@media (max-width: 1200px) {
+    .research-hero-section .research-hero-title   { font-size: 44px; letter-spacing: -1.5px; }
+    .research-hero-section .research-hero-content { width: 330px; left: 5%; bottom: 60px; }
+    .research-hero-section .research-hero-gallery { width: 63%; }
+    .research-hero-section .research-hero-image-1 { top: -25px; left: -15px; width: 320px; height: 198px; }
+    .research-hero-section .research-hero-image-2 { top: 130px; left: 108px; width: 332px; height: 206px; }
+    .research-hero-section .research-hero-image-3 { top: 292px; left: 232px; width: 332px; height: 206px; }
+    .research-hero-section .research-hero-image-4 { top: 454px; left: 356px; width: 332px; height: 206px; }
+}
+
+/* ── Tablet landscape: 992px ── */
+@media (max-width: 992px) {
+    .research-hero-section { min-height: 660px; }
+    .research-hero-section .research-hero-title   { font-size: 36px; letter-spacing: -1px; }
+    .research-hero-section .research-hero-eyebrow { font-size: 15px; }
+    .research-hero-section .research-hero-content { width: 280px; left: 4%; bottom: 48px; }
+    .research-hero-section .research-hero-gallery { width: 60%; }
+    .research-hero-section .research-hero-background::before { width: 72%; }
+    .research-hero-section .research-hero-image-1 { top: -20px; left: -12px; width: 278px; height: 173px; }
+    .research-hero-section .research-hero-image-2 { top: 112px; left:  92px; width: 288px; height: 178px; }
+    .research-hero-section .research-hero-image-3 { top: 248px; left: 200px; width: 288px; height: 178px; }
+    .research-hero-section .research-hero-image-4 { top: 384px; left: 308px; width: 288px; height: 178px; }
+}
+
+/* ── Tablet portrait: 768px — stack vertically ── */
+@media (max-width: 768px) {
+    .research-hero-section {
+        min-height: auto;
+        background-color: #ffffff;
+        padding-bottom: 50px;
+    }
+
+    /* Hide the oval curve on mobile (full white bg) */
+    .research-hero-section .research-hero-background::before {
+        display: none;
+    }
+
+    /* Gallery: fixed-height strip at top */
+    .research-hero-section .research-hero-gallery {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    /* Content: normal flow below gallery */
+    .research-hero-section .research-hero-content {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        padding: 32px 20px 0;
+        box-sizing: border-box;
+    }
+
+    .research-hero-section .research-hero-image-1 { top:  0px; left:   0px; width: 238px; height: 148px; }
+    .research-hero-section .research-hero-image-2 { top: 86px; left: 104px; width: 246px; height: 152px; }
+    .research-hero-section .research-hero-image-3 { top: 174px; left: 196px; width: 246px; height: 152px; }
+    .research-hero-section .research-hero-image-4 { top: 262px; left: 284px; width: 246px; height: 152px; }
+
+    .research-hero-section .research-hero-title   { font-size: 34px; letter-spacing: -0.5px; }
+    .research-hero-section .research-hero-eyebrow { font-size: 15px; }
+}
+
+/* ── Mobile: 480px ── */
+@media (max-width: 480px) {
+    .research-hero-section .research-hero-gallery { height: 250px; }
+    .research-hero-section .research-hero-image-1 { width: 200px; height: 125px; }
+    .research-hero-section .research-hero-image-2 { top: 72px;  left: 88px;  width: 206px; height: 128px; }
+    .research-hero-section .research-hero-image-3 { top: 146px; left: 162px; width: 206px; height: 128px; }
+    .research-hero-section .research-hero-image-4 { top: 220px; left: 230px; width: 206px; height: 128px; }
+    .research-hero-section .research-hero-title   { font-size: 28px; }
+    .research-hero-section .research-hero-primary,
+    .research-hero-section .research-hero-secondary { padding: 11px 22px; font-size: 12.5px; }
+}

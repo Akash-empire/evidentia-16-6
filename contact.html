@@ -132,121 +132,102 @@
     </section>
     <!-- Banner Section Start -->
 
-    <!-- Contact Info Section Start -->
-    <section class="contact-info-section fix space-top space-bottom">
+    <!-- Contact Hero & Card Section Start -->
+    <section class="charity-contact-section position-relative fix">
         <div class="container">
-            <div class="row g-5 align-items-center">
-                <!-- Left Column: Image -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="contact-img-container">
-                        <img src="assets/webimages/contact.jpg" alt="Contact Illustration">
+            <!-- Header Text -->
+            <div class="charity-contact-header text-center">
+                <span class="text-uppercase fw-bold text-teal tracking-wider mb-2 d-inline-block" style="color: #70A6B1; font-size: 14px; letter-spacing: 2px;">CONTACT</span>
+                <h2 class="charity-contact-intro">
+                    Whether you’re looking to work with us, explore a collaboration, join our team, or simply have a question — we’d be happy to hear from you.
+                </h2>
+                <p class="charity-contact-sub">
+                    Reach us at — Email: <a href="mailto:admin@evidentia.co.in">admin@evidentia.co.in</a> &nbsp;|&nbsp; Phone: <a href="tel:+919790615824">+91 97906 15824</a>
+                </p>
+            </div>
+
+            <!-- Dual-Column Contact Card -->
+            <div class="charity-contact-card overflow-hidden">
+                <div class="row g-0">
+                    <!-- Left Accent Panel -->
+                    <div class="col-lg-5 charity-left-panel d-flex flex-column justify-content-between">
+                        <div class="charity-left-top">
+                            <h2 class="charity-left-title">
+                                Let’s Connect.
+                            </h2>
+                            <div class="charity-left-img-wrap text-center">
+                                <img src="assets/webimages/contact.jpg" alt="Contact Evidentia">
+                            </div>
+                        </div>
+                        <div class="charity-left-bottom">
+                            <p class="charity-left-sublabel mb-3" style="color: #70A6B1; font-weight: 600; font-size: 15px; letter-spacing: 0.5px;">REACH US AT</p>
+                            <div class="charity-phones">
+                                <p class="mb-2"><i class="fa-solid fa-envelope me-2"></i>Email: <a href="mailto:admin@evidentia.co.in" class="text-white text-decoration-underline">admin@evidentia.co.in</a></p>
+                                <p><i class="fa-solid fa-phone me-2"></i>Phone: <a href="tel:+919790615824" class="text-white text-decoration-underline">+91 97906 15824</a></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Right Column: Stack of Details Cards -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="contact-details-wrapper">
-                        <!-- Card 1: Phone -->
-                        <div class="contact-detail-card phone-card">
-                            <div class="contact-icon-box">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="contact-detail-info">
-                                <h5>Phone Number</h5>
-                                <p>Call Us Directly:</p>
-                                <a href="tel:+12246767430" class="fw-semibold">+(1) 224 676 7430</a>
-                            </div>
-                        </div>
 
-                        <!-- Card 2: Email -->
-                        <div class="contact-detail-card email-card">
-                            <div class="contact-icon-box">
-                                <i class="fa-regular fa-envelope"></i>
+                    <!-- Right Form Panel -->
+                    <div class="col-lg-7 charity-right-panel">
+                        <h3 class="charity-form-title">Or send us a message</h3>
+                        <form action="#" method="POST" id="charity-contact-form" class="charity-form">
+                            <!-- Input: Name -->
+                            <div class="charity-input-group">
+                                <span class="charity-input-icon"><i class="fa-regular fa-user"></i></span>
+                                <input type="text" name="name" id="charity-name" placeholder="Name" required>
                             </div>
-                            <div class="contact-detail-info">
-                                <h5>Email Address</h5>
-                                <p>Send Us an Email:</p>
-                                <a href="mailto:admin@evidentia.co.in" class="fw-semibold">admin@evidentia.co.in</a>
-                            </div>
-                        </div>
 
-                        <!-- Card 3: Address -->
-                        <div class="contact-detail-card address-card">
-                            <div class="contact-icon-box">
-                                <i class="fa-solid fa-map-location-dot"></i>
+                            <!-- Input: Email -->
+                            <div class="charity-input-group">
+                                <span class="charity-input-icon"><i class="fa-regular fa-envelope"></i></span>
+                                <input type="email" name="email" id="charity-email" placeholder="Email" required>
                             </div>
-                            <div class="contact-detail-info">
-                                <h5>Office Location</h5>
-                                <p>Headquarters:</p>
-                                <p class="fw-semibold black">Digital Agency Network 20 Eastbourne Terrace, London W2 6LG</p>
+
+                            <!-- Input: I'm reaching out about -->
+                            <div class="charity-input-group flex-column align-items-start mt-1">
+                                <label for="charity-subject" class="charity-label">I’m reaching out about:</label>
+                                <div class="w-100 position-relative d-flex align-items-center charity-select-wrap">
+                                    <span class="charity-input-icon"><i class="fa-solid fa-circle-nodes"></i></span>
+                                    <select name="subject" id="charity-subject" class="charity-select" required>
+                                        <option value="" disabled selected>Select an option</option>
+                                        <option value="Working with Evidentia">Working with Evidentia</option>
+                                        <option value="Collaboration">Collaboration</option>
+                                        <option value="Careers / Opportunities">Careers / Opportunities</option>
+                                        <option value="Research / Academic enquiry">Research / Academic enquiry</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
+
+                            <!-- Input: Message -->
+                            <div class="charity-input-group flex-column align-items-start mt-2">
+                                <label for="charity-message" class="charity-label">Message</label>
+                                <textarea name="message" id="charity-message" rows="4" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <!-- Submit Button & Response Note -->
+                            <div class="charity-form-footer mt-2 d-flex flex-column align-items-start gap-2">
+                                <button type="submit" class="charity-send-btn">
+                                    SEND MESSAGE
+                                </button>
+                                <span class="charity-form-note">
+                                    <i class="fa-regular fa-clock me-1" style="color: #70A6B1;"></i> We’ll get back to you as soon as we can.
+                                </span>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form & Map Section Start -->
-    <section class="contact-form-map-section fix space-bottom">
+    <!-- Map Section Below Start -->
+    <section class="contact-map-section fix">
         <div class="container">
-            <div class="row g-5 align-items-stretch">
-                <!-- Left Column: Premium Contact Inquiry Form -->
-                <div class="col-lg-7">
-                    <div class="contact-form-card">
-                        <h3>How Can We Help You?</h3>
-                        <form action="#" method="POST" id="contact-form">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-input-wrapper">
-                                        <input type="text" name="name" id="name" placeholder="Your Name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-input-wrapper">
-                                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-input-wrapper">
-                                        <input type="email" name="email" id="email" placeholder="Your Email Address" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-input-wrapper">
-                                        <input type="text" name="subject" id="subject" placeholder="Your Subject" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-input-wrapper">
-                                        <textarea name="message" id="message" rows="5" placeholder="Write Your Message Here..." required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="d-flex flex-lg-nowrap flex-wrap justify-content-lg-between justify-content-center align-items-center gap-4 mt-3">
-                                        <button type="submit" class="common-btn box-style cmn-style1 d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold white overflow-hidden rounded-5 p3-bg" style="border: none; white-space: nowrap;">
-                                            <span>
-                                                Send Message
-                                                <span class="ani-arrow" style="margin-left: 8px;">
-                                                    <i class="fa-solid fa-arrow-right-long"></i>
-                                                </span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Right Column: Premium Location Map Card -->
-                <div class="col-lg-5">
-                    <div class="contact-map-card">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52808140.21705447!2d-161.46429918210544!3d36.11412792251988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1740418796595!5m2!1sen!2sbd"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
+            <div class="contact-map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52808140.21705447!2d-161.46429918210544!3d36.11412792251988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1740418796595!5m2!1sen!2sbd"
+                    style="border:0; width:100%; height:450px; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
