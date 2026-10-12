@@ -2313,20 +2313,20 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 
 .testimonial-card {
     width: 330px;
-    background: #ffffff;
+    background: linear-gradient(145deg, #031740 0%, #072255 50%, #0c3374 100%);
     padding: 40px;
     border-radius: 16px;
-    border: 1px solid rgba(112, 166, 177, 0.22);
-    box-shadow: 0 10px 30px rgba(3, 23, 64, 0.06);
+    border: 1px solid rgba(112, 166, 177, 0.28);
+    box-shadow: 0 12px 35px rgba(3, 23, 64, 0.16);
     flex-shrink: 0;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(112, 166, 177, 0.5);
-    box-shadow: 0 16px 40px rgba(3, 23, 64, 0.12);
+    transform: translateY(-6px);
+    border-color: #70A6B1;
+    box-shadow: 0 20px 45px rgba(3, 23, 64, 0.25);
 }
 
 .quote {
@@ -2337,7 +2337,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 }
 
 .testimonial-card p {
-    color: #374151;
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.8;
     font-size: 15px;
     min-height: 180px;
@@ -2346,7 +2346,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 .testimonial-card h4 {
     margin-top: 25px;
     margin-bottom: 4px;
-    color: #031740;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 700;
 }
@@ -2355,6 +2355,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     color: #70A6B1;
     font-size: 13px;
     font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 @keyframes scrollTestimonials {
@@ -5582,4 +5583,99 @@ Global Map
         left: -247px;
         top: -50.4px;
     }
+}
+
+/* ============================================================
+   ABOUT PAGE: PROCESS CIRCLES RIGHT-SIDE DIRECTING ARROWS
+   ============================================================ */
+
+/* Hide the old crude polygon wedge */
+.work-learn-item .thumb-author::before {
+    display: none !important;
+}
+
+/* Brand styling for author circle & serial number */
+.work-learn-item .thumb-author {
+    background: #E8EEFB;
+    border: 3px solid #ffffff;
+    box-shadow: 0 10px 28px rgba(3, 23, 64, 0.08);
+}
+
+.work-learn-item .thumb-author .serial {
+    background: #031740;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(3, 23, 64, 0.2);
+}
+
+.work-learn-item:hover .thumb-author {
+    background: #031740 !important;
+    border-color: #70A6B1 !important;
+    box-shadow: 0 14px 35px rgba(3, 23, 64, 0.18) !important;
+}
+
+.work-learn-item:hover .thumb-author .serial {
+    background: #70A6B1 !important;
+    color: #031740 !important;
+}
+
+/* Directing Arrow container positioned after each circle */
+.step-directing-arrow {
+    position: absolute;
+    right: -64px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+/* Connecting dashed guide line */
+.step-arrow-line {
+    width: 24px;
+    height: 0;
+    border-top: 2px dashed rgba(112, 166, 177, 0.7);
+    transition: border-color 0.3s ease;
+}
+
+/* Modern circular arrow badge */
+.step-arrow-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #70A6B1;
+    color: #031740;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 6px 18px rgba(3, 23, 64, 0.12);
+    transition: all 0.35s ease;
+    animation: stepArrowFloat 2.2s infinite ease-in-out;
+}
+
+@keyframes stepArrowFloat {
+    0%, 100% {
+        transform: translateX(0);
+        box-shadow: 0 6px 18px rgba(3, 23, 64, 0.12);
+    }
+    50% {
+        transform: translateX(6px);
+        box-shadow: 0 8px 24px rgba(112, 166, 177, 0.28);
+    }
+}
+
+/* Interactive hover on parent step */
+.work-learn-item:hover .step-arrow-badge {
+    background: #031740;
+    color: #70A6B1;
+    border-color: #031740;
+    transform: translateX(6px) scale(1.08);
+    box-shadow: 0 10px 25px rgba(3, 23, 64, 0.22);
+}
+
+.work-learn-item:hover .step-arrow-line {
+    border-top-color: #031740;
 }

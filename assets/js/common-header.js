@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="row gy-5 pb-5 border-bottom border-secondary">
 
                 <!-- Company Info -->
-                <div class="col-xl-3 col-lg-3 col-md-12">
+                <div class="col-xl-4 col-lg-4 col-md-12">
                     <div class="footer-widget pe-lg-4">
 
                         <a href="index.html" class="footer-logo d-inline-block mb-4">
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </a>
 
                         <p class="white65 mb-4">
-                            Empowering researchers, institutions and industries through innovative research consulting, scientific excellence and evidence-based solutions that drive knowledge.
+                            Helping organizations make confident decisions through research.
                         </p>
 
                         <!-- Social -->
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Quick Links (Menus) -->
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
