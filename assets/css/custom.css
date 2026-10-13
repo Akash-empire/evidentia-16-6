@@ -3327,22 +3327,56 @@ Global Map
 }
 
 .charity-contact-sub {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    color: #49577A;
+    font-family: "Plus Jakarta Sans", sans-serif;
     margin: 0;
 }
 
-.charity-contact-sub a {
-    color: #70A6B1;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+.charity-contact-sub-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #031740;
+    letter-spacing: 0.2px;
+}
+
+.charity-contact-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    background: #031740;
+    color: #ffffff !important;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 13px 28px;
+    border-radius: 50px;
+    text-decoration: none !important;
+    border: 1px solid rgba(112, 166, 177, 0.4);
+    box-shadow: 0 8px 22px rgba(3, 23, 64, 0.18);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.charity-contact-cta-btn span {
+    color: #ffffff !important;
     transition: color 0.3s ease;
 }
 
-.charity-contact-sub a:hover {
-    color: #031740;
+.charity-contact-cta-btn i {
+    color: #70A6B1;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.charity-contact-cta-btn:hover {
+    background: #70A6B1;
+    transform: translateY(-2px);
+    border-color: #70A6B1;
+    box-shadow: 0 12px 28px rgba(112, 166, 177, 0.4);
+}
+
+.charity-contact-cta-btn:hover,
+.charity-contact-cta-btn:hover span,
+.charity-contact-cta-btn:hover i {
+    color: #031740 !important;
 }
 
 /* Dual-Column Card */
@@ -3571,26 +3605,42 @@ Global Map
 }
 
 .charity-send-btn {
-    background-color: #70A6B1;
-    color: #031740;
+    background-color: #031740;
+    color: #ffffff;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 700;
     font-size: 15px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
-    padding: 13px 44px;
-    border-radius: 4px;
-    border: none;
+    padding: 14px 44px;
+    border-radius: 50px;
+    border: 1px solid rgba(112, 166, 177, 0.35);
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(112, 166, 177, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 8px 22px rgba(3, 23, 64, 0.18);
+}
+
+.charity-send-btn i {
+    color: #70A6B1;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .charity-send-btn:hover {
-    background-color: #031740;
-    color: #ffffff;
+    background-color: #70A6B1;
+    color: #031740;
+    border-color: #70A6B1;
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(3, 23, 64, 0.4);
+    box-shadow: 0 12px 28px rgba(112, 166, 177, 0.4);
+}
+
+.charity-send-btn:hover i {
+    color: #031740;
+    transform: translateX(3px);
 }
 
 .charity-form-note {
@@ -5382,43 +5432,99 @@ Global Map
     }
 }
 
-/* 2-Column Enabled Cards Layout for Services Section */
+/* Service Category Sections Spacing & Layout Stability */
+.svc-category-section {
+    padding-top: 60px !important;
+    padding-bottom: 75px !important;
+    position: relative;
+}
+
+.svc-category-section .container {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* 2-Column Cards for Services Section (Compact, No Empty White Space, Sublines on Hover) */
 .svc-2col-card {
     background: #ffffff;
     border: 1px solid rgba(112, 166, 177, 0.22);
-    border-radius: 14px;
-    padding: 24px 28px;
+    border-radius: 12px;
+    padding: 16px 20px;
     height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                border-color 0.3s ease;
     box-shadow: 0 4px 15px rgba(3, 23, 64, 0.03);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
 }
 
+.svc-2col-card.active,
 .svc-2col-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(112, 166, 177, 0.55);
-    box-shadow: 0 12px 28px rgba(3, 23, 64, 0.08);
+    transform: translateY(-2px);
+    border-color: #70A6B1;
+    box-shadow: 0 10px 24px rgba(3, 23, 64, 0.08);
 }
 
 .svc-2col-card h4 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     color: #031740;
-    margin-bottom: 10px;
+    margin: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
+    line-height: 1.35;
+    transition: margin-bottom 0.3s ease;
 }
 
 .svc-2col-card h4 i {
     color: #70A6B1;
     font-size: 16px;
+    width: 16px;
+    text-align: center;
+    margin-top: 3px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.svc-2col-card.active h4,
+.svc-2col-card:hover h4 {
+    margin-bottom: 8px;
+}
+
+.svc-2col-card.active h4 i,
+.svc-2col-card:hover h4 i {
+    transform: scale(1.1);
 }
 
 .svc-2col-card p {
-    font-size: 14.5px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.6;
     color: #4b5563;
     margin: 0;
+    padding-left: 26px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transform: translateY(4px);
+    transition: max-height 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                visibility 0.35s ease;
+}
+
+.svc-2col-card.active p,
+.svc-2col-card:hover p {
+    max-height: 120px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* ============================================================

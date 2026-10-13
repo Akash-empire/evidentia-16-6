@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- ========== Meta Tags ========== -->
@@ -92,9 +92,7 @@
                         </h1>
                         
                         <div class="d-flex flex-wrap align-items-center gap-3">
-                            <a href="contact.html" class="gainlove-hero-btn">
-                                <i class="fa-solid fa-paper-plane me-2"></i>GET IN TOUCH
-                            </a>
+                            
                             <a href="#research-evaluation" class="gainlove-hero-btn-outline">
                                 OUR SERVICES
                             </a>
@@ -230,7 +228,7 @@
                     <div class="gainlove-content-block mb-4">
                         <h2 class="gainlove-split-title mb-2">Monitoring & Evaluation</h2>
                         <p class="pra fs-seven mt-3" style="color: #4b5563; font-size: 16px; line-height: 1.8;">
-                            Keep programmes on track and learn from what happens. We help you put practical systems in place to track progress, understand results, and support continuous programme improvement.
+                            Keep programmes on track and learn from what happens.
                         </p>
                     </div>
 
@@ -315,7 +313,7 @@
                     <div class="gainlove-content-block mb-4">
                         <h2 class="gainlove-split-title mb-2">Data Analytics</h2>
                         <p class="pra fs-seven mt-3" style="color: #4b5563; font-size: 16px; line-height: 1.8;">
-                            From data to findings you can use. Good data becomes useful when it is organised, analysed, and interpreted in the right way. We clean, model, and visualize data across statistical platforms.
+                            From data to findings you can use.  We clean, model, and visualize data across statistical platforms.
                         </p>
                     </div>
 
@@ -389,7 +387,7 @@
                     <div class="gainlove-content-block mb-4">
                         <h2 class="gainlove-split-title mb-2">Research Writing & Publications</h2>
                         <p class="pra fs-seven mt-3" style="color: #4b5563; font-size: 16px; line-height: 1.8;">
-                            Give your research a clear voice. From an early research idea to a publication-ready output, we support the writing and documentation needed to communicate your work.
+                            Give your research a clear voice.
                         </p>
                     </div>
 
@@ -551,7 +549,7 @@
                     <div class="gainlove-content-block mb-4">
                         <h2 class="gainlove-split-title mb-2">Capacity Building & Training</h2>
                         <p class="pra fs-seven mt-3" style="color: #4b5563; font-size: 16px; line-height: 1.8;">
-                            Build skills that can be put into practice. Our training is designed around practical research, analytical, programme, and professional needs.
+                            Build skills that can be put into practice.
                         </p>
                     </div>
 
@@ -624,11 +622,9 @@
             <div class="max-w-800 mx-auto" style="max-width: 820px;">
                 <span class="text-uppercase fw-bold text-teal tracking-wider mb-2 d-inline-block" style="color: #70A6B1; font-size: 14px; letter-spacing: 2px;">LET'S WORK TOGETHER</span>
                 <h2 class="text-white mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(32px, 3.5vw, 44px); font-weight: 700; line-height: 1.2;">
-                    Have a Research or Programme Requirement?
+                    Have a research or programme requirement?
                 </h2>
-                <h3 class="mb-4" style="color: rgba(255, 255, 255, 0.9); font-size: 20px; font-weight: 400;">
-                    Let’s understand what you need.
-                </h3>
+          
                 <p class="mb-4" style="color: rgba(255, 255, 255, 0.78); font-size: 16.5px; line-height: 1.7;">
                     Share your research question, programme requirement, data challenge, or training need with us. We can explore the right scope of support for your work.
                 </p>
@@ -667,6 +663,14 @@
                 pill.addEventListener('click', function() {
                     pills.forEach(p => p.classList.remove('active'));
                     this.classList.add('active');
+                });
+            });
+
+            // Tap/click toggle for service cards on mobile/touch screens
+            const cards = document.querySelectorAll('.svc-2col-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('active');
                 });
             });
         });
