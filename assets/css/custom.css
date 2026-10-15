@@ -175,12 +175,12 @@ select {
     position: relative !important;
 }
 
-/* Ensure service page sticky images sit safely below the header navbar and never overlap the menu */
-.gainlove-image-wrap,
-.svc-side-img-container,
-.svc-category-section .sticky-lg-top {
-    top: 120px !important;
-    z-index: 10 !important;
+/* Ensure service page images sit naturally centered without unwanted sticky shift */
+.svc-category-section .gainlove-image-wrap,
+.svc-category-section .svc-side-img-container {
+    position: relative !important;
+    top: 0 !important;
+    z-index: 2 !important;
 }
 
 .services-mega-backdrop {
@@ -2119,26 +2119,37 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     margin-bottom: 4px;
 }
 
-/* Premium customized style for FAQs Accordion cards */
+/* Premium customized style for FAQs Accordion cards with Dark Blue Gradient Border */
+.faq-section .accordion-item,
 .accordion-item {
-    background: #ffffff;
-    border: 1px solid rgba(112, 166, 177, 0.2) !important;
+    position: relative;
+    border: 1px solid transparent !important;
     border-radius: 14px !important;
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, rgba(3, 23, 64, 0.45) 0%, rgba(12, 43, 116, 0.45) 60%, rgba(27, 53, 126, 0.4) 100%) border-box !important;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(3, 23, 64, 0.02);
+    box-shadow: 0 4px 15px rgba(3, 23, 64, 0.04);
 }
 
+.faq-section .accordion-item:hover,
 .accordion-item:hover {
     transform: translateY(-2px);
-    border-color: rgba(112, 166, 177, 0.45) !important;
-    box-shadow: 0 12px 25px rgba(3, 23, 64, 0.06);
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, rgba(2, 13, 36, 0.8) 0%, rgba(8, 33, 84, 0.85) 50%, rgba(29, 78, 216, 0.75) 100%) border-box !important;
+    box-shadow: 0 10px 25px rgba(3, 23, 64, 0.12);
 }
 
+.faq-section .accordion-item.active,
+.faq-section .accordion-item:has(.accordion-button:not(.collapsed)),
 .accordion-item.active,
 .accordion-item:has(.accordion-button:not(.collapsed)) {
-    border-color: #031740 !important;
-    box-shadow: 0 12px 30px rgba(3, 23, 64, 0.08) !important;
-    background: #ffffff !important;
+    border: 1px solid transparent !important;
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #020d24 0%, #031740 35%, #082154 65%, #14358a 100%) border-box !important;
+    box-shadow: 0 12px 30px rgba(3, 23, 64, 0.16), 0 4px 12px rgba(3, 23, 64, 0.08) !important;
 }
 
 .accordion-item .accordion-header .accordion-button {
@@ -2183,11 +2194,40 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     flex-shrink: 0;
 }
 
+.faq-section .accordion-item.active .accordion-header .accordion-button::after,
+.faq-section .accordion-button:not(.collapsed)::after,
 .accordion-item.active .accordion-header .accordion-button::after,
 .accordion-button:not(.collapsed)::after {
-    background: #031740 !important;
+    background: linear-gradient(135deg, #020d24 0%, #031740 55%, #0c2b74 100%) !important;
     color: #ffffff !important;
-    border-color: #031740 !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(3, 23, 64, 0.3) !important;
+}
+
+/* FAQ Section Left Alignment & Even Spacing */
+.faq-section .faq-stresh .about-call {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.faq-section .about-call .cont {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.faq-section .section-title {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.faq-section .section-title h2 {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.faq-section .accordion {
+    margin-top: 0 !important;
 }
 
 .accordion-premium-cards {
@@ -3949,7 +3989,8 @@ Global Map
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 25px 25px 35px;
+    position: relative;
 }
 
 .gainlove-main-circle {
@@ -3984,8 +4025,8 @@ Global Map
     border: 5px solid #ffffff;
     box-shadow: 0 10px 25px rgba(3, 23, 64, 0.14);
     position: absolute;
-    bottom: 10px;
-    left: -5px;
+    bottom: 25px;
+    left: 4px;
     z-index: 3;
 }
 
@@ -4053,7 +4094,8 @@ Global Map
 .svc-side-img-container img {
     border-radius: 24px;
     width: 100%;
-    height: 450px;
+    height: 380px;
+    max-height: 400px;
     object-fit: cover;
     display: block;
 }
@@ -5434,40 +5476,53 @@ Global Map
 
 /* Service Category Sections Spacing & Layout Stability */
 .svc-category-section {
-    padding-top: 60px !important;
-    padding-bottom: 75px !important;
+    padding-top: 75px !important;
+    padding-bottom: 110px !important;
     position: relative;
+    overflow: visible !important;
 }
 
 .svc-category-section .container {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-top: 5px !important;
+    padding-bottom: 35px !important;
 }
 
-/* 2-Column Cards for Services Section (Compact, No Empty White Space, Sublines on Hover) */
+/* 2-Column Cards for Services Section (Dark Blue Gradient Border Matching Website Theme) */
 .svc-2col-card {
-    background: #ffffff;
-    border: 1px solid rgba(112, 166, 177, 0.22);
+    position: relative;
+    border: 1px solid transparent !important;
     border-radius: 12px;
     padding: 16px 20px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                border-color 0.3s ease;
-    box-shadow: 0 4px 15px rgba(3, 23, 64, 0.03);
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, rgba(3, 23, 64, 0.45) 0%, rgba(12, 43, 116, 0.5) 55%, rgba(29, 78, 216, 0.45) 100%) border-box !important;
+    box-shadow: 0 4px 15px rgba(3, 23, 64, 0.04);
     cursor: pointer;
     overflow: hidden;
-    position: relative;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                background 0.3s ease;
 }
 
-.svc-2col-card.active,
 .svc-2col-card:hover {
     transform: translateY(-2px);
-    border-color: #70A6B1;
-    box-shadow: 0 10px 24px rgba(3, 23, 64, 0.08);
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, rgba(2, 13, 36, 0.85) 0%, rgba(8, 33, 84, 0.9) 50%, rgba(29, 78, 216, 0.8) 100%) border-box !important;
+    box-shadow: 0 10px 24px rgba(3, 23, 64, 0.10);
+}
+
+.svc-2col-card.active {
+    transform: translateY(-2px);
+    border: 1px solid transparent !important;
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #020d24 0%, #031740 35%, #082154 65%, #14358a 100%) border-box !important;
+    box-shadow: 0 12px 28px rgba(3, 23, 64, 0.14), 0 3px 10px rgba(3, 23, 64, 0.08) !important;
 }
 
 .svc-2col-card h4 {
@@ -5483,7 +5538,7 @@ Global Map
 }
 
 .svc-2col-card h4 i {
-    color: #70A6B1;
+    color: #123e75;
     font-size: 16px;
     width: 16px;
     text-align: center;
@@ -5499,6 +5554,7 @@ Global Map
 
 .svc-2col-card.active h4 i,
 .svc-2col-card:hover h4 i {
+    color: #031740;
     transform: scale(1.1);
 }
 

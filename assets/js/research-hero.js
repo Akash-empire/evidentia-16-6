@@ -1,45 +1,106 @@
-﻿/**
- * research-hero.js  —  Isolated animation controller
- * Triggers .rh-visible on .research-hero-image and .research-hero-content
- * when they enter the viewport. Vanilla JS only. No jQuery.
+/**
+ * research-hero.js — Projects Slider Controller
+ * Smooth auto-scroll with pause on hover & touch-swipe support.
+ * Handles interactive clicks on hero project cards to scroll & reveal project details.
  */
 (function () {
     "use strict";
 
-    function initResearchHero() {
-        var section = document.querySelector(".research-hero-section");
-        if (!section) return;
+    function initResearchHeroSlider() {
+        var swiperContainer = document.querySelector(".researchHeroSwiper");
+        if (!swiperContainer || typeof Swiper === "undefined") return;
 
-        var images  = section.querySelectorAll(".research-hero-image");
-        var content = section.querySelector(".research-hero-content");
+        var heroSwiper = new Swiper(".researchHeroSwiper", {
+            slidesPerView: 1.15,
+            spaceBetween: 18,
+            loop: true,
+            loopedSlides: 11,
+            speed: 800,
+            autoplay: {
+                delay: 2400,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            grabCursor: true,
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                },
+                1280: {
+                    slidesPerView: 3.8,
+                    spaceBetween: 26
+                }
+            }
+        });
 
-        var targets = Array.prototype.slice.call(images);
-        if (content) targets.unshift(content);   // content animates first
-
-        /* Fallback: no IntersectionObserver support */
-        if (!("IntersectionObserver" in window)) {
-            targets.forEach(function (el) { el.classList.add("rh-visible"); });
-            return;
+        // Ensure autoplay starts automatically
+        if (heroSwiper.autoplay && typeof heroSwiper.autoplay.start === "function") {
+            heroSwiper.autoplay.start();
         }
 
-        var observer = new IntersectionObserver(
-            function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("rh-visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.10 }
-        );
+        // Delegate click handler for hero project cards linking to #project-X
+        swiperContainer.addEventListener("click", function (e) {
+            var cardLink = e.target.closest(".research-hero-card");
+            if (!cardLink) return;
 
-        targets.forEach(function (el) { observer.observe(el); });
+            var targetHref = cardLink.getAttribute("href");
+            if (!targetHref || !targetHref.startsWith("#project-")) return;
+
+            var targetCard = document.querySelector(targetHref);
+            if (!targetCard) return;
+
+            e.preventDefault();
+
+            // 1. If currently filtered and the card is hidden, reset to 'all'
+            var activeFilterBtn = document.querySelector(".proj-filter-btn.active");
+            if (activeFilterBtn && activeFilterBtn.getAttribute("data-filter") !== "all") {
+                var allBtn = document.querySelector('.proj-filter-btn[data-filter="all"]');
+                if (allBtn) {
+                    allBtn.click();
+                }
+            }
+
+            // 2. Smoothly scroll to target card with fixed header offset
+            var headerOffset = 95;
+            var cardTop = targetCard.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({
+                top: cardTop,
+                behavior: "smooth"
+            });
+
+            // 3. Open progressive disclosure drawer if not already expanded
+            var detailsDrawer = targetCard.querySelector(".project-card-expanded-body");
+            var detailsToggleBtn = targetCard.querySelector(".btn-project-details-toggle");
+            if (detailsDrawer && !detailsDrawer.classList.contains("show")) {
+                if (detailsToggleBtn) {
+                    detailsToggleBtn.click();
+                } else if (typeof bootstrap !== "undefined" && bootstrap.Collapse) {
+                    new bootstrap.Collapse(detailsDrawer, { toggle: true });
+                }
+            }
+
+            // 4. Highlight flash on the target card
+            targetCard.classList.add("project-card-highlighted");
+            setTimeout(function () {
+                targetCard.classList.remove("project-card-highlighted");
+            }, 2200);
+
+            // 5. Update browser hash history
+            if (history.pushState) {
+                history.pushState(null, null, targetHref);
+            }
+        });
     }
 
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initResearchHero);
+        document.addEventListener("DOMContentLoaded", initResearchHeroSlider);
     } else {
-        initResearchHero();
+        initResearchHeroSlider();
     }
 })();
+
