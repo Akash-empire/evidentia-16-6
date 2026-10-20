@@ -1256,22 +1256,21 @@
 
     <!-- << All JS Plugins >> -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/viewport.jquery.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/nice-select.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/common-header.js"></script>
 
-    <!-- Component Loader script for Header and Footer -->
+    <!-- Page Specific Script -->
     <script>
         $(document).ready(function () {
-            $("#header").load("header.html", function () {
-                $(".main-menu a[href='projects.html']").addClass("active");
-                $(".main-menu a[href='projects.html']").closest("li").addClass("active");
-            });
-            $("#footer").load("footer.html");
-
             // Category Filter Logic
             $('.proj-filter-btn').on('click', function () {
                 $('.proj-filter-btn').removeClass('active');

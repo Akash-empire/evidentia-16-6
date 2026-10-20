@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <i class="fal fa-map-marker-alt"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="#">3517 W. Gray St. Utica, Pennsylvania</a>
+                                    <a target="_blank" href="contact.html">Aminjikarai, Chennai – 600029</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -35,8 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a href="mailto:info@example.com"><span
-                                            class="mailto:info@example.com">alma.lawson@example.com</span></a>
+                                    <a href="mailto:admin@evidentia.co.in">admin@evidentia.co.in</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <i class="fal fa-clock"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="#">Sun-friday, 02am -09pm</a>
+                                    <span>Mon - Fri, 09:00 AM - 06:00 PM</span>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -52,14 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <i class="far fa-phone"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a href="tel:+11002345909">(219) 555-0114</a>
+                                    <a href="tel:+919790615824">+91 97906 15824</a>
                                 </div>
                             </li>
                         </ul>
                         <div class="header-button mt-4">
                             <a href="contact.html" class="theme-btn p2-bg text-center">
                                 <span>
-                                    Get A Quote
+                                    Contact Us
                                     <span class="ani-arrow">
                                         <i class="fa-solid fa-arrow-right-long"></i>
                                     </span>
@@ -67,10 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             </a>
                         </div>
                         <div class="social-icon d-flex align-items-center">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -152,11 +149,11 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="container">
 
             <!-- Top Footer -->
-            <div class="row gy-5 pb-5 border-bottom border-secondary">
+            <div class="row gy-5 pb-5 border-bottom border-secondary footer-balanced-row">
 
                 <!-- Company Info -->
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="footer-widget pe-lg-4">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="footer-widget pe-xl-3 pe-lg-2">
 
                         <a href="index.html" class="footer-logo d-inline-block mb-4">
                             <img src="assets/webimages/log.png" width="240px" alt="logo" class="white-logoo">
@@ -180,8 +177,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Quick Links (Menus) -->
-                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6">
-                    <div class="footer-widget">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-widget ps-xl-5 ps-lg-4 ps-md-0">
 
                         <div class="widget-head mb-4">
                             <h5 class="white">Quick Links</h5>
@@ -200,8 +197,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Our Services (Particular Service Links) -->
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                    <div class="footer-widget">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-widget ps-xl-3 ps-lg-2 ps-md-0">
 
                         <div class="widget-head mb-4">
                             <h5 class="white">Our Services</h5>
@@ -220,8 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Contact Details -->
-                <div class="col-xl-3 col-lg-3 col-md-4">
-                    <div class="footer-widget">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="footer-widget ps-xl-4 ps-lg-3 ps-md-0">
 
                         <div class="widget-head mb-4">
                             <h5 class="white">Contact</h5>

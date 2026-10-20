@@ -1215,6 +1215,61 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     font-weight: 300 !important;
 }
 
+/* Footer balanced spacing & interactive styling */
+.gradient-footer .footer-balanced-row {
+    align-items: flex-start;
+}
+
+.gradient-footer .footer-widget .widget-head h5 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.25rem;
+}
+
+.gradient-footer .footer-widget ul.list-area li a {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 14.5px;
+    line-height: 1.7;
+    transition: all 0.25s ease;
+}
+
+.gradient-footer .footer-widget ul.list-area li a:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+.gradient-footer .footer-widget ul.list-area li a:hover i {
+    color: #00eeff !important;
+}
+
+.gradient-footer .footer-widget .social-custom a {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gradient-footer .footer-widget .social-custom a:hover {
+    background: #00eeff;
+    color: #071226 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 238, 255, 0.35);
+}
+
+.gradient-footer .footer-widget .social-custom a:hover i {
+    color: #071226 !important;
+}
+
 /* ==========================================================================
    Core Security Principles (DSP) Glowing Vector Badges
    ========================================================================== */
