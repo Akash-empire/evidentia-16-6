@@ -136,49 +136,24 @@
                 <div class="ps-progress">
 
                     <div class="ps-progress-item active" data-target="1">
-                        <div class="ps-number">01</div>
-
+                        <span class="ps-item-name">Purpose</span>
                         <div class="ps-middle">
-
                             <div class="ps-line"></div>
-
-
-
                         </div>
-
                     </div>
-
 
                     <div class="ps-progress-item" data-target="2">
-
-                        <div class="ps-number">
-                            02
-                        </div>
-
+                        <span class="ps-item-name">Partnership</span>
                         <div class="ps-middle">
-
                             <div class="ps-line"></div>
-
-
                         </div>
-
                     </div>
 
-
-
                     <div class="ps-progress-item" data-target="3">
-
-                        <div class="ps-number">
-                            03
-                        </div>
-
+                        <span class="ps-item-name">Impact</span>
                         <div class="ps-middle">
-
                             <div class="ps-line"></div>
-
-
                         </div>
-
                     </div>
 
                 </div>
@@ -710,6 +685,16 @@
 
                 observer.observe(section);
 
+            });
+
+            items.forEach((item) => {
+                item.addEventListener("click", function () {
+                    const target = item.getAttribute("data-target");
+                    const block = document.getElementById("ps-block-" + target);
+                    if (block) {
+                        block.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
             });
 
         });
