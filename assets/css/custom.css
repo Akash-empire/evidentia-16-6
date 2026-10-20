@@ -6039,7 +6039,8 @@ Global Map
         padding-top: 0 !important;
         gap: 8px !important;
     }
-    .services-nav-pills .nav-link {
+    .services-nav-pills .nav-link,
+    .services-nav-pills .svc-pill-btn {
         padding: 7px 14px !important;
         font-size: 13px !important;
     }

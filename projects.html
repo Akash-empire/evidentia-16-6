@@ -149,20 +149,20 @@
 
             <!-- Quick Jump Category Pills Navigation (Same Style as Services Page) -->
             <div class="services-nav-pills d-flex flex-wrap justify-content-center gap-2 mt-5 pt-3">
-                <button class="svc-pill-btn proj-filter-btn active" data-filter="all"><i
-                        class="fa-solid fa-border-all me-1"></i>All Projects</button>
-                <button class="svc-pill-btn proj-filter-btn" data-filter="evaluation"><i
-                        class="fa-solid fa-chart-pie me-1"></i>Evaluation</button>
-                <button class="svc-pill-btn proj-filter-btn" data-filter="me"><i
-                        class="fa-solid fa-chart-line me-1"></i>Monitoring & Evaluation</button>
-                <button class="svc-pill-btn proj-filter-btn" data-filter="needs"><i
-                        class="fa-solid fa-clipboard-question me-1"></i>Needs Assessment</button>
-                <button class="svc-pill-btn proj-filter-btn" data-filter="health"><i
-                        class="fa-solid fa-heart-pulse me-1"></i>Health Systems</button>
-                <button class="svc-pill-btn proj-filter-btn" data-filter="nutrition"><i
-                        class="fa-solid fa-apple-whole me-1"></i>Nutrition</button>
-                <button class="svc-pill-btn proj-filter-btn" data-filter="training"><i
-                        class="fa-solid fa-graduation-cap me-1"></i>Capacity Building</button>
+                <a href="#all-projects" class="svc-pill-btn proj-filter-btn active" data-filter="all"><i
+                        class="fa-solid fa-border-all me-1"></i>All Projects</a>
+                <a href="#evaluation" class="svc-pill-btn proj-filter-btn" data-filter="evaluation"><i
+                        class="fa-solid fa-chart-pie me-1"></i>Evaluation</a>
+                <a href="#monitoring-evaluation" class="svc-pill-btn proj-filter-btn" data-filter="me"><i
+                        class="fa-solid fa-chart-line me-1"></i>Monitoring & Evaluation</a>
+                <a href="#needs-assessment" class="svc-pill-btn proj-filter-btn" data-filter="needs"><i
+                        class="fa-solid fa-clipboard-question me-1"></i>Needs Assessment</a>
+                <a href="#health-systems" class="svc-pill-btn proj-filter-btn" data-filter="health"><i
+                        class="fa-solid fa-heart-pulse me-1"></i>Health Systems</a>
+                <a href="#nutrition" class="svc-pill-btn proj-filter-btn" data-filter="nutrition"><i
+                        class="fa-solid fa-apple-whole me-1"></i>Nutrition</a>
+                <a href="#capacity-building" class="svc-pill-btn proj-filter-btn" data-filter="training"><i
+                        class="fa-solid fa-graduation-cap me-1"></i>Capacity Building</a>
             </div>
         </div>
     </section>
@@ -353,13 +353,25 @@
     <!-- ============================================================
          2. OUR PROJECTS & CATEGORY FILTERS (PDF Inspo Page 2 - 11)
          ============================================================ -->
-    <section id="our-projects-list" class="py-5 fix" style="background-color: #ffffff;">
+    <section id="our-projects-list" class="py-5 fix" style="background-color: #ffffff; scroll-margin-top: 95px;">
+        <!-- Category Anchor IDs for direct hash linking and smooth scroll targets -->
+        <span id="all-projects" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="evaluation" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="monitoring-evaluation" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="me" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="needs-assessment" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="needs" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="health-systems" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="health" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="nutrition" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="capacity-building" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+        <span id="training" style="display: block; position: relative; top: -95px; visibility: hidden; height: 0;"></span>
+
         <div class="container py-4">
             <!-- Section Title -->
             <div class="text-center max-w-800 mx-auto mb-5">
                 <h2 class="gainlove-split-title mb-3" style="font-size: 38px; color: #031740; font-weight: 800;">Our
                     Projects</h2>
-                
             </div>
 
             <!-- LARGE HORIZONTAL PROJECT CARDS LIST -->
@@ -1279,22 +1291,80 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/common-header.js"></script>
 
-    <!-- Page Specific Script -->
+    <!-- Page Specific Script: Projects Category Filter & ID Anchor Functionality -->
     <script>
         $(document).ready(function () {
-            // Category Filter Logic
-            $('.proj-filter-btn').on('click', function () {
+            // Map URL hash fragments and anchor IDs to project filter category classes
+            var categoryHashMap = {
+                '#all-projects': 'all',
+                '#our-projects-list': 'all',
+                '#evaluation': 'evaluation',
+                '#monitoring-evaluation': 'me',
+                '#me': 'me',
+                '#needs-assessment': 'needs',
+                '#needs': 'needs',
+                '#health-systems': 'health',
+                '#health': 'health',
+                '#nutrition': 'nutrition',
+                '#capacity-building': 'training',
+                '#training': 'training'
+            };
+
+            // Main filter & ID jump executor
+            function filterProjectsById(filterValue, shouldScroll, hashToPush) {
+                // 1. Sync active class across all category pills (both banner and in-page)
                 $('.proj-filter-btn').removeClass('active');
-                $(this).addClass('active');
+                $('.proj-filter-btn[data-filter="' + filterValue + '"]').addClass('active');
 
-                var filterValue = $(this).attr('data-filter');
-
+                // 2. Animate and filter project cards
                 if (filterValue === 'all') {
-                    $('.proj-item').fadeIn(300);
+                    $('.proj-item').stop(true, true).fadeIn(280);
                 } else {
                     $('.proj-item').hide();
-                    $('.proj-item.' + filterValue).fadeIn(300);
+                    $('.proj-item.' + filterValue).stop(true, true).fadeIn(280);
                 }
+
+                // 3. Smooth scroll down to projects section ID with header clearance
+                if (shouldScroll) {
+                    var targetSection = $('#our-projects-list');
+                    if (targetSection.length) {
+                        var headerOffset = 95;
+                        var targetOffset = targetSection.offset().top - headerOffset;
+                        $('html, body').stop().animate({
+                            scrollTop: targetOffset
+                        }, 500);
+                    }
+                }
+
+                // 4. Update browser URL hash cleanly without instant jump
+                if (hashToPush && window.history && window.history.pushState) {
+                    window.history.pushState(null, null, hashToPush);
+                }
+            }
+
+            // Click event for all category pills (both hero banner and in-page filters)
+            $(document).on('click', '.proj-filter-btn', function (e) {
+                e.preventDefault();
+                var filterVal = $(this).attr('data-filter') || 'all';
+                var targetHref = $(this).attr('href') || '#our-projects-list';
+
+                filterProjectsById(filterVal, true, targetHref);
+            });
+
+            // Handle URL Hash navigation on initial page load (e.g. projects.html#nutrition)
+            function initHashFilter() {
+                var currentHash = window.location.hash.toLowerCase();
+                if (currentHash && categoryHashMap[currentHash]) {
+                    setTimeout(function () {
+                        filterProjectsById(categoryHashMap[currentHash], true, currentHash);
+                    }, 250);
+                }
+            }
+            initHashFilter();
+
+            // Support browser back/forward history buttons
+            $(window).on('hashchange', function () {
+                initHashFilter();
             });
         });
     </script>
