@@ -1579,8 +1579,8 @@ ACTIVE ANIMATION
         }
 
         .audit-fixed-content {
-            position: sticky;
-            top: 140px;
+            position: absolute;
+            top: 120px;
             left: max(24px, calc((100vw - 1320px) / 2 + 24px));
             width: min(600px, 48%);
             height: 0;
@@ -1606,6 +1606,34 @@ ACTIVE ANIMATION
             margin: 0;
             letter-spacing: -1px;
             white-space: nowrap;
+        }
+
+        .audit-section .service-card {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .audit-evidence-line {
+            color: #70A6B1;
+            font-weight: 600;
+            margin: 18px 0 0;
+        }
+
+        .audit-intro {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 16px 0 0;
+        }
+
+        .service-card-desc {
+            position: relative;
+            z-index: 2;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 17px;
+            line-height: 1.6;
+            margin: 12px 0 0;
         }
 
         /* keep cards above heading background */
@@ -1866,21 +1894,13 @@ ACTIVE ANIMATION
                             <img src="assets/img/sponsor/aarvam.png" alt="img">
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="sponsor-item">
-                            <img src="assets/img/sponsor/ford.png" alt="img">
-                        </div>
-                    </div>
+                    
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <img src="assets/img/sponsor/fw.png" alt="img">
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="sponsor-item">
-                            <img src="assets/img/sponsor/gain.png" alt="img">
-                        </div>
-                    </div>
+                    
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <img src="assets/img/sponsor/niepmd.png" alt="img">
@@ -1891,21 +1911,13 @@ ACTIVE ANIMATION
                             <img src="assets/img/sponsor/nmct.png" alt="img">
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="sponsor-item">
-                            <img src="assets/img/sponsor/pcc.png" alt="img">
-                        </div>
-                    </div>
+                    
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <img src="assets/img/sponsor/rwe.png" alt="img">
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="sponsor-item">
-                            <img src="assets/img/sponsor/sponsor1.png" alt="img">
-                        </div>
-                    </div>
+                    
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <img src="assets/img/sponsor/sponsor2.png" alt="img">
@@ -2500,6 +2512,8 @@ ACTIVE ANIMATION
             <h2 class="audit-heading">
                 WHY EVIDENTIA?
             </h2>
+            <span class="audit-tagline audit-evidence-line">Evidence. Insight. Impact.</span>
+            <p class="audit-intro">Evidentia Research Solutions supports organisations in generating reliable evidence, strengthening programmes, and translating findings into practical decisions.</p>
         </div>
         <div class="container">
             <div class="row g-4 justify-content-between">
@@ -2520,6 +2534,7 @@ ACTIVE ANIMATION
                             <circle cx="580" cy="240" r="80" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
                         </svg>
                         <h3>Research & Evaluation</h3>
+                        <p class="service-card-desc">Design and conduct studies that assess needs, examine outcomes, and generate evidence for decision-making.</p>
                     </div>
 
                 </div>
@@ -2538,7 +2553,8 @@ ACTIVE ANIMATION
                             <path d="M 540,-30 Q 600,180 640,350" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" />
                             <circle cx="-10" cy="130" r="110" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
                         </svg>
-                        <h3>Monitoring & Evaluation</h3>
+                        <h3>Monitoring, Evaluation & Learning</h3>
+                        <p class="service-card-desc">Build practical systems to track progress, assess performance, and use learning to improve programmes.</p>
                     </div>
 
 
@@ -2560,7 +2576,8 @@ ACTIVE ANIMATION
                             <path d="M 260,70 Q 260,210 330,210 L 330,130" stroke="rgba(255,255,255,0.3)"
                                 stroke-width="1.5" />
                         </svg>
-                        <h3>Data Analytics</h3>
+                        <h3>Data Management & Analytics</h3>
+                        <p class="service-card-desc">Organise, analyse, and interpret data to produce clear and useful findings.</p>
                     </div>
 
                 </div>
@@ -2578,7 +2595,8 @@ ACTIVE ANIMATION
                             <path d="M 70,-40 C 250,200 110,330 -30,270" stroke="rgba(255,255,255,0.3)"
                                 stroke-width="1.5" />
                         </svg>
-                        <h3>Scientific Writing & Publications</h3>
+                        <h3>Research Writing & Publications</h3>
+                        <p class="service-card-desc">Develop clear, rigorous research documents for academic, scientific, and funding audiences.</p>
                     </div>
 
                 </div>
@@ -2597,27 +2615,14 @@ ACTIVE ANIMATION
                             <path d="M 0,85 L 600,85" stroke="rgba(255,255,255,0.22)" stroke-width="1" />
                             <circle cx="490" cy="230" r="60" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
                         </svg>
-                        <h3>Documentation & Knowledge Products</h3>
+                        <h3>Knowledge Products & Capacity Building</h3>
+                        <p class="service-card-desc">Translate evidence into accessible resources and strengthen the skills needed to apply it.</p>
                     </div>
 
 
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="service-card yellow">
-                        <svg class="service-card-pattern" viewBox="0 0 600 320" preserveAspectRatio="none" fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1; opacity:0.55;">
-                            <path d="M -20,50 C 230,-90 350,350 640,110" stroke="rgba(255,255,255,0.4)"
-                                stroke-width="1.5" />
-                            <circle cx="300" cy="150" r="90" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" />
-                            <path d="M 210,0 L 210,320" stroke="rgba(255,255,255,0.22)" stroke-width="1" />
-                            <path d="M 0,175 L 600,175" stroke="rgba(255,255,255,0.22)" stroke-width="1" />
-                        </svg>
-                        <h3>Capacity Building & Training</h3>
-                    </div>
-
-                </div>
+                
                 <div class="col-lg-6"></div>
             </div>
         </div>
