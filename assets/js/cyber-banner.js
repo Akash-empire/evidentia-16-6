@@ -1,4 +1,4 @@
-(function() {
+(function () {
     // 1. Inject Premium Cyber Security Console Styles
     const cssStyles = `
         /* Injected dynamically by cyber-banner.js */
@@ -69,7 +69,7 @@
         .orb-1 {
             width: 700px;
             height: 700px;
-            background: #5135ff;
+            background: #70A6B1;
             top: -200px;
             left: -150px;
         }
@@ -529,10 +529,10 @@
         if (container) {
             container.innerHTML = bannerHTML;
             console.log("Clarent 360 Quantum Canvas Lock Assembler Mounted!");
-            
+
             // Setup Canvas particles
             initCanvasParticles();
-            
+
             // Trigger GSAP Timeline Animation
             initGSAPAnimation();
         } else {
@@ -569,7 +569,7 @@
         const targetX = 1350; // Shifted horizontally to perfectly center inside the right column area
         const targetY = 600; // Centered vertically to prevent cut-off at the top boundary
         particles = [];
- 
+
         // Total Target Points: ~17,300 dense cyber dust dots for massive 1.8x scaled cyber lock blueprint
         // A. Broad Shackle Arc Points (8 concentric rings for extra thickness and high density - Multiplied by 1.8)
         const shackleRadii = [120, 122, 124, 126, 128, 130, 132, 134];
@@ -584,7 +584,7 @@
                 ));
             }
         });
- 
+
         // Broad Shackle straight legs (16 concentric lines for extreme thickness - Multiplied by 1.8)
         const shackleOffsets = [-134, -132, -130, -128, -126, -124, -122, -120, 120, 122, 124, 126, 128, 130, 132, 134];
         shackleOffsets.forEach(xOffset => {
@@ -603,7 +603,7 @@
             for (let y = 18; y <= 252; y += 1.5) {
                 const isBorder = (x <= -155 || x >= 155 || y <= 25 || y >= 245);
                 const isInnerGrid = (Math.round(x) % 24 === 0 || Math.round(y) % 24 === 0); // High tech inner matrix grid
-                
+
                 if (isBorder || isInnerGrid) {
                     particles.push(createParticle(
                         targetX + x,
@@ -641,8 +641,8 @@
             const x0 = -280, y0 = -198;
             const x1 = 0, y1 = -243;
             const x2 = 280, y2 = -198;
-            const cx = Math.pow(1-t, 2)*x0 + 2*(1-t)*t*x1 + Math.pow(t, 2)*x2;
-            const cy = Math.pow(1-t, 2)*y0 + 2*(1-t)*t*y1 + Math.pow(t, 2)*y2;
+            const cx = Math.pow(1 - t, 2) * x0 + 2 * (1 - t) * t * x1 + Math.pow(t, 2) * x2;
+            const cy = Math.pow(1 - t, 2) * y0 + 2 * (1 - t) * t * y1 + Math.pow(t, 2) * y2;
             particles.push(createParticle(
                 targetX + cx,
                 targetY + cy,
@@ -657,9 +657,9 @@
             const x1 = 280, y1 = -18;
             const x2 = 216, y2 = 180;
             const x3 = 0, y3 = 324;
-            
-            const cx = Math.pow(1-t, 3)*x0 + 3*Math.pow(1-t, 2)*t*x1 + 3*(1-t)*Math.pow(t, 2)*x2 + Math.pow(t, 3)*x3;
-            const cy = Math.pow(1-t, 3)*y0 + 3*Math.pow(1-t, 2)*t*y1 + 3*(1-t)*Math.pow(t, 2)*y2 + Math.pow(t, 3)*y3;
+
+            const cx = Math.pow(1 - t, 3) * x0 + 3 * Math.pow(1 - t, 2) * t * x1 + 3 * (1 - t) * Math.pow(t, 2) * x2 + Math.pow(t, 3) * x3;
+            const cy = Math.pow(1 - t, 3) * y0 + 3 * Math.pow(1 - t, 2) * t * y1 + 3 * (1 - t) * Math.pow(t, 2) * y2 + Math.pow(t, 3) * y3;
             particles.push(createParticle(
                 targetX + cx,
                 targetY + cy,
@@ -674,9 +674,9 @@
             const x1 = -216, y1 = 180;
             const x2 = -280, y2 = -18;
             const x3 = -280, y3 = -198;
-            
-            const cx = Math.pow(1-t, 3)*x0 + 3*Math.pow(1-t, 2)*t*x1 + 3*(1-t)*Math.pow(t, 2)*x2 + Math.pow(t, 3)*x3;
-            const cy = Math.pow(1-t, 3)*y0 + 3*Math.pow(1-t, 2)*t*y1 + 3*(1-t)*Math.pow(t, 2)*y2 + Math.pow(t, 3)*y3;
+
+            const cx = Math.pow(1 - t, 3) * x0 + 3 * Math.pow(1 - t, 2) * t * x1 + 3 * (1 - t) * Math.pow(t, 2) * x2 + Math.pow(t, 3) * x3;
+            const cy = Math.pow(1 - t, 3) * y0 + 3 * Math.pow(1 - t, 2) * t * y1 + 3 * (1 - t) * Math.pow(t, 2) * y2 + Math.pow(t, 3) * y3;
             particles.push(createParticle(
                 targetX + cx,
                 targetY + cy,
@@ -686,7 +686,7 @@
         }
 
         console.log(`Canvas initialized successfully with ${particles.length} lock particles!`);
-        
+
         // Start the continuous high-performance render loop
         requestAnimationFrame(renderLoop);
     }
@@ -700,7 +700,7 @@
         let startX = 0;
         let startY = 0;
         const side = Math.floor(Math.random() * 4); // 0: Top, 1: Bottom, 2: Left, 3: Right
-        
+
         if (side === 0) { // Top
             startX = Math.random() * 1920;
             startY = -Math.random() * 200 - 50;
@@ -723,7 +723,7 @@
             targetX: tx,
             targetY: ty,
             // Randomized stagger delay factor for organic swirling arrival
-            delay: Math.random() * 0.45, 
+            delay: Math.random() * 0.45,
             size: Math.random() * 0.6 + 0.8, // fine crystal core size (0.8px to 1.4px) for unmatched clarity and sharpness
             auraColor: auraColor,
             coreColor: coreColor
@@ -732,10 +732,10 @@
 
     function resizeCanvas() {
         if (!canvas) return;
-        
+
         const dpr = window.devicePixelRatio || 1;
         const root = document.getElementById("cyber-svg-root");
-        
+
         let displayWidth, displayHeight;
         if (root) {
             displayWidth = root.clientWidth || window.innerWidth;
@@ -744,11 +744,11 @@
             displayWidth = window.innerWidth;
             displayHeight = 850;
         }
-        
+
         // Backing store dimensions scaled for High-DPI displays
         canvas.width = displayWidth * dpr;
         canvas.height = displayHeight * dpr;
-        
+
         drawParticles(); // Instantly redraw to keep the padlock pixel-perfect on window resize
     }
 
@@ -781,7 +781,7 @@
         // Retrieve current dynamic floating coordinates from SVG padlock to sync perfectly!
         const svgLock = document.getElementById("lock-and-shield-assembled");
         const floatOffsetY = svgLock ? (gsap.getProperty(svgLock, "y") - 600) : 0;
-        
+
         // Dynamic High-DPI mouse interaction coordinates
         const dpr = window.devicePixelRatio || 1;
         const physicalMouseX = mouseX * dpr;
@@ -851,7 +851,7 @@
     function scrambleDecrypt(element, finalText, duration = 1.2, delay = 0, yOffset = 25, showEndCursor = false) {
         if (!element) return;
         const chars = "010101#@$&%+?=";
-        
+
         const tokens = [];
         let idx = 0;
         while (idx < finalText.length) {
@@ -906,7 +906,7 @@
                 let currentTextIndex = 0;
                 let output = "";
                 let cursorInserted = false;
-                
+
                 tokens.forEach(token => {
                     if (token.type === 'tag') {
                         output += token.content;
@@ -929,12 +929,12 @@
                         currentTextIndex += token.content.length;
                     }
                 });
-                
+
                 // Keep cursor at the end if requested
                 if (revealLimit >= totalTextLength && showEndCursor) {
                     output += '<span class="cyber-cursor permanent">_</span>';
                 }
-                
+
                 element.innerHTML = output;
             },
             onComplete: () => {

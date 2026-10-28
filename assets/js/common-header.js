@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             </a>
                         </div>
                         <div class="social-icon d-flex align-items-center">
-                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/evidentia-research-solutions-pvt-ltd/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/evidentia.research/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -165,10 +165,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <!-- Social -->
                         <div class="social-custom d-flex align-items-center gap-3 mt-4">
-                            <a href="#" class="black" aria-label="Instagram">
+                            <a href="https://www.instagram.com/evidentia.research/" target="_blank" class="black" aria-label="Instagram">
                                 <i class="fab fa-instagram white65"></i>
                             </a>
-                            <a href="#" class="black" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/evidentia-research-solutions-pvt-ltd/" target="_blank" class="black" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in white65"></i>
                             </a>
                         </div>

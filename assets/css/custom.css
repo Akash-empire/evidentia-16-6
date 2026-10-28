@@ -270,7 +270,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 
 .header-main .main-menu ul li .submenu.services-mega .services-mega__tab:not(.active):hover,
 .header-main .main-menu ul li .submenu.services-mega .services-mega__tab:not(.active):focus {
-    color: #5135FF;
+    color: #70A6B1;
 }
 
 .header-main .main-menu ul li .submenu.services-mega .services-mega__tab i {
@@ -367,7 +367,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-size: 13px;
-    color: #5135FF;
+    color: #70A6B1;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -380,7 +380,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 }
 
 .header-main .main-menu ul li .submenu.services-mega .services-mega__link--main:hover::before {
-    background: #5135FF;
+    background: #70A6B1;
     color: #ffffff;
     transform: scale(1.08);
 }
@@ -986,7 +986,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     align-items: center;
     justify-content: center;
     font-size: 26px;
-    color: #5135FF;
+    color: #70A6B1;
     margin-bottom: 24px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1009,7 +1009,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 }
 
 .outcome-card:hover .outcome-card__title {
-    color: #5135FF;
+    color: #70A6B1;
 }
 
 .outcome-card__text {
@@ -1032,7 +1032,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 
 .framework-card:hover {
     transform: translateY(-5px);
-    border-color: #5135FF;
+    border-color: #70A6B1;
     box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
 }
 
@@ -1045,13 +1045,13 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    color: #5135FF;
+    color: #70A6B1;
     margin-bottom: 16px;
     transition: all 0.3s ease;
 }
 
 .framework-card:hover .framework-card__icon {
-    background: #5135FF;
+    background: #70A6B1;
     color: #ffffff;
 }
 
@@ -1139,7 +1139,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 /* Advantage Callout Slogan Banner */
 .advantage-banner {
     background: linear-gradient(93deg, rgba(81, 53, 255, 0.05), rgba(255, 84, 85, 0.05));
-    border-left: 5px solid #5135FF;
+    border-left: 5px solid #70A6B1;
     border-radius: 8px 24px 24px 8px;
     padding: 24px 30px;
     margin: 30px 0;
@@ -1149,7 +1149,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #5135FF;
+    color: #70A6B1;
     margin: 0;
     letter-spacing: 0.5px;
 }
@@ -1477,7 +1477,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 }
 
 .indexx-services-menu .services-mega__tab:hover {
-    color: #5135ff;
+    color: #70A6B1;
     transform: translateX(4px);
 }
 
@@ -1510,7 +1510,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 
 .indexx-services-menu .services-mega__panel h3::before,
 .indexx-services-menu .security-headding h3::before {
-    background: #5135ff;
+    background: #70A6B1;
     border-radius: 999px;
     bottom: 0;
     content: "";
@@ -1578,7 +1578,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 }
 
 .indexx-services-menu .services-mega__link--main:hover {
-    color: #5135ff;
+    color: #70A6B1;
 }
 
 .indexx-services-menu .services-mega__sublist {
@@ -1858,7 +1858,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 .service-details-tab-btn:hover {
     background: linear-gradient(135deg, #17111f, #231238);
     color: #ffffff !important;
-    border-color: #5135FF;
+    border-color: #70A6B1;
     border-bottom: 4px solid #FF5455;
     box-shadow: 0 15px 35px rgba(81, 53, 255, 0.15);
     transform: translateY(-8px);
@@ -1941,7 +1941,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     position: absolute;
     left: 0;
     top: 4px;
-    color: #5135FF;
+    color: #70A6B1;
     font-size: 16px;
     transition: transform 0.3s ease;
 }
@@ -1995,7 +1995,7 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    color: #5135FF;
+    color: #70A6B1;
     margin-bottom: 20px;
     transition: all 0.3s ease;
 }
@@ -2180,20 +2180,18 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     position: relative;
     border: 1px solid transparent !important;
     border-radius: 14px !important;
-    background:
-        linear-gradient(#ffffff, #ffffff) padding-box,
-        linear-gradient(135deg, rgba(3, 23, 64, 0.45) 0%, rgba(12, 43, 116, 0.45) 60%, rgba(27, 53, 126, 0.4) 100%) border-box !important;
+    
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(3, 23, 64, 0.04);
+    background-color: #70A6B1;
 }
 
 .faq-section .accordion-item:hover,
 .accordion-item:hover {
     transform: translateY(-2px);
-    background:
-        linear-gradient(#ffffff, #ffffff) padding-box,
-        linear-gradient(135deg, rgba(2, 13, 36, 0.8) 0%, rgba(8, 33, 84, 0.85) 50%, rgba(29, 78, 216, 0.75) 100%) border-box !important;
+    
     box-shadow: 0 10px 25px rgba(3, 23, 64, 0.12);
+    background-color: #70A6B1;;
 }
 
 .faq-section .accordion-item.active,
@@ -2389,10 +2387,10 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 }
 
 .theme-btn:hover {
-    background: #70A6B1;
+    background: #FF5455;
     color: #fff !important;
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(112, 166, 177, 0.35);
+    box-shadow: 0 8px 22px rgba(255, 84, 85, 0.4);
 }
 
 .testimonial-track {
@@ -3194,6 +3192,85 @@ Global Map
         margin-top: 40px;
         margin-bottom: 25px;
     }
+}
+
+/* ==========================================================================
+   Events Section: Dark Gradient Cards Theme
+   ========================================================================== */
+.ps-events-item {
+    background: linear-gradient(145deg, #031740 0%, #082154 50%, #031740 100%) !important;
+    padding: 40px 35px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.ps-events-item:first-of-type {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.ps-events-item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.ps-events-item .ps-month {
+    color: #70A6B1 !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    letter-spacing: 3px !important;
+}
+
+.ps-events-item .ps-events-date h3 {
+    color: #70A6B1 !important;
+    font-size: 58px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+}
+
+.ps-events-item .ps-events-content h3,
+.ps-events-item .ps-events-content h3 a {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    transition: color 0.3s ease !important;
+}
+
+.ps-events-item:hover .ps-events-content h3,
+.ps-events-item:hover .ps-events-content h3 a {
+    color: #70A6B1 !important;
+}
+
+.ps-events-item .ps-events-content h5 {
+    color: #70A6B1 !important;
+    font-weight: 600 !important;
+}
+
+.ps-events-item .ps-events-content p {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 15.5px !important;
+    line-height: 1.8 !important;
+}
+
+.ps-events-item .ps-events-content a {
+    color: #70A6B1 !important;
+}
+
+.ps-events-item .ps-events-content a:hover {
+    color: #ffffff !important;
+}
+
+.ps-events-item .ps-events-image {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.ps-events-item .ps-events-image img {
+    border-radius: 8px !important;
+    display: block !important;
+    width: 100% !important;
 }
 
 /* ==========================================================================
@@ -4220,10 +4297,10 @@ Global Map
 }
 
 .gainlove-pill-btn-primary:hover {
-    background-color: #031740;
+    background-color: #FF5455;
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(3, 23, 64, 0.4);
+    box-shadow: 0 8px 22px rgba(255, 84, 85, 0.4);
 }
 
 .gainlove-pill-btn-secondary {
@@ -4418,9 +4495,9 @@ Global Map
    GAINLOVE DIAGONAL PILL HERO BANNER STYLES
    ============================================================ */
 .gainlove-hero-headline {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 800;
-    color: #111827;
+    color: #214080;
     line-height: 1.18;
     letter-spacing: -0.6px;
     font-family: inherit;
@@ -4678,6 +4755,21 @@ Global Map
 
 .project-card-horizontal:hover .project-card-img-wrapper img {
     transform: scale(1.07);
+
+@media (min-width: 992px) {
+    .project-card-horizontal .col-lg-4 {
+        position: relative;
+    }
+    .project-card-horizontal .project-card-img-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        min-height: 100%;
+    }
+}
 }
 
 .project-card-num-badge {
@@ -5117,7 +5209,7 @@ Global Map
     left: 16px;
     right: 16px;
     height: 3px;
-    background-color: #5135ff;
+    background-color: #70A6B1;
     border-radius: 4px;
     opacity: 0;
     transform: scaleX(0);
@@ -5551,6 +5643,7 @@ Global Map
         min-width: 150px;
         font-size: 24px;
     }
+
     .ps-progress-item.active .ps-item-name {
         font-size: 26px;
     }
@@ -5561,21 +5654,26 @@ Global Map
         padding-top: 90px;
         padding-bottom: 60px;
     }
+
     .ps-blueprint-left {
         top: 0 !important;
         height: auto !important;
         padding: 40px 20px !important;
     }
+
     .ps-item-name {
         min-width: 130px;
         font-size: 22px;
     }
+
     .ps-progress-item.active .ps-item-name {
         font-size: 24px;
     }
+
     .ps-line {
         width: 35px;
     }
+
     .ps-progress-item.active .ps-line {
         width: 50px;
     }
@@ -5586,6 +5684,7 @@ Global Map
         min-width: 110px;
         font-size: 18px;
     }
+
     .ps-progress-item.active .ps-item-name {
         font-size: 20px;
     }
@@ -5620,9 +5719,9 @@ Global Map
     box-shadow: 0 4px 15px rgba(3, 23, 64, 0.04);
     cursor: pointer;
     overflow: hidden;
-    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                background 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+        box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+        background 0.3s ease;
 }
 
 .svc-2col-card:hover {
@@ -5686,10 +5785,10 @@ Global Map
     visibility: hidden;
     overflow: hidden;
     transform: translateY(4px);
-    transition: max-height 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                visibility 0.35s ease;
+    transition: max-height 0.35s cubic-bezier(0.165, 0.84, 0.44, 1),
+        opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+        visibility 0.35s ease;
 }
 
 .svc-2col-card.active p,
@@ -5719,6 +5818,7 @@ Global Map
     pointer-events: none;
     animation: splitDotFloat 4s ease-in-out infinite alternate;
 }
+
 .split-dot-teal {
     width: 16px;
     height: 16px;
@@ -5726,6 +5826,7 @@ Global Map
     top: 25px;
     left: 5px;
 }
+
 .split-dot-orange {
     width: 22px;
     height: 22px;
@@ -5734,6 +5835,7 @@ Global Map
     right: 10px;
     animation-delay: 1s;
 }
+
 .split-dot-green {
     width: 14px;
     height: 14px;
@@ -5742,6 +5844,7 @@ Global Map
     left: -20px;
     animation-delay: 2s;
 }
+
 .split-dot-blue {
     width: 12px;
     height: 12px;
@@ -5752,8 +5855,13 @@ Global Map
 }
 
 @keyframes splitDotFloat {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-8px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-8px);
+    }
 }
 
 /* 3 Slanted Pill Cuts Container */
@@ -5846,18 +5954,22 @@ Global Map
         height: 360px;
         max-width: 380px;
     }
+
     .projects-split-img-inner {
         width: 380px;
         height: 360px;
     }
+
     .projects-split-pill-1 .projects-split-img-inner {
         left: -15.2px;
         top: -64.8px;
     }
+
     .projects-split-pill-2 .projects-split-img-inner {
         left: -129.2px;
         top: -10.8px;
     }
+
     .projects-split-pill-3 .projects-split-img-inner {
         left: -247px;
         top: -50.4px;
@@ -5936,10 +6048,13 @@ Global Map
 }
 
 @keyframes stepArrowFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
         box-shadow: 0 6px 18px rgba(3, 23, 64, 0.12);
     }
+
     50% {
         transform: translateX(6px);
         box-shadow: 0 8px 24px rgba(112, 166, 177, 0.28);
@@ -5966,15 +6081,18 @@ Global Map
    ============================================================ */
 
 @media (max-width: 767px) {
+
     /* ------------------------------------------------------------
        1. GLOBAL SECTION WRAPPERS & SPACERS (All Pages)
        ------------------------------------------------------------ */
     .section-padding {
         padding: 42px 0 !important;
     }
+
     .space-top {
         padding-top: 40px !important;
     }
+
     .space-bottom {
         padding-bottom: 40px !important;
     }
@@ -5986,6 +6104,7 @@ Global Map
         padding-top: 2.2rem !important;
         padding-bottom: 2.2rem !important;
     }
+
     section .container.py-4,
     section .container.py-5,
     .section-padding .container.py-4 {
@@ -6000,6 +6119,7 @@ Global Map
     .section-title.mb-xxl-5 {
         margin-bottom: 1.5rem !important;
     }
+
     .section-title h2 {
         line-height: 1.25 !important;
     }
@@ -6010,6 +6130,7 @@ Global Map
         --bs-gutter-y: 1.4rem !important;
         --bs-gutter-x: 1.2rem !important;
     }
+
     .row.g-4,
     .row.gy-4 {
         --bs-gutter-y: 1.15rem !important;
@@ -6028,19 +6149,23 @@ Global Map
         padding-top: 36px !important;
         padding-bottom: 30px !important;
     }
+
     .gainlove-hero-headline {
         font-size: clamp(26px, 6.5vw, 34px) !important;
         margin-bottom: 14px !important;
     }
+
     .gainlove-hero-paragraph {
         font-size: 15px !important;
         margin-bottom: 18px !important;
     }
+
     .services-nav-pills {
         margin-top: 18px !important;
         padding-top: 0 !important;
         gap: 8px !important;
     }
+
     .services-nav-pills .nav-link,
     .services-nav-pills .svc-pill-btn {
         padding: 7px 14px !important;
@@ -6052,6 +6177,7 @@ Global Map
         padding-top: 36px !important;
         padding-bottom: 36px !important;
     }
+
     .svc-category-section .container {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
@@ -6064,11 +6190,13 @@ Global Map
         padding: 8px !important;
         margin: 0 auto 15px !important;
     }
+
     .gainlove-main-circle {
         width: 230px !important;
         height: 230px !important;
         border-width: 5px !important;
     }
+
     .gainlove-sub-circle-1 {
         width: 100px !important;
         height: 100px !important;
@@ -6076,6 +6204,7 @@ Global Map
         right: 0px !important;
         border-width: 4px !important;
     }
+
     .gainlove-sub-circle-2 {
         width: 75px !important;
         height: 75px !important;
@@ -6083,6 +6212,7 @@ Global Map
         left: 0px !important;
         border-width: 3px !important;
     }
+
     .gainlove-dot-pattern {
         width: 160px !important;
         height: 160px !important;
@@ -6093,6 +6223,7 @@ Global Map
         margin: 0 auto 18px !important;
         max-width: 100% !important;
     }
+
     .svc-side-img-container img {
         height: 210px !important;
     }
@@ -6102,16 +6233,20 @@ Global Map
         margin-bottom: 1rem !important;
         text-align: center;
     }
+
     .gainlove-split-title {
         font-size: 26px !important;
         margin-bottom: 8px !important;
     }
+
     .svc-2col-card {
         padding: 12px 14px !important;
     }
+
     .svc-2col-card h4 {
         font-size: 15px !important;
     }
+
     .svc-2col-card p {
         font-size: 13.5px !important;
         line-height: 1.5 !important;
@@ -6121,6 +6256,7 @@ Global Map
     .svc-cta-section {
         padding: 38px 0 !important;
     }
+
     .svc-cta-section h2 {
         font-size: 26px !important;
         margin-bottom: 12px !important;
@@ -6133,45 +6269,56 @@ Global Map
         height: 310px !important;
         margin: 15px auto 0 !important;
     }
+
     .research-hero-section {
         padding: 38px 0 32px !important;
     }
+
     .research-hero-title {
         font-size: 26px !important;
         margin-bottom: 14px !important;
     }
+
     .research-hero-slider-wrap {
         padding: 6px 4px 10px !important;
     }
+
     #our-projects-list {
         padding: 35px 0 !important;
     }
+
     #our-projects-list .container {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
+
     .projects-filter-bar {
         margin-bottom: 18px !important;
         gap: 6px !important;
     }
+
     .projects-filter-btn {
         padding: 6px 12px !important;
         font-size: 13px !important;
     }
+
     .project-card-horizontal {
         padding: 16px 14px !important;
         margin-bottom: 16px !important;
     }
+
     .process-step-card {
         padding: 16px 12px !important;
         margin-bottom: 10px !important;
     }
+
     .process-step-num {
         width: 44px !important;
         height: 44px !important;
         font-size: 15px !important;
         margin-bottom: 10px !important;
     }
+
     .domain-badge-card {
         padding: 14px 12px !important;
     }
@@ -6183,28 +6330,35 @@ Global Map
         padding-top: 36px !important;
         padding-bottom: 30px !important;
     }
+
     .ps-blueprint-left {
         padding: 18px 12px !important;
         top: 0 !important;
     }
+
     .ps-small-title {
         margin-bottom: 15px !important;
     }
+
     .ps-progress {
         gap: 14px !important;
     }
+
     .ps-content-block {
         padding: 24px 12px !important;
         min-height: auto !important;
     }
+
     .ps-content-block h2 {
         font-size: 32px !important;
         margin: 0 0 10px !important;
     }
+
     .ps-content-block h4 {
         font-size: 18px !important;
         margin-bottom: 12px !important;
     }
+
     .ps-content-block p {
         font-size: 14.5px !important;
         line-height: 1.6 !important;
@@ -6215,20 +6369,25 @@ Global Map
     .event-work-section {
         padding: 38px 0 !important;
     }
+
     .event-work-section .section-title p {
         font-size: 18px !important;
     }
+
     .puzzle-outer-card {
         padding: 16px 14px !important;
         margin-bottom: 14px !important;
     }
+
     .puzzle-piece-content {
         padding: 32px 18px !important;
     }
+
     .puzzle-piece-title {
         font-size: 24px !important;
         margin-bottom: 10px !important;
     }
+
     .puzzle-piece-text a {
         font-size: 14px !important;
         line-height: 1.55 !important;
@@ -6238,6 +6397,7 @@ Global Map
     .about-wrapper.section-padding {
         padding: 38px 0 !important;
     }
+
     .about-clarent {
         margin-bottom: 20px !important;
     }
@@ -6246,10 +6406,12 @@ Global Map
     .team-evidentia-section {
         padding: 35px 0 !important;
     }
+
     .team-evidentia-grid {
         gap: 20px 14px !important;
         margin-top: 18px !important;
     }
+
     .team-avatar-wrap {
         width: 125px !important;
         height: 125px !important;
@@ -6260,22 +6422,27 @@ Global Map
     .why-choose-infographic-section {
         padding: 35px 0 !important;
     }
+
     .roadmap-steps-container {
         gap: 16px !important;
         padding-left: 20px !important;
         margin-left: 8px !important;
         margin-right: 8px !important;
     }
+
     .step-content-card {
         padding: 14px 16px !important;
     }
+
     .step-title-row {
         margin-bottom: 8px !important;
         gap: 10px !important;
     }
+
     .step-title {
         font-size: 17px !important;
     }
+
     .step-desc {
         font-size: 13.5px !important;
         line-height: 1.55 !important;
@@ -6287,6 +6454,7 @@ Global Map
     .banner-section2 {
         padding: 100px 0 45px !important;
     }
+
     .banner-section2 .banner-content h1 {
         font-size: 30px !important;
         line-height: 38px !important;
@@ -6296,6 +6464,7 @@ Global Map
     .studies-section {
         padding: 38px 0 !important;
     }
+
     .studies-box-even-left,
     .studies-box-even-right {
         padding: 22px 16px !important;
@@ -6305,22 +6474,28 @@ Global Map
     .benefit-section {
         padding: 35px 0 !important;
     }
+
     .benefit-section-header {
         margin-bottom: 20px !important;
         padding: 0 14px !important;
     }
+
     .benefit-section-title {
         font-size: 26px !important;
     }
+
     .left-slide img {
         height: 220px !important;
     }
+
     .left-content {
         padding: 16px 14px !important;
     }
+
     .small-card img {
         height: 140px !important;
     }
+
     .small-content {
         padding: 14px 12px !important;
     }
@@ -6334,12 +6509,15 @@ Global Map
     .ps-showcase-section {
         padding: 38px 0 !important;
     }
+
     .ps-showcase-heading {
         margin-bottom: 22px !important;
     }
+
     .ps-showcase-heading h2 {
         font-size: 28px !important;
     }
+
     .ps-showcase-grid {
         gap: 18px !important;
     }
@@ -6353,12 +6531,14 @@ Global Map
         justify-content: center;
         padding-top: 1.5rem !important;
     }
-    .network-section .netwrok-items > span,
+
+    .network-section .netwrok-items>span,
     .network-section .netwrok-items .d-flex {
         justify-content: center !important;
         text-align: center !important;
         width: 100%;
     }
+
     .network-section .netwrok-items .content {
         justify-content: center !important;
         text-align: center !important;
@@ -6369,22 +6549,27 @@ Global Map
     .audit-section {
         padding: 40px 0 !important;
     }
+
     .audit-fixed-content {
         margin-bottom: 20px !important;
     }
+
     .audit-tagline {
         font-size: 16px !important;
         margin-bottom: 8px !important;
     }
+
     .audit-heading {
         font-size: 28px !important;
         line-height: 1.2 !important;
     }
+
     .service-card {
         margin-bottom: 20px !important;
         padding: 22px 18px !important;
         min-height: 160px !important;
     }
+
     .service-card h3 {
         font-size: 22px !important;
         line-height: 28px !important;
@@ -6394,16 +6579,20 @@ Global Map
     .testimonial-section {
         padding: 38px 0 !important;
     }
+
     .testimonial-wrapper {
         gap: 20px !important;
     }
+
     .testimonial-left h2 {
         font-size: 28px !important;
         margin-bottom: 10px !important;
     }
+
     .testimonial-card {
         padding: 20px 18px !important;
     }
+
     .global-map {
         margin-top: 24px !important;
     }
@@ -6412,12 +6601,15 @@ Global Map
     .custom-contact-section .custom-contact-form:first-child {
         padding: 30px 16px 10px !important;
     }
+
     .custom-contact-section .custom-contact-form:last-child {
         padding: 10px 16px 30px !important;
     }
+
     .custom-contact-form {
         padding: 24px 16px !important;
     }
+
     .custom-contact-form .box form.row.g-4 {
         --bs-gutter-y: 0.85rem !important;
     }
@@ -6426,6 +6618,7 @@ Global Map
     .faq-section {
         padding: 38px 0 !important;
     }
+
     .faq-section .section-title {
         margin-bottom: 18px !important;
     }
@@ -6436,51 +6629,64 @@ Global Map
     .ps-events-section {
         padding: 38px 0 30px !important;
     }
+
     .ps-events-heading {
         margin-bottom: 20px !important;
     }
+
     .ps-events-heading h2 {
         font-size: 28px !important;
     }
+
     .ps-events-item {
-        padding: 20px 0 !important;
+        padding: 24px 18px !important;
         gap: 15px !important;
     }
+
     .ps-events-content h3 {
         font-size: 20px !important;
         margin-bottom: 8px !important;
     }
+
     .ps-events-content h5 {
         font-size: 15px !important;
         margin-bottom: 10px !important;
     }
+
     .ps-events-content p {
         margin-bottom: 12px !important;
         line-height: 1.55 !important;
         font-size: 14.5px !important;
     }
+
     .kids-learning-hero {
         min-height: auto !important;
         padding: 32px 0 20px !important;
     }
+
     .kids-hero-content {
         padding-top: 10px !important;
     }
+
     .kids-hero-title {
         font-size: 26px !important;
         margin-bottom: 8px !important;
     }
+
     .kids-hero-subtitle {
         font-size: 16px !important;
         margin-bottom: 16px !important;
     }
+
     .research-insights {
         padding: 30px 0 !important;
     }
+
     .research-heading {
         padding: 0 14px !important;
         margin-bottom: 14px !important;
     }
+
     .research-heading h2 {
         font-size: 26px !important;
     }
@@ -6491,45 +6697,57 @@ Global Map
     .charity-contact-section {
         padding: 35px 0 40px !important;
     }
+
     .charity-contact-header {
         margin: 0 auto 22px !important;
         padding: 0 10px !important;
     }
+
     .charity-contact-intro {
         font-size: 17px !important;
         line-height: 1.5 !important;
     }
+
     .charity-contact-sub {
         margin-top: 14px !important;
     }
+
     .charity-left-panel {
         padding: 24px 18px !important;
         min-height: auto !important;
         border-radius: 12px 12px 0 0 !important;
     }
+
     .charity-left-title {
         font-size: 26px !important;
     }
+
     .charity-left-img-wrap {
         margin: 14px 0 !important;
     }
+
     .charity-left-img-wrap img {
         max-height: 150px !important;
     }
+
     .charity-right-panel {
         padding: 24px 18px !important;
         border-radius: 0 0 12px 12px !important;
     }
+
     .charity-form-title {
         font-size: 20px !important;
         margin-bottom: 16px !important;
     }
+
     .charity-input-group {
         margin-bottom: 12px !important;
     }
+
     .contact-map-section {
         padding: 30px 0 35px !important;
     }
+
     .contact-map-section iframe {
         height: 250px !important;
     }
@@ -6541,12 +6759,15 @@ Global Map
     footer.footer-section {
         padding-top: 35px !important;
     }
+
     .footer-balanced-row.pb-5 {
         padding-bottom: 22px !important;
     }
+
     .footer-balanced-row.gy-5 {
         --bs-gutter-y: 1.35rem !important;
     }
+
     .footer-logo.mb-4,
     .footer-widget .widget-head.mb-4 {
         margin-bottom: 12px !important;
@@ -6560,30 +6781,49 @@ Global Map
     .section-padding {
         padding: 34px 0 !important;
     }
+
     .space-top {
         padding-top: 30px !important;
     }
+
     .space-bottom {
         padding-bottom: 30px !important;
     }
+
     .banner-section2 {
         padding: 95px 0 38px !important;
     }
+
     .gainlove-hero-banner {
         padding: 30px 0 25px !important;
     }
+
     .svc-category-section {
         padding-top: 28px !important;
         padding-bottom: 28px !important;
     }
+
     .charity-left-panel,
     .charity-right-panel {
         padding: 20px 14px !important;
     }
+
     .audit-section {
         padding: 32px 0 !important;
     }
+
     .ps-content-block {
         padding: 18px 10px !important;
     }
-}
+}
+
+/* Life at Evidentia Additional Hanging Card Arcs */
+.card-arc-8 {
+    transform: translateY(24px) rotate(-2deg);
+}
+.card-arc-9 {
+    transform: translateY(14px) rotate(-3deg);
+}
+.card-arc-10 {
+    transform: translateY(2px) rotate(-4deg);
+}
