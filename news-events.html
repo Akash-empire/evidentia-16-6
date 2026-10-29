@@ -7,11 +7,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Clarent360">
+    <meta name="author" content="Evidentia">
     <meta name="description"
-        content="The Clarent360 Information Assurance Program (IAP) provides an integrated framework that embeds security, privacy, and risk governance into organizational operations, systems development, and business initiatives.">
+        content="The Evidentia Information Assurance Program (IAP) provides an integrated framework that embeds security, privacy, and risk governance into organizational operations, systems development, and business initiatives.">
     <!-- ======== Page title ============ -->
-    <title>About Us | Clarent360</title>
+    <title>About Us | Evidentia</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/logo/favs.png">
     <!--<< Bootstrap min.css >>-->
@@ -44,43 +44,15 @@
             <div class="spinner">
             </div>
             <div class="txt-loading">
-                <span data-text-preloader="T" class="letters-loading">
-                    C
-                </span>
-                <span data-text-preloader="E" class="letters-loading">
-                    L
-                </span>
-                <span data-text-preloader="C" class="letters-loading">
-                    A
-                </span>
-                <span data-text-preloader="M" class="letters-loading">
-                    R
-                </span>
-                <span data-text-preloader="O" class="letters-loading">
-                    E
-                </span>
-                <span data-text-preloader="O" class="letters-loading">
-                    N
-                </span>
-                <span data-text-preloader="O" class="letters-loading">
-                    T
-                </span>
-
-                <span data-text-preloader="O" class="letters-loading">
-
-                </span>
-
-                <span data-text-preloader="O" class="letters-loading">
-                    3
-                </span>
-
-                <span data-text-preloader="O" class="letters-loading">
-                    6
-                </span>
-
-                <span data-text-preloader="O" class="letters-loading">
-                    0
-                </span>
+                <span data-text-preloader="E" class="letters-loading">E</span>
+                <span data-text-preloader="V" class="letters-loading">V</span>
+                <span data-text-preloader="I" class="letters-loading">I</span>
+                <span data-text-preloader="D" class="letters-loading">D</span>
+                <span data-text-preloader="E" class="letters-loading">E</span>
+                <span data-text-preloader="N" class="letters-loading">N</span>
+                <span data-text-preloader="T" class="letters-loading">T</span>
+                <span data-text-preloader="I" class="letters-loading">I</span>
+                <span data-text-preloader="A" class="letters-loading">A</span>
             </div>
             <p class="text-center">Loading</p>
         </div>
@@ -121,8 +93,8 @@
 
         <div class="ps-events-container">
 
-            <div class="ps-events-heading">
-                <h2>What We Do</h2>
+            <div class="ps-events-heading ps-events-heading-center">
+                <h2>Our Latest Initiatives</h2>
                 <h3 class="ps-events-year">2026</h3>
             </div>
 
@@ -582,6 +554,43 @@
         </div>
 
     </section>
+
+    <!-- Life at Evidentia: hang each card from the wire at its own position -->
+    <script>
+        (function () {
+            var track = document.querySelector('.kids-scroll-track');
+            if (!track) return;
+
+            var svg = track.querySelector('.kids-hanging-wire-svg');
+            var wire = svg.querySelector('path');
+            var cards = track.querySelectorAll('.kids-floating-card');
+            var TOP = 10;   // wire height at both ends
+            var SAG = 60;   // how far the wire dips in the middle
+            var PIN = 16;   // pin sits above the card top
+
+            function wireY(x, width) {
+                var t = x / width;
+                return TOP + 4 * SAG * t * (1 - t);
+            }
+
+            function layout() {
+                var width = track.scrollWidth;
+
+                Array.prototype.forEach.call(cards, function (card) {
+                    var centre = card.offsetLeft + card.offsetWidth / 2;
+                    card.style.marginTop = (wireY(centre, width) + PIN) + 'px';
+                });
+
+                // Size the wire to the track after the card offsets are set
+                svg.setAttribute('viewBox', '0 0 ' + width + ' ' + track.scrollHeight);
+                wire.setAttribute('d', 'M 0 ' + TOP + ' Q ' + (width / 2) + ' ' + (TOP + 2 * SAG) + ' ' + width + ' ' + TOP);
+            }
+
+            layout();
+            window.addEventListener('load', layout);
+            window.addEventListener('resize', layout);
+        })();
+    </script>
 
     <section class="research-insights">
 

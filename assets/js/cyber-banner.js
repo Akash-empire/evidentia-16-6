@@ -507,7 +507,7 @@
                         <h4 class="hero-subtitle mb-3" id="dec-subtitle"></h4>
                         <h1 class="hero-title mb-4" id="dec-title"></h1>
                         <p class="hero-desc mb-5" id="dec-desc">
-                            Clarent360 delivers enterprise-grade Zero Trust architecture, threat engineering,
+                            Evidentia delivers enterprise-grade Zero Trust architecture, threat engineering,
                             and managed compliance to secure your business against modern digital risks.
                         </p>
                         <div class="hero-actions">
@@ -528,7 +528,7 @@
         }
         if (container) {
             container.innerHTML = bannerHTML;
-            console.log("Clarent 360 Quantum Canvas Lock Assembler Mounted!");
+            console.log("Evidentia Quantum Canvas Lock Assembler Mounted!");
 
             // Setup Canvas particles
             initCanvasParticles();
@@ -998,7 +998,7 @@
         mainTimeline.add(() => {
             scrambleDecrypt(
                 document.getElementById("dec-desc"),
-                "Clarent360 delivers enterprise-grade Zero Trust architecture, threat engineering, and managed compliance to secure your business against modern digital risks.",
+                "Evidentia delivers enterprise-grade Zero Trust architecture, threat engineering, and managed compliance to secure your business against modern digital risks.",
                 1.7,
                 0,
                 15,

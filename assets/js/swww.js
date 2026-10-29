@@ -562,7 +562,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="white65 mb-0">
                             © 2026
                             <a href="index.html" class="white fw-semibold">
-                                Clarent360
+                                Evidentia
                             </a>.
                             All Rights Reserved.
                         </p>
