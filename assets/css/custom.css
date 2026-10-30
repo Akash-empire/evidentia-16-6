@@ -6896,11 +6896,11 @@ Global Map
    The gradient sits on a single element, and the columns inside stay transparent. */
 .projects-hero-box {
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-columns: 0.8fr 1.2fr;
     gap: 0;
     border-radius: 24px;
-    padding: 48px 44px;
-    background: linear-gradient(145deg, #031740 0%, #082154 50%, #031740 100%) !important;
+    padding: 24px;
+    background: linear-gradient(145deg, #020d26 0%, #072255 50%, #0c3374 100%) !important;
     box-shadow: 0 18px 42px rgba(3, 23, 64, 0.18);
     overflow: hidden;
 }
@@ -6912,7 +6912,7 @@ Global Map
 }
 
 .projects-hero-panel {
-    min-height: 380px;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6922,8 +6922,19 @@ Global Map
     padding-right: 24px;
 }
 
+/* Tablet: stack the text above a full-width circle photo */
+@media (max-width: 991px) {
+    .projects-hero-box {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-hero-panel-text {
+        padding-right: 0;
+    }
+}
+
 .projects-hero-panel-image {
-    align-items: center;
+    align-items: flex-end;
 }
 
 .projects-hero-panel .gainlove-hero-headline {
@@ -6936,7 +6947,7 @@ Global Map
 
 .projects-circle-hero {
     width: 100%;
-    max-width: 580px;
+    max-width: 448px;
     aspect-ratio: 1 / 1;
     height: auto;
     border-radius: 50%;
@@ -6970,8 +6981,72 @@ Global Map
 /* Why Choose us ?: each text block is centred on its circle's vertical centre.
    Circle centres sit at 140, 385, 620 and 850 of the 980-high canvas. */
 @media (min-width: 992px) {
-    .roadmap-step-item.step-1 { top: 14.29%; left: 42%; width: 33%; transform: translateY(-50%); }
+    .roadmap-step-item.step-1 { top: 14.29%; left: 42%; width: 36%; transform: translateY(-50%); }
     .roadmap-step-item.step-2 { top: 39.29%; left: 18%; width: 38%; transform: translateY(-50%); }
     .roadmap-step-item.step-3 { top: 63.27%; left: 38%; width: 36%; transform: translateY(-50%); }
     .roadmap-step-item.step-4 { top: 86.73%; left: 18%; width: 40%; transform: translateY(-50%); }
+}
+
+/* Our Latest Initiatives (news & events): glow only on the left and right outside each blue card.
+   A strip the same height as the card fades outward at both sides, so nothing shows at the top or bottom edges. */
+.ps-events-item {
+    box-shadow: none;
+}
+
+.ps-events-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -18px;
+    right: -18px;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(to right,
+            rgba(112, 166, 177, 0.95) 0,
+            rgba(112, 166, 177, 0) 18px,
+            rgba(112, 166, 177, 0) calc(100% - 18px),
+            rgba(112, 166, 177, 0.95) 100%);
+}
+
+/* Keep only the outer glow on the events cards: hide the inside sparkle layer */
+.ps-events-item::after {
+    display: none !important;
+    animation: none !important;
+}
+
+/* Our Latest Initiatives: glow above the first card and below the last card, as well as the side glow */
+.ps-events-heading + .ps-events-item {
+    box-shadow: 0 -12px 18px -6px rgba(112, 166, 177, 0.9);
+}
+
+.ps-events-item:last-child {
+    box-shadow: 0 12px 18px -6px rgba(112, 166, 177, 0.9);
+}
+
+/* Wrap the side glow around the top corners of the first card and the bottom corners of the last card */
+.ps-events-heading + .ps-events-item::before {
+    top: -18px;
+}
+
+.ps-events-item:last-child::before {
+    bottom: -18px;
+}
+
+/* Side glow back to the earlier soft version (box-shadow, pulled in at top and bottom).
+   The patchy strip is turned off; first card also gets its top glow and last card its bottom glow. */
+.ps-events-item::before {
+    display: none !important;
+}
+
+.ps-events-item {
+    box-shadow: -10px 0 16px -8px rgba(112, 166, 177, 0.95), 10px 0 16px -8px rgba(112, 166, 177, 0.95);
+}
+
+.ps-events-heading + .ps-events-item {
+    box-shadow: -10px 0 16px -8px rgba(112, 166, 177, 0.95), 10px 0 16px -8px rgba(112, 166, 177, 0.95), 0 -12px 18px -6px rgba(112, 166, 177, 0.9);
+}
+
+.ps-events-item:last-child {
+    box-shadow: -10px 0 16px -8px rgba(112, 166, 177, 0.95), 10px 0 16px -8px rgba(112, 166, 177, 0.95), 0 12px 18px -6px rgba(112, 166, 177, 0.9);
 }
