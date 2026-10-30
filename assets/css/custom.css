@@ -6896,7 +6896,7 @@ Global Map
    The gradient sits on a single element, and the columns inside stay transparent. */
 .projects-hero-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.85fr 1.15fr;
     gap: 0;
     border-radius: 24px;
     padding: 48px 44px;
@@ -6935,9 +6935,10 @@ Global Map
 }
 
 .projects-circle-hero {
-    width: 360px;
-    height: 360px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 580px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     border-radius: 50%;
     overflow: hidden;
     border: 8px solid #ffffff;
@@ -6962,8 +6963,7 @@ Global Map
     }
 
     .projects-circle-hero {
-        width: 260px;
-        height: 260px;
+        max-width: 320px;
     }
 }
 
