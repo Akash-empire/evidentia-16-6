@@ -6867,12 +6867,12 @@ Global Map
 .kids-scroll-wrapper {
     position: relative !important;
     bottom: auto !important;
-    margin-top: -48px;
+    margin-top: -20px;
 }
 
 .kids-scroll-track {
     padding-top: 0 !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 70px !important;
 }
 
 .kids-scroll-track .kids-floating-card {
@@ -7049,4 +7049,22 @@ Global Map
 
 .ps-events-item:last-child {
     box-shadow: -10px 0 16px -8px rgba(112, 166, 177, 0.95), 10px 0 16px -8px rgba(112, 166, 177, 0.95), 0 12px 18px -6px rgba(112, 166, 177, 0.9);
+}
+
+/* News & events: same background as the About page "Why Choose us ?" section */
+.ps-events-section,
+.kids-learning-hero,
+.research-insights {
+    background: #F0F4FD !important;
+}
+
+/* Projects banner (desktop): keep the layout, nudge the text right and the photo left */
+@media (min-width: 992px) {
+    .projects-hero-panel-text {
+        padding-left: 70px;
+    }
+
+    .projects-hero-panel-image {
+        padding-right: 70px;
+    }
 }
