@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <i class="fal fa-map-marker-alt"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="contact.html">Aminjikarai, Chennai – 600081</a>
+                                    <a target="_blank" href="contact.html">Tondiarpet, Chennai – 600081</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
