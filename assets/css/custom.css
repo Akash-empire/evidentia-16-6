@@ -671,6 +671,17 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     display: none !important;
 }
 
+/* Larger EVIDENTIA wordmark on the loading screen */
+.preloader .animation-preloader .txt-loading {
+    font-size: 7.5em;
+}
+
+@media (max-width: 767px) {
+    .preloader .animation-preloader .txt-loading {
+        font-size: 3.5em;
+    }
+}
+
 .preloader {
     background: #ffffff !important;
 }
@@ -6899,6 +6910,24 @@ Global Map
 
     .ps-content-block {
         padding: 18px 10px !important;
+    }
+}
+
+/* Why Evidentia: keep the heading pinned while the service cards scroll past it.
+   Sticky replaces the absolute position, so the left offset becomes a margin. */
+@media (min-width: 992px) {
+    .audit-section .audit-fixed-content {
+        position: sticky;
+        top: 120px;
+        left: auto;
+        margin-left: max(24px, calc((100vw - 1320px) / 2 + 24px));
+        z-index: 2;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .audit-section .audit-fixed-content {
+        margin-left: 40px;
     }
 }
 
