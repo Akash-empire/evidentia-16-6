@@ -673,12 +673,12 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
 
 /* Larger EVIDENTIA wordmark on the loading screen */
 .preloader .animation-preloader .txt-loading {
-    font-size: 7.5em;
+    font-size: 10em;
 }
 
 @media (max-width: 767px) {
     .preloader .animation-preloader .txt-loading {
-        font-size: 3.5em;
+        font-size: 4.5em;
     }
 }
 
