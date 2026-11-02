@@ -666,6 +666,11 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     display: none !important;
 }
 
+/* Hide the "Loading" word under the brand letters on every page */
+.preloader .animation-preloader > p.text-center {
+    display: none !important;
+}
+
 .preloader {
     background: #ffffff !important;
 }
