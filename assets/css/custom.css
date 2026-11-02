@@ -671,6 +671,22 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     display: none !important;
 }
 
+/* Mobile: center the pill and common buttons horizontally */
+@media (max-width: 767px) {
+    .gainlove-pill-btn-primary {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .common-btn,
+    [class*="common-btn"] {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
 /* Larger EVIDENTIA wordmark on the loading screen */
 .preloader .animation-preloader .txt-loading {
     font-size: min(14em, 13vw);
